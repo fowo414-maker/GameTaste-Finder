@@ -1,0 +1,1019 @@
+const games = [
+  {
+    id: "elden-ring",
+    title: "Elden Ring",
+    titleKo: "엘든 링",
+    genre: "Action RPG",
+    tags: ["오픈월드", "소울라이크", "탐험", "판타지"],
+    mood: ["도전적", "몰입감"],
+    description: "광활한 세계와 높은 난이도 전투가 특징인 액션 RPG"
+  },
+  {
+    id: "dark-souls-3",
+    title: "Dark Souls III",
+    titleKo: "다크 소울 3",
+    genre: "Action RPG",
+    tags: ["소울라이크", "보스전", "다크판타지", "전투"],
+    mood: ["도전적", "긴장감"],
+    description: "정교한 전투와 강한 성취감을 주는 다크 판타지 액션 RPG"
+  },
+  {
+    id: "the-witcher-3",
+    title: "The Witcher 3: Wild Hunt",
+    titleKo: "더 위쳐 3: 와일드 헌트",
+    genre: "RPG",
+    tags: ["오픈월드", "스토리", "판타지", "선택"],
+    mood: ["몰입감", "서사적"],
+    description: "풍부한 이야기와 선택 중심 퀘스트가 돋보이는 오픈월드 RPG"
+  },
+  {
+    id: "baldurs-gate-3",
+    title: "Baldur's Gate 3",
+    titleKo: "발더스 게이트 3",
+    genre: "RPG",
+    tags: ["턴제", "스토리", "파티", "선택"],
+    mood: ["전략적", "서사적"],
+    description: "선택과 주사위 판정, 파티 전투가 결합된 깊이 있는 RPG"
+  },
+  {
+    id: "stardew-valley",
+    title: "Stardew Valley",
+    titleKo: "스타듀 밸리",
+    genre: "Simulation",
+    tags: ["농장", "생활", "제작", "관계"],
+    mood: ["편안함", "따뜻함"],
+    description: "농장 운영과 마을 생활을 느긋하게 즐길 수 있는 생활 시뮬레이션"
+  },
+  {
+    id: "animal-crossing",
+    title: "Animal Crossing: New Horizons",
+    titleKo: "모여봐요 동물의 숲",
+    genre: "Simulation",
+    tags: ["생활", "꾸미기", "수집", "섬"],
+    mood: ["편안함", "따뜻함"],
+    description: "섬을 꾸미고 이웃과 교류하는 느긋한 생활형 게임"
+  },
+  {
+    id: "minecraft",
+    title: "Minecraft",
+    titleKo: "마인크래프트",
+    genre: "Sandbox",
+    tags: ["생존", "건축", "제작", "탐험"],
+    mood: ["창의적", "자유로움"],
+    description: "블록 세계에서 건축, 탐험, 생존을 자유롭게 즐기는 샌드박스 게임"
+  },
+  {
+    id: "terraria",
+    title: "Terraria",
+    titleKo: "테라리아",
+    genre: "Sandbox",
+    tags: ["생존", "제작", "탐험", "보스전"],
+    mood: ["자유로움", "모험적"],
+    description: "2D 세계에서 자원을 모으고 강력한 보스를 상대하는 샌드박스 어드벤처"
+  },
+  {
+    id: "hades",
+    title: "Hades",
+    titleKo: "하데스",
+    genre: "Roguelike",
+    tags: ["액션", "로그라이크", "스토리", "신화"],
+    mood: ["빠른", "도전적"],
+    description: "빠른 전투와 반복 플레이 속 이야기 전개가 강점인 로그라이크 액션 게임"
+  },
+  {
+    id: "dead-cells",
+    title: "Dead Cells",
+    titleKo: "데드 셀",
+    genre: "Roguelike",
+    tags: ["액션", "로그라이크", "플랫포머", "전투"],
+    mood: ["빠른", "도전적"],
+    description: "속도감 있는 전투와 반복 도전이 핵심인 로그라이크 액션 플랫포머"
+  },
+  {
+    id: "civilization-vi",
+    title: "Sid Meier's Civilization VI",
+    titleKo: "시드 마이어의 문명 VI",
+    genre: "Strategy",
+    tags: ["턴제", "문명", "전략", "확장"],
+    mood: ["전략적", "집중"],
+    description: "문명을 성장시키며 외교, 과학, 전쟁을 운영하는 턴제 전략 게임"
+  },
+  {
+    id: "xcom-2",
+    title: "XCOM 2",
+    titleKo: "엑스컴 2",
+    genre: "Strategy",
+    tags: ["턴제", "전술", "분대", "SF"],
+    mood: ["전략적", "긴장감"],
+    description: "분대 단위 전술과 자원 관리가 결합된 턴제 전략 게임"
+  },
+  {
+    id: "portal-2",
+    title: "Portal 2",
+    titleKo: "포털 2",
+    genre: "Puzzle",
+    tags: ["퍼즐", "물리", "스토리", "협동"],
+    mood: ["영리함", "유쾌함"],
+    description: "포털 장치를 이용해 공간 퍼즐을 해결하는 퍼즐 어드벤처 게임"
+  },
+  {
+    id: "the-witness",
+    title: "The Witness",
+    titleKo: "더 위트니스",
+    genre: "Puzzle",
+    tags: ["퍼즐", "탐험", "섬", "관찰"],
+    mood: ["차분함", "영리함"],
+    description: "섬 곳곳의 규칙을 관찰하며 퍼즐을 풀어가는 탐험형 퍼즐 게임"
+  },
+  {
+    id: "hollow-knight",
+    title: "Hollow Knight",
+    titleKo: "할로우 나이트",
+    genre: "Metroidvania",
+    tags: ["탐험", "플랫포머", "보스전", "다크판타지"],
+    mood: ["몰입감", "도전적"],
+    description: "거대한 지하 왕국을 탐험하고 강력한 적과 싸우는 메트로배니아 게임"
+  },
+  {
+    id: "ori-will-of-the-wisps",
+    title: "Ori and the Will of the Wisps",
+    titleKo: "오리와 도깨비불",
+    genre: "Metroidvania",
+    tags: ["탐험", "플랫포머", "감성", "판타지"],
+    mood: ["감성적", "아름다움"],
+    description: "부드러운 움직임과 감성적인 연출이 돋보이는 액션 플랫포머"
+  },
+  {
+    id: "celeste",
+    title: "Celeste",
+    titleKo: "셀레스트",
+    genre: "Platformer",
+    tags: ["플랫포머", "정밀조작", "스토리", "도전"],
+    mood: ["도전적", "감성적"],
+    description: "정밀한 조작과 성장 이야기를 함께 담은 고난도 플랫포머"
+  },
+  {
+    id: "slay-the-spire",
+    title: "Slay the Spire",
+    titleKo: "슬레이 더 스파이어",
+    genre: "Card Strategy",
+    tags: ["카드", "로그라이크", "전략", "덱빌딩"],
+    mood: ["전략적", "집중"],
+    description: "카드를 선택하고 덱을 발전시키며 탑을 오르는 전략 로그라이크"
+  },
+  {
+    id: "subnautica",
+    title: "Subnautica",
+    titleKo: "서브노티카",
+    genre: "Survival",
+    tags: ["생존", "탐험", "제작", "해양"],
+    mood: ["몰입감", "긴장감"],
+    description: "낯선 해양 행성에서 자원을 모으고 생존하는 탐험형 생존 게임"
+  },
+  {
+    id: "dont-starve",
+    title: "Don't Starve",
+    titleKo: "돈 스타브",
+    genre: "Survival",
+    tags: ["생존", "제작", "로그라이크", "자원관리"],
+    mood: ["긴장감", "기묘함"],
+    description: "독특한 세계에서 굶주림과 위험을 관리하는 생존 게임"
+  },
+  {
+    id: "mass-effect-2",
+    title: "Mass Effect 2",
+    titleKo: "매스 이펙트 2",
+    genre: "RPG",
+    tags: ["SF", "스토리", "파티", "선택"],
+    mood: ["서사적", "몰입감"],
+    description: "동료와 선택, 우주 서사가 중심인 SF RPG"
+  },
+  {
+    id: "it-takes-two",
+    title: "It Takes Two",
+    titleKo: "잇 테이크 투",
+    genre: "Co-op Adventure",
+    tags: ["협동", "퍼즐", "플랫포머", "스토리"],
+    mood: ["유쾌함", "창의적"],
+    description: "두 명이 함께 다양한 장치를 해결하는 협동 어드벤처 게임"
+  },
+  {
+    id: "cyberpunk-2077",
+    title: "Cyberpunk 2077",
+    titleKo: "사이버펑크 2077",
+    genre: "RPG",
+    tags: ["오픈월드", "SF", "스토리", "선택"],
+    mood: ["몰입감", "긴장감"],
+    description: "거대한 미래 도시와 선택 중심 서사가 결합된 오픈월드 RPG"
+  },
+  {
+    id: "red-dead-redemption-2",
+    title: "Red Dead Redemption 2",
+    titleKo: "레드 데드 리뎀션 2",
+    genre: "Open World",
+    tags: ["오픈월드", "스토리", "탐험", "서부"],
+    mood: ["몰입감", "서사적"],
+    description: "방대한 서부 세계와 인물 서사가 돋보이는 오픈월드 어드벤처"
+  },
+  {
+    id: "god-of-war",
+    title: "God of War",
+    titleKo: "갓 오브 워",
+    genre: "Action Adventure",
+    tags: ["액션", "스토리", "신화", "전투"],
+    mood: ["서사적", "몰입감"],
+    description: "강렬한 전투와 부자 관계 서사가 중심인 액션 어드벤처"
+  },
+  {
+    id: "horizon-zero-dawn",
+    title: "Horizon Zero Dawn",
+    titleKo: "호라이즌 제로 던",
+    genre: "Action RPG",
+    tags: ["오픈월드", "탐험", "SF", "전투"],
+    mood: ["모험적", "몰입감"],
+    description: "기계 생명체가 지배하는 세계를 탐험하는 오픈월드 액션 RPG"
+  },
+  {
+    id: "ghost-of-tsushima",
+    title: "Ghost of Tsushima",
+    titleKo: "고스트 오브 쓰시마",
+    genre: "Action Adventure",
+    tags: ["오픈월드", "전투", "스토리", "잠입"],
+    mood: ["서사적", "몰입감"],
+    description: "아름다운 섬과 검술 전투가 어우러진 사무라이 액션 어드벤처"
+  },
+  {
+    id: "monster-hunter-world",
+    title: "Monster Hunter: World",
+    titleKo: "몬스터 헌터: 월드",
+    genre: "Action RPG",
+    tags: ["액션", "협동", "전투", "제작"],
+    mood: ["도전적", "모험적"],
+    description: "거대 몬스터 사냥과 장비 제작이 핵심인 협동 액션 RPG"
+  },
+  {
+    id: "sekiro",
+    title: "Sekiro: Shadows Die Twice",
+    titleKo: "세키로: 섀도우 다이 트와이스",
+    genre: "Action Adventure",
+    tags: ["소울라이크", "전투", "잠입", "보스전"],
+    mood: ["도전적", "긴장감"],
+    description: "정밀한 검술과 패링 중심 전투가 특징인 고난도 액션 어드벤처"
+  },
+  {
+    id: "bloodborne",
+    title: "Bloodborne",
+    titleKo: "블러드본",
+    genre: "Action RPG",
+    tags: ["소울라이크", "보스전", "다크판타지", "전투"],
+    mood: ["도전적", "기묘함"],
+    description: "고딕 공포 분위기와 공격적인 전투가 강점인 액션 RPG"
+  },
+  {
+    id: "nioh-2",
+    title: "Nioh 2",
+    titleKo: "인왕 2",
+    genre: "Action RPG",
+    tags: ["소울라이크", "전투", "장비", "보스전"],
+    mood: ["도전적", "긴장감"],
+    description: "복잡한 자세 전환과 장비 빌드가 깊이 있는 액션 RPG"
+  },
+  {
+    id: "persona-5-royal",
+    title: "Persona 5 Royal",
+    titleKo: "페르소나 5 더 로열",
+    genre: "JRPG",
+    tags: ["턴제", "스토리", "생활", "파티"],
+    mood: ["감성적", "서사적"],
+    description: "학교 생활과 던전 공략이 결합된 스타일리시 턴제 JRPG"
+  },
+  {
+    id: "dragon-quest-xi-s",
+    title: "Dragon Quest XI S",
+    titleKo: "드래곤 퀘스트 XI S",
+    genre: "JRPG",
+    tags: ["턴제", "스토리", "판타지", "파티"],
+    mood: ["따뜻함", "모험적"],
+    description: "전통적인 모험 서사와 안정적인 턴제 전투가 중심인 JRPG"
+  },
+  {
+    id: "final-fantasy-vii-remake",
+    title: "Final Fantasy VII Remake",
+    titleKo: "파이널 판타지 VII 리메이크",
+    genre: "Action RPG",
+    tags: ["액션", "스토리", "파티", "SF"],
+    mood: ["서사적", "몰입감"],
+    description: "실시간 액션과 전술 선택이 섞인 시네마틱 액션 RPG"
+  },
+  {
+    id: "nier-automata",
+    title: "NieR: Automata",
+    titleKo: "니어: 오토마타",
+    genre: "Action RPG",
+    tags: ["액션", "스토리", "SF", "철학"],
+    mood: ["감성적", "서사적"],
+    description: "빠른 액션과 철학적인 서사가 결합된 액션 RPG"
+  },
+  {
+    id: "disco-elysium",
+    title: "Disco Elysium",
+    titleKo: "디스코 엘리시움",
+    genre: "RPG",
+    tags: ["스토리", "선택", "추리", "대화"],
+    mood: ["서사적", "기묘함"],
+    description: "대화와 선택, 심리 묘사가 핵심인 서사 중심 RPG"
+  },
+  {
+    id: "divinity-original-sin-2",
+    title: "Divinity: Original Sin 2",
+    titleKo: "디비니티: 오리지널 신 2",
+    genre: "RPG",
+    tags: ["턴제", "스토리", "파티", "선택"],
+    mood: ["전략적", "서사적"],
+    description: "자유로운 상호작용과 전술 전투가 강점인 파티 기반 RPG"
+  },
+  {
+    id: "rimworld",
+    title: "RimWorld",
+    titleKo: "림월드",
+    genre: "Simulation",
+    tags: ["생존", "건축", "자원관리", "스토리"],
+    mood: ["전략적", "기묘함"],
+    description: "정착민의 생존과 돌발 사건 관리가 핵심인 colony 시뮬레이션"
+  },
+  {
+    id: "factorio",
+    title: "Factorio",
+    titleKo: "팩토리오",
+    genre: "Automation",
+    tags: ["건축", "자원관리", "제작", "자동화"],
+    mood: ["집중", "창의적"],
+    description: "자원 채굴부터 생산 라인 최적화까지 이어지는 자동화 게임"
+  },
+  {
+    id: "oxygen-not-included",
+    title: "Oxygen Not Included",
+    titleKo: "옥시전 낫 인클루디드",
+    genre: "Simulation",
+    tags: ["생존", "건축", "자원관리", "과학"],
+    mood: ["전략적", "집중"],
+    description: "기지의 산소와 열, 자원을 세밀하게 관리하는 생존 시뮬레이션"
+  },
+  {
+    id: "cities-skylines",
+    title: "Cities: Skylines",
+    titleKo: "시티즈: 스카이라인",
+    genre: "Simulation",
+    tags: ["건축", "도시", "자원관리", "확장"],
+    mood: ["창의적", "집중"],
+    description: "교통과 구역, 공공 서비스를 설계하는 도시 건설 시뮬레이션"
+  },
+  {
+    id: "the-sims-4",
+    title: "The Sims 4",
+    titleKo: "심즈 4",
+    genre: "Simulation",
+    tags: ["생활", "꾸미기", "관계", "창작"],
+    mood: ["자유로움", "창의적"],
+    description: "캐릭터의 일상과 집, 관계를 자유롭게 꾸미는 생활 시뮬레이션"
+  },
+  {
+    id: "fire-emblem-three-houses",
+    title: "Fire Emblem: Three Houses",
+    titleKo: "파이어 엠블렘 풍화설월",
+    genre: "Strategy RPG",
+    tags: ["턴제", "전술", "스토리", "관계"],
+    mood: ["전략적", "서사적"],
+    description: "학원 생활과 전술 전투, 분기 서사가 결합된 전략 RPG"
+  },
+  {
+    id: "into-the-breach",
+    title: "Into the Breach",
+    titleKo: "인투 더 브리치",
+    genre: "Strategy",
+    tags: ["턴제", "전술", "SF", "퍼즐"],
+    mood: ["전략적", "집중"],
+    description: "작은 전장에서 수를 계산해 피해를 막는 턴제 전술 게임"
+  },
+  {
+    id: "total-war-three-kingdoms",
+    title: "Total War: Three Kingdoms",
+    titleKo: "토탈 워: 삼국",
+    genre: "Strategy",
+    tags: ["전략", "전술", "역사", "전쟁"],
+    mood: ["전략적", "서사적"],
+    description: "삼국지 외교와 대규모 전투를 결합한 역사 전략 게임"
+  },
+  {
+    id: "age-of-empires-ii-de",
+    title: "Age of Empires II: Definitive Edition",
+    titleKo: "에이지 오브 엠파이어 2: 결정판",
+    genre: "Strategy",
+    tags: ["전략", "건축", "전쟁", "자원관리"],
+    mood: ["전략적", "집중"],
+    description: "문명 성장과 실시간 전투 운영이 핵심인 클래식 RTS"
+  },
+  {
+    id: "tetris-effect-connected",
+    title: "Tetris Effect: Connected",
+    titleKo: "테트리스 이펙트: 커넥티드",
+    genre: "Puzzle",
+    tags: ["퍼즐", "음악", "협동", "점수"],
+    mood: ["아름다움", "집중"],
+    description: "음악과 시각 연출이 몰입감을 높이는 리듬감 있는 퍼즐 게임"
+  },
+  {
+    id: "return-of-the-obra-dinn",
+    title: "Return of the Obra Dinn",
+    titleKo: "리턴 오브 더 오브라 딘",
+    genre: "Puzzle",
+    tags: ["추리", "퍼즐", "관찰", "스토리"],
+    mood: ["영리함", "기묘함"],
+    description: "사건의 단서를 관찰해 승무원의 운명을 추적하는 추리 퍼즐 게임"
+  },
+  {
+    id: "outer-wilds",
+    title: "Outer Wilds",
+    titleKo: "아우터 와일즈",
+    genre: "Adventure",
+    tags: ["탐험", "퍼즐", "우주", "스토리"],
+    mood: ["모험적", "감성적"],
+    description: "반복되는 시간 속 우주 비밀을 풀어가는 탐험 어드벤처"
+  },
+  {
+    id: "super-mario-odyssey",
+    title: "Super Mario Odyssey",
+    titleKo: "슈퍼 마리오 오디세이",
+    genre: "Platformer",
+    tags: ["플랫포머", "탐험", "수집", "액션"],
+    mood: ["유쾌함", "창의적"],
+    description: "다채로운 왕국을 자유롭게 탐험하는 3D 플랫포머"
+  },
+  {
+    id: "metroid-dread",
+    title: "Metroid Dread",
+    titleKo: "메트로이드 드레드",
+    genre: "Metroidvania",
+    tags: ["탐험", "플랫포머", "SF", "전투"],
+    mood: ["긴장감", "몰입감"],
+    description: "빠른 움직임과 긴장감 있는 추격이 특징인 메트로배니아"
+  },
+  {
+    id: "cuphead",
+    title: "Cuphead",
+    titleKo: "컵헤드",
+    genre: "Run and Gun",
+    tags: ["액션", "보스전", "플랫포머", "협동"],
+    mood: ["도전적", "유쾌함"],
+    description: "고전 애니메이션풍 연출과 어려운 보스전이 핵심인 액션 게임"
+  },
+  {
+    id: "the-last-of-us-part-ii",
+    title: "The Last of Us Part II",
+    titleKo: "더 라스트 오브 어스 파트 II",
+    genre: "Action Adventure",
+    tags: ["스토리", "잠입", "전투", "생존"],
+    mood: ["서사적", "긴장감"],
+    description: "강렬한 서사와 생존 전투가 결합된 시네마틱 액션 어드벤처"
+  },
+  {
+    id: "uncharted-4",
+    title: "Uncharted 4: A Thief's End",
+    titleKo: "언차티드 4: 해적왕과 최후의 보물",
+    genre: "Action Adventure",
+    tags: ["액션", "스토리", "탐험", "퍼즐"],
+    mood: ["모험적", "서사적"],
+    description: "영화적인 연출과 보물 탐험이 어우러진 액션 어드벤처"
+  },
+  {
+    id: "resident-evil-4-remake",
+    title: "Resident Evil 4 Remake",
+    titleKo: "바이오하자드 RE:4",
+    genre: "Survival Horror",
+    tags: ["생존", "공포", "전투", "자원관리"],
+    mood: ["긴장감", "기묘함"],
+    description: "자원 관리와 압박감 있는 전투가 중심인 생존 공포 게임"
+  },
+  {
+    id: "zelda-breath-of-the-wild",
+    title: "The Legend of Zelda: Breath of the Wild",
+    titleKo: "젤다의 전설 브레스 오브 더 와일드",
+    genre: "Open World",
+    tags: ["오픈월드", "탐험", "퍼즐", "판타지"],
+    mood: ["자유로움", "모험적"],
+    description: "물리와 탐험의 자유도가 뛰어난 오픈월드 어드벤처"
+  },
+  {
+    id: "zelda-tears-of-the-kingdom",
+    title: "The Legend of Zelda: Tears of the Kingdom",
+    titleKo: "젤다의 전설 티어스 오브 더 킹덤",
+    genre: "Open World",
+    tags: ["오픈월드", "탐험", "제작", "퍼즐"],
+    mood: ["자유로움", "창의적"],
+    description: "하늘과 지상을 넘나들며 장치를 조합하는 오픈월드 어드벤처"
+  },
+  {
+    id: "dave-the-diver",
+    title: "Dave the Diver",
+    titleKo: "데이브 더 다이버",
+    genre: "Adventure",
+    tags: ["탐험", "생활", "수집", "경영"],
+    mood: ["유쾌함", "따뜻함"],
+    description: "해양 탐험과 초밥집 운영이 결합된 캐주얼 어드벤처"
+  },
+  {
+    id: "vampire-survivors",
+    title: "Vampire Survivors",
+    titleKo: "뱀파이어 서바이버즈",
+    genre: "Roguelike",
+    tags: ["로그라이크", "액션", "생존", "빌드"],
+    mood: ["빠른", "집중"],
+    description: "자동 공격과 성장 빌드가 중독적인 생존 로그라이크"
+  },
+  {
+    id: "balatro",
+    title: "Balatro",
+    titleKo: "발라트로",
+    genre: "Card Strategy",
+    tags: ["카드", "로그라이크", "전략", "덱빌딩"],
+    mood: ["전략적", "집중"],
+    description: "포커 조합과 변칙 카드 시너지가 핵심인 덱빌딩 로그라이크"
+  },
+  {
+    id: "valheim",
+    title: "Valheim",
+    titleKo: "발헤임",
+    genre: "Survival",
+    tags: ["생존", "건축", "협동", "탐험"],
+    mood: ["모험적", "자유로움"],
+    description: "바이킹 세계에서 건축과 탐험, 보스전을 이어가는 생존 게임"
+  },
+  {
+    id: "palworld",
+    title: "Palworld",
+    titleKo: "팰월드",
+    genre: "Survival",
+    tags: ["생존", "수집", "건축", "협동"],
+    mood: ["자유로움", "유쾌함"],
+    description: "생물 수집과 기지 건설, 전투가 결합된 오픈월드 생존 게임"
+  },
+  {
+    id: "lethal-company",
+    title: "Lethal Company",
+    titleKo: "리썰 컴퍼니",
+    genre: "Survival Horror",
+    tags: ["공포", "협동", "탐험", "수집"],
+    mood: ["긴장감", "유쾌함"],
+    description: "폐시설에서 폐품을 모으는 협동 공포 생존 게임"
+  },
+  {
+    id: "helldivers-2",
+    title: "HELLDIVERS 2",
+    titleKo: "헬다이버즈 2",
+    genre: "Co-op Shooter",
+    tags: ["협동", "슈터", "전투", "SF"],
+    mood: ["긴장감", "유쾌함"],
+    description: "분대 협동과 전장 혼란이 강점인 3인칭 협동 슈터"
+  },
+  {
+    id: "deep-rock-galactic",
+    title: "Deep Rock Galactic",
+    titleKo: "딥 락 갤럭틱",
+    genre: "Co-op Shooter",
+    tags: ["협동", "슈터", "채굴", "SF"],
+    mood: ["유쾌함", "모험적"],
+    description: "동굴 탐사와 채굴, 외계 생물 전투가 결합된 협동 슈터"
+  },
+  {
+    id: "risk-of-rain-2",
+    title: "Risk of Rain 2",
+    titleKo: "리스크 오브 레인 2",
+    genre: "Roguelike",
+    tags: ["로그라이크", "액션", "협동", "빌드"],
+    mood: ["빠른", "도전적"],
+    description: "아이템 중첩과 난이도 상승이 핵심인 3D 액션 로그라이크"
+  },
+  {
+    id: "no-mans-sky",
+    title: "No Man's Sky",
+    titleKo: "노 맨즈 스카이",
+    genre: "Open World",
+    tags: ["오픈월드", "탐험", "우주", "제작"],
+    mood: ["자유로움", "모험적"],
+    description: "무한에 가까운 우주 탐험과 기지 건설이 중심인 오픈월드 게임"
+  },
+  {
+    id: "satisfactory",
+    title: "Satisfactory",
+    titleKo: "새티스팩토리",
+    genre: "Automation",
+    tags: ["자동화", "건축", "자원관리", "협동"],
+    mood: ["집중", "창의적"],
+    description: "거대한 3D 공장과 생산 라인을 설계하는 자동화 게임"
+  },
+  {
+    id: "hi-fi-rush",
+    title: "Hi-Fi RUSH",
+    titleKo: "하이파이 러시",
+    genre: "Action Adventure",
+    tags: ["액션", "음악", "전투", "스토리"],
+    mood: ["유쾌함", "빠른"],
+    description: "리듬에 맞춘 전투와 만화풍 연출이 강점인 액션 어드벤처"
+  },
+  {
+    id: "sea-of-stars",
+    title: "Sea of Stars",
+    titleKo: "씨 오브 스타즈",
+    genre: "JRPG",
+    tags: ["턴제", "스토리", "판타지", "파티"],
+    mood: ["따뜻함", "모험적"],
+    description: "고전 JRPG 감성과 현대적인 턴제 전투가 어우러진 RPG"
+  },
+  {
+    id: "tunic",
+    title: "TUNIC",
+    titleKo: "튜닉",
+    genre: "Adventure",
+    tags: ["탐험", "퍼즐", "전투", "판타지"],
+    mood: ["영리함", "모험적"],
+    description: "설명서를 해독하며 세계의 비밀을 찾아가는 어드벤처"
+  },
+  {
+    id: "undertale",
+    title: "Undertale",
+    titleKo: "언더테일",
+    genre: "RPG",
+    tags: ["스토리", "선택", "전투", "픽셀"],
+    mood: ["감성적", "기묘함"],
+    description: "전투와 대화 선택이 서사에 크게 영향을 주는 인디 RPG"
+  },
+  {
+    id: "dredge",
+    title: "DREDGE",
+    titleKo: "드레지",
+    genre: "Adventure",
+    tags: ["탐험", "수집", "공포", "해양"],
+    mood: ["기묘함", "긴장감"],
+    description: "낚시와 업그레이드, 불길한 해양 미스터리가 결합된 어드벤처"
+  },
+  {
+    id: "inscryption",
+    title: "Inscryption",
+    titleKo: "인스크립션",
+    genre: "Card Strategy",
+    tags: ["카드", "로그라이크", "퍼즐", "공포"],
+    mood: ["기묘함", "영리함"],
+    description: "카드 게임과 퍼즐, 메타 서사가 얽힌 기묘한 덱빌딩 게임"
+  },
+  {
+    id: "cult-of-the-lamb",
+    title: "Cult of the Lamb",
+    titleKo: "컬트 오브 더 램",
+    genre: "Roguelike",
+    tags: ["로그라이크", "경영", "액션", "기지"],
+    mood: ["기묘함", "유쾌함"],
+    description: "던전 액션과 교단 운영이 섞인 귀여운 분위기의 로그라이크"
+  },
+  {
+    id: "lies-of-p",
+    title: "Lies of P",
+    titleKo: "P의 거짓",
+    genre: "Action RPG",
+    tags: ["소울라이크", "전투", "보스전", "다크판타지"],
+    mood: ["도전적", "긴장감"],
+    description: "동화 피노키오를 어둡게 재해석한 소울라이크 액션 RPG"
+  },
+  {
+    id: "armored-core-vi",
+    title: "Armored Core VI: Fires of Rubicon",
+    titleKo: "아머드 코어 VI 루비콘의 화염",
+    genre: "Action",
+    tags: ["액션", "전투", "커스터마이징", "SF"],
+    mood: ["빠른", "도전적"],
+    description: "고속 메카 전투와 기체 조립이 핵심인 액션 게임"
+  },
+  {
+    id: "remnant-2",
+    title: "Remnant II",
+    titleKo: "렘넌트 2",
+    genre: "Action RPG",
+    tags: ["슈터", "협동", "소울라이크", "전투"],
+    mood: ["도전적", "긴장감"],
+    description: "총기 전투와 보스 공략, 협동 플레이가 결합된 액션 RPG"
+  },
+  {
+    id: "phasmophobia",
+    title: "Phasmophobia",
+    titleKo: "파스모포비아",
+    genre: "Survival Horror",
+    tags: ["공포", "협동", "추리", "탐험"],
+    mood: ["긴장감", "기묘함"],
+    description: "장비로 유령의 정체를 조사하는 협동 공포 게임"
+  },
+  {
+    id: "project-zomboid",
+    title: "Project Zomboid",
+    titleKo: "프로젝트 좀보이드",
+    genre: "Survival",
+    tags: ["생존", "좀비", "자원관리", "협동"],
+    mood: ["긴장감", "전략적"],
+    description: "좀비 아포칼립스에서 생활과 자원을 관리하는 하드코어 생존 게임"
+  },
+  {
+    id: "binding-of-isaac-rebirth",
+    title: "The Binding of Isaac: Rebirth",
+    titleKo: "아이작의 번제: 리버스",
+    genre: "Roguelike",
+    tags: ["로그라이크", "액션", "아이템", "던전"],
+    mood: ["기묘함", "도전적"],
+    description: "무작위 아이템 조합과 방 단위 전투가 핵심인 로그라이크"
+  },
+  {
+    id: "euro-truck-simulator-2",
+    title: "Euro Truck Simulator 2",
+    titleKo: "유로 트럭 시뮬레이터 2",
+    genre: "Simulation",
+    tags: ["운전", "경영", "탐험", "생활"],
+    mood: ["차분함", "집중"],
+    description: "유럽 도로를 달리며 화물을 운송하는 트럭 운전 시뮬레이션"
+  },
+  {
+    id: "among-us",
+    title: "Among Us",
+    titleKo: "어몽 어스",
+    genre: "Social Deduction",
+    tags: ["협동", "추리", "파티", "심리전"],
+    mood: ["유쾌함", "긴장감"],
+    description: "크루원과 임포스터의 심리전이 핵심인 멀티플레이 추리 게임"
+  },
+  {
+    id: "papers-please",
+    title: "Papers, Please",
+    titleKo: "페이퍼스, 플리즈",
+    genre: "Simulation",
+    tags: ["추리", "선택", "스토리", "관리"],
+    mood: ["긴장감", "기묘함"],
+    description: "입국 심사관의 판단과 선택을 다루는 독특한 서류 심사 시뮬레이션"
+  },
+  {
+    id: "hotline-miami",
+    title: "Hotline Miami",
+    titleKo: "핫라인 마이애미",
+    genre: "Action",
+    tags: ["액션", "전투", "속도감", "픽셀"],
+    mood: ["빠른", "긴장감"],
+    description: "빠른 판단과 반복 도전이 강렬한 탑다운 액션 게임"
+  },
+  {
+    id: "ftl",
+    title: "FTL: Faster Than Light",
+    titleKo: "FTL: 패스터 댄 라이트",
+    genre: "Strategy",
+    tags: ["전략", "우주", "자원관리", "로그라이크"],
+    mood: ["전략적", "긴장감"],
+    description: "우주선을 관리하며 위기를 넘기는 전략 로그라이크"
+  },
+  {
+    id: "stanley-parable-ultra-deluxe",
+    title: "The Stanley Parable: Ultra Deluxe",
+    titleKo: "스탠리 패러블: 울트라 디럭스",
+    genre: "Adventure",
+    tags: ["스토리", "선택", "유머", "탐험"],
+    mood: ["기묘함", "유쾌함"],
+    description: "내레이션과 선택을 비트는 실험적인 스토리 어드벤처"
+  },
+  {
+    id: "a-short-hike",
+    title: "A Short Hike",
+    titleKo: "어 쇼트 하이크",
+    genre: "Adventure",
+    tags: ["탐험", "생활", "수집", "힐링"],
+    mood: ["따뜻함", "차분함"],
+    description: "작은 섬을 자유롭게 오르내리는 짧고 따뜻한 탐험 어드벤처"
+  },
+  {
+    id: "spiritfarer",
+    title: "Spiritfarer",
+    titleKo: "스피릿페어러",
+    genre: "Simulation",
+    tags: ["생활", "제작", "스토리", "관계"],
+    mood: ["감성적", "따뜻함"],
+    description: "영혼을 배웅하며 배를 확장하고 관계를 쌓는 감성 시뮬레이션"
+  },
+  {
+    id: "inside",
+    title: "INSIDE",
+    titleKo: "인사이드",
+    genre: "Puzzle",
+    tags: ["퍼즐", "플랫포머", "스토리", "공포"],
+    mood: ["기묘함", "긴장감"],
+    description: "어두운 세계를 통과하며 환경 퍼즐을 해결하는 시네마틱 퍼즐 게임"
+  },
+  {
+    id: "limbo",
+    title: "LIMBO",
+    titleKo: "림보",
+    genre: "Puzzle",
+    tags: ["퍼즐", "플랫포머", "공포", "관찰"],
+    mood: ["기묘함", "차분함"],
+    description: "흑백 실루엣 세계에서 위험을 피해 나아가는 퍼즐 플랫포머"
+  },
+  {
+    id: "fez",
+    title: "FEZ",
+    titleKo: "페즈",
+    genre: "Puzzle",
+    tags: ["퍼즐", "플랫포머", "탐험", "관찰"],
+    mood: ["영리함", "차분함"],
+    description: "2D와 3D 시점을 돌려 숨은 길을 찾는 퍼즐 플랫포머"
+  },
+  {
+    id: "spelunky-2",
+    title: "Spelunky 2",
+    titleKo: "스펠렁키 2",
+    genre: "Roguelike",
+    tags: ["로그라이크", "플랫포머", "탐험", "협동"],
+    mood: ["도전적", "긴장감"],
+    description: "매번 달라지는 동굴을 탐험하는 고난도 로그라이크 플랫포머"
+  },
+  {
+    id: "shovel-knight-treasure-trove",
+    title: "Shovel Knight: Treasure Trove",
+    titleKo: "쇼벨 나이트: 트레저 트로브",
+    genre: "Platformer",
+    tags: ["플랫포머", "액션", "보스전", "픽셀"],
+    mood: ["유쾌함", "도전적"],
+    description: "고전 액션 플랫포머 감성을 현대적으로 다듬은 인디 게임"
+  },
+  {
+    id: "katana-zero",
+    title: "Katana ZERO",
+    titleKo: "카타나 제로",
+    genre: "Action",
+    tags: ["액션", "스토리", "전투", "픽셀"],
+    mood: ["빠른", "긴장감"],
+    description: "시간 조작과 즉사 액션이 결합된 스타일리시 액션 게임"
+  },
+  {
+    id: "hyper-light-drifter",
+    title: "Hyper Light Drifter",
+    titleKo: "하이퍼 라이트 드리프터",
+    genre: "Action Adventure",
+    tags: ["액션", "탐험", "전투", "픽셀"],
+    mood: ["감성적", "도전적"],
+    description: "묵직한 분위기와 빠른 전투가 어우러진 액션 어드벤처"
+  },
+  {
+    id: "enter-the-gungeon",
+    title: "Enter the Gungeon",
+    titleKo: "엔터 더 건전",
+    genre: "Roguelike",
+    tags: ["로그라이크", "슈터", "액션", "협동"],
+    mood: ["빠른", "도전적"],
+    description: "총알 지옥 전투와 아이템 조합이 핵심인 로그라이크 슈터"
+  },
+  {
+    id: "darkest-dungeon",
+    title: "Darkest Dungeon",
+    titleKo: "다키스트 던전",
+    genre: "Strategy",
+    tags: ["턴제", "전략", "자원관리", "공포"],
+    mood: ["긴장감", "기묘함"],
+    description: "스트레스와 위험을 관리하며 던전을 공략하는 어두운 전략 RPG"
+  },
+  {
+    id: "firewatch",
+    title: "Firewatch",
+    titleKo: "파이어워치",
+    genre: "Adventure",
+    tags: ["스토리", "탐험", "대화", "미스터리"],
+    mood: ["감성적", "차분함"],
+    description: "숲속 감시탑에서 벌어지는 관계와 미스터리를 따라가는 어드벤처"
+  },
+  {
+    id: "gris",
+    title: "GRIS",
+    titleKo: "그리스",
+    genre: "Platformer",
+    tags: ["플랫포머", "감성", "퍼즐", "예술"],
+    mood: ["아름다움", "감성적"],
+    description: "수채화 같은 비주얼과 감성적인 진행이 돋보이는 플랫포머"
+  },
+  {
+    id: "edith-finch",
+    title: "What Remains of Edith Finch",
+    titleKo: "왓 리메인즈 오브 에디스 핀치",
+    genre: "Adventure",
+    tags: ["스토리", "탐험", "미스터리", "가족"],
+    mood: ["감성적", "서사적"],
+    description: "한 가족의 이야기를 다양한 방식으로 체험하는 서사 어드벤처"
+  },
+  {
+    id: "baba-is-you",
+    title: "Baba Is You",
+    titleKo: "바바 이즈 유",
+    genre: "Puzzle",
+    tags: ["퍼즐", "규칙", "논리", "창의"],
+    mood: ["영리함", "집중"],
+    description: "규칙 문장을 직접 바꿔 해법을 만드는 창의적인 퍼즐 게임"
+  },
+  {
+    id: "untitled-goose-game",
+    title: "Untitled Goose Game",
+    titleKo: "언타이틀드 구스 게임",
+    genre: "Puzzle",
+    tags: ["퍼즐", "잠입", "유머", "생활"],
+    mood: ["유쾌함", "창의적"],
+    description: "마을 사람들을 골탕 먹이며 목표를 해결하는 코미디 퍼즐 게임"
+  },
+  {
+    id: "loop-hero",
+    title: "Loop Hero",
+    titleKo: "루프 히어로",
+    genre: "Strategy",
+    tags: ["전략", "덱빌딩", "로그라이크", "자동전투"],
+    mood: ["전략적", "집중"],
+    description: "타일과 카드를 배치해 반복 루프를 설계하는 전략 게임"
+  },
+  {
+    id: "rain-world",
+    title: "Rain World",
+    titleKo: "레인 월드",
+    genre: "Survival",
+    tags: ["생존", "탐험", "플랫포머", "생태계"],
+    mood: ["긴장감", "기묘함"],
+    description: "거친 생태계 속에서 살아남아 이동하는 생존 플랫포머"
+  },
+  {
+    id: "night-in-the-woods",
+    title: "Night in the Woods",
+    titleKo: "나이트 인 더 우즈",
+    genre: "Adventure",
+    tags: ["스토리", "대화", "관계", "미스터리"],
+    mood: ["감성적", "기묘함"],
+    description: "작은 마을의 관계와 불안을 그리는 스토리 중심 어드벤처"
+  },
+  {
+    id: "oxenfree",
+    title: "Oxenfree",
+    titleKo: "옥센프리",
+    genre: "Adventure",
+    tags: ["스토리", "대화", "미스터리", "선택"],
+    mood: ["기묘함", "감성적"],
+    description: "무전기를 통해 섬의 미스터리를 풀어가는 대화 중심 어드벤처"
+  },
+  {
+    id: "crypt-of-the-necrodancer",
+    title: "Crypt of the NecroDancer",
+    titleKo: "크립트 오브 더 네크로댄서",
+    genre: "Roguelike",
+    tags: ["로그라이크", "음악", "리듬", "던전"],
+    mood: ["빠른", "도전적"],
+    description: "박자에 맞춰 움직이며 던전을 공략하는 리듬 로그라이크"
+  },
+  {
+    id: "superhot",
+    title: "SUPERHOT",
+    titleKo: "슈퍼핫",
+    genre: "Action",
+    tags: ["액션", "슈터", "퍼즐", "전투"],
+    mood: ["영리함", "긴장감"],
+    description: "움직일 때만 시간이 흐르는 독특한 규칙의 액션 슈터"
+  },
+  {
+    id: "brotato",
+    title: "Brotato",
+    titleKo: "브로타토",
+    genre: "Roguelike",
+    tags: ["로그라이크", "액션", "생존", "빌드"],
+    mood: ["빠른", "집중"],
+    description: "짧은 웨이브와 무기 빌드가 핵심인 캐주얼 액션 로그라이크"
+  },
+  {
+    id: "unpacking",
+    title: "Unpacking",
+    titleKo: "언패킹",
+    genre: "Puzzle",
+    tags: ["퍼즐", "생활", "정리", "스토리"],
+    mood: ["차분함", "따뜻함"],
+    description: "물건을 정리하며 한 사람의 삶을 따라가는 조용한 퍼즐 게임"
+  },
+  {
+    id: "dorfromantik",
+    title: "Dorfromantik",
+    titleKo: "도르프로만틱",
+    genre: "Puzzle",
+    tags: ["퍼즐", "건축", "타일", "차분함"],
+    mood: ["차분함", "집중"],
+    description: "타일을 이어 평화로운 풍경을 만드는 차분한 퍼즐 게임"
+  },
+  {
+    id: "mini-motorways",
+    title: "Mini Motorways",
+    titleKo: "미니 모터웨이즈",
+    genre: "Strategy",
+    tags: ["전략", "교통", "퍼즐", "도시"],
+    mood: ["집중", "영리함"],
+    description: "도로망을 설계해 도시의 교통 흐름을 유지하는 전략 퍼즐 게임"
+  }
+];

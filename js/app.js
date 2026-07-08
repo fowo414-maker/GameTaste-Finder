@@ -818,6 +818,29 @@
     siteHeader.classList.toggle("is-hidden", currentScrollY > lastScrollY && currentScrollY > 80);
     lastScrollY = Math.max(currentScrollY, 0);
   }, { passive: true });
+
+  const jumpToStep2Button = document.getElementById("jumpToStep2");
+  const heroSection = document.querySelector(".hero");
+  const step2Section = document.getElementById("recommend-title") ? document.getElementById("recommend-title").closest("section") : null;
+
+  if (jumpToStep2Button && heroSection && step2Section) {
+    const updateJumpButtonVisibility = () => {
+      const heroBottom = heroSection.getBoundingClientRect().bottom;
+      const step2Top = step2Section.getBoundingClientRect().top;
+      const shouldShow = heroBottom < 60 && step2Top > 160;
+
+      jumpToStep2Button.classList.toggle("is-visible", shouldShow);
+    };
+
+    updateJumpButtonVisibility();
+    window.addEventListener("scroll", updateJumpButtonVisibility, { passive: true });
+    window.addEventListener("resize", updateJumpButtonVisibility);
+
+    jumpToStep2Button.addEventListener("click", () => {
+      step2Section.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
   const recommendButtonLabel = recommendButton.querySelector(".button-label") || recommendButton;
   const recommendButtonDefaultText = recommendButtonLabel.textContent;
 

@@ -38,121 +38,6 @@
     "Survival": ["생존"],
     "Survival Horror": ["생존"]
   };
-  const gameDetails = {
-    "elden-ring": ["2022", "약 60-100시간", 5, "온라인 협동/침입", "PC, PlayStation, Xbox", "지원", "Metacritic 96 / Steam 매우 긍정적"],
-    "dark-souls-3": ["2016", "약 35-60시간", 5, "온라인 협동/침입", "PC, PlayStation, Xbox", "지원", "Metacritic 89 / Steam 매우 긍정적"],
-    "the-witcher-3": ["2015", "약 50-120시간", 3, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 93 / Steam 압도적으로 긍정적"],
-    "baldurs-gate-3": ["2023", "약 75-120시간", 4, "온라인 협동 최대 4명", "PC, PlayStation, Xbox", "지원", "Metacritic 96 / Steam 압도적으로 긍정적"],
-    "stardew-valley": ["2016", "약 50-150시간", 2, "온라인 협동 최대 8명", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 89 / Steam 압도적으로 긍정적"],
-    "animal-crossing": ["2020", "약 60시간 이상", 1, "온라인 최대 8명", "Switch", "지원", "Metacritic 90 / Steam 없음"],
-    "minecraft": ["2011", "플레이 방식에 따라 크게 달라짐", 2, "온라인 다인원", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 93 / Steam 없음"],
-    "terraria": ["2011", "약 50-100시간", 3, "온라인 최대 8명", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 83 / Steam 압도적으로 긍정적"],
-    "hades": ["2020", "약 20-50시간", 4, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 93 / Steam 압도적으로 긍정적"],
-    "dead-cells": ["2018", "약 20-60시간", 4, "싱글플레이", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 89 / Steam 압도적으로 긍정적"],
-    "civilization-vi": ["2016", "약 40시간 이상", 3, "온라인 다인원", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 88 / Steam 매우 긍정적"],
-    "xcom-2": ["2016", "약 30-50시간", 4, "싱글플레이", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 88 / Steam 매우 긍정적"],
-    "portal-2": ["2011", "약 8-12시간", 2, "협동 2명", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 95 / Steam 압도적으로 긍정적"],
-    "the-witness": ["2016", "약 15-30시간", 4, "싱글플레이", "PC, PlayStation, Xbox, Mobile", "미지원", "Metacritic 87 / Steam 매우 긍정적"],
-    "hollow-knight": ["2017", "약 25-50시간", 4, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 90 / Steam 압도적으로 긍정적"],
-    "ori-will-of-the-wisps": ["2020", "약 12-20시간", 3, "싱글플레이", "PC, Xbox, Switch", "지원", "Metacritic 90 / Steam 압도적으로 긍정적"],
-    "celeste": ["2018", "약 8-20시간", 5, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 94 / Steam 압도적으로 긍정적"],
-    "slay-the-spire": ["2019", "약 20-100시간", 4, "싱글플레이", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 89 / Steam 압도적으로 긍정적"],
-    "subnautica": ["2018", "약 25-50시간", 3, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 87 / Steam 압도적으로 긍정적"],
-    "dont-starve": ["2013", "약 20시간 이상", 4, "싱글플레이", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 79 / Steam 매우 긍정적"],
-    "mass-effect-2": ["2010", "약 25-45시간", 3, "싱글플레이", "PC, PlayStation, Xbox", "지원", "Metacritic 96 / Steam 매우 긍정적"],
-    "it-takes-two": ["2021", "약 12-15시간", 2, "협동 2명 전용", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 89 / Steam 압도적으로 긍정적"],
-    "cyberpunk-2077": ["2020", "약 30-80시간", 3, "싱글플레이", "PC, PlayStation, Xbox", "지원", "Metacritic 86 / Steam 매우 긍정적"],
-    "red-dead-redemption-2": ["2018", "약 50-100시간", 3, "온라인 다인원", "PC, PlayStation, Xbox", "지원", "Metacritic 97 / Steam 매우 긍정적"],
-    "god-of-war": ["2018", "약 20-40시간", 3, "싱글플레이", "PC, PlayStation", "지원", "Metacritic 94 / Steam 압도적으로 긍정적"],
-    "horizon-zero-dawn": ["2017", "약 35-70시간", 3, "싱글플레이", "PC, PlayStation", "지원", "Metacritic 89 / Steam 매우 긍정적"],
-    "ghost-of-tsushima": ["2020", "약 30-60시간", 3, "온라인 협동 최대 4명", "PC, PlayStation", "지원", "Metacritic 83 / Steam 매우 긍정적"],
-    "monster-hunter-world": ["2018", "약 50-100시간", 4, "온라인 협동 최대 4명", "PC, PlayStation, Xbox", "지원", "Metacritic 90 / Steam 매우 긍정적"],
-    "sekiro": ["2019", "약 30-50시간", 5, "싱글플레이", "PC, PlayStation, Xbox", "지원", "Metacritic 90 / Steam 매우 긍정적"],
-    "bloodborne": ["2015", "약 35-60시간", 5, "온라인 협동/침입", "PlayStation", "지원", "Metacritic 92 / Steam 없음"],
-    "nioh-2": ["2020", "약 50-100시간", 5, "온라인 협동 최대 3명", "PC, PlayStation", "지원", "Metacritic 85 / Steam 매우 긍정적"],
-    "persona-5-royal": ["2019", "약 90-120시간", 3, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 95 / Steam 압도적으로 긍정적"],
-    "dragon-quest-xi-s": ["2019", "약 60-100시간", 2, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 91 / Steam 매우 긍정적"],
-    "final-fantasy-vii-remake": ["2020", "약 35-50시간", 3, "싱글플레이", "PC, PlayStation", "지원", "Metacritic 87 / Steam 매우 긍정적"],
-    "nier-automata": ["2017", "약 25-60시간", 3, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 88 / Steam 매우 긍정적"],
-    "disco-elysium": ["2019", "약 20-40시간", 2, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 91 / Steam 매우 긍정적"],
-    "divinity-original-sin-2": ["2017", "약 60-100시간", 4, "온라인 협동 최대 4명", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 93 / Steam 압도적으로 긍정적"],
-    "rimworld": ["2018", "약 50시간 이상", 4, "싱글플레이", "PC, PlayStation, Xbox", "지원", "Metacritic 87 / Steam 압도적으로 긍정적"],
-    "factorio": ["2020", "약 50시간 이상", 4, "온라인 다인원", "PC, Switch", "지원", "Metacritic 90 / Steam 압도적으로 긍정적"],
-    "oxygen-not-included": ["2019", "약 50시간 이상", 4, "싱글플레이", "PC", "지원", "Metacritic 86 / Steam 압도적으로 긍정적"],
-    "cities-skylines": ["2015", "약 40시간 이상", 3, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 85 / Steam 매우 긍정적"],
-    "the-sims-4": ["2014", "플레이 방식에 따라 크게 달라짐", 1, "싱글플레이", "PC, PlayStation, Xbox", "지원", "Metacritic 70 / Steam 매우 긍정적"],
-    "fire-emblem-three-houses": ["2019", "약 50-80시간", 3, "싱글플레이", "Switch", "지원", "Metacritic 89 / Steam 없음"],
-    "into-the-breach": ["2018", "약 10-30시간", 4, "싱글플레이", "PC, Switch, Mobile", "지원", "Metacritic 90 / Steam 압도적으로 긍정적"],
-    "total-war-three-kingdoms": ["2019", "약 30-80시간", 4, "온라인 2명", "PC", "지원", "Metacritic 85 / Steam 매우 긍정적"],
-    "age-of-empires-ii-de": ["2019", "약 20시간 이상", 3, "온라인 다인원", "PC, Xbox", "지원", "Metacritic 84 / Steam 매우 긍정적"],
-    "tetris-effect-connected": ["2018", "약 5-20시간", 2, "온라인/로컬 최대 3명", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 89 / Steam 압도적으로 긍정적"],
-    "return-of-the-obra-dinn": ["2018", "약 8-12시간", 3, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 89 / Steam 압도적으로 긍정적"],
-    "outer-wilds": ["2019", "약 15-25시간", 3, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 85 / Steam 압도적으로 긍정적"],
-    "super-mario-odyssey": ["2017", "약 12-30시간", 2, "로컬 2명", "Switch", "지원", "Metacritic 97 / Steam 없음"],
-    "metroid-dread": ["2021", "약 8-15시간", 4, "싱글플레이", "Switch", "지원", "Metacritic 88 / Steam 없음"],
-    "cuphead": ["2017", "약 10-20시간", 5, "로컬 협동 2명", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 88 / Steam 압도적으로 긍정적"],
-    "the-last-of-us-part-ii": ["2020", "약 25-35시간", 3, "싱글플레이", "PlayStation", "지원", "Metacritic 93 / Steam 없음"],
-    "uncharted-4": ["2016", "약 15-30시간", 2, "온라인 다인원", "PC, PlayStation", "지원", "Metacritic 93 / Steam 매우 긍정적"],
-    "resident-evil-4-remake": ["2023", "약 15-30시간", 4, "싱글플레이", "PC, PlayStation, Xbox", "지원", "Metacritic 93 / Steam 압도적으로 긍정적"],
-    "zelda-breath-of-the-wild": ["2017", "약 50-100시간", 3, "싱글플레이", "Switch", "지원", "Metacritic 97 / Steam 없음"],
-    "zelda-tears-of-the-kingdom": ["2023", "약 60-120시간", 3, "싱글플레이", "Switch", "지원", "Metacritic 96 / Steam 없음"],
-    "dave-the-diver": ["2023", "약 20-35시간", 2, "싱글플레이", "PC, PlayStation, Switch", "지원", "Metacritic 90 / Steam 압도적으로 긍정적"],
-    "vampire-survivors": ["2022", "약 20-60시간", 2, "로컬 협동 최대 4명", "PC, Xbox, Switch, Mobile", "지원", "Metacritic 86 / Steam 압도적으로 긍정적"],
-    "balatro": ["2024", "약 20-80시간", 3, "싱글플레이", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 90 / Steam 압도적으로 긍정적"],
-    "valheim": ["2021", "약 60-120시간", 3, "온라인 최대 10명", "PC, Xbox", "지원", "Metacritic 86 / Steam 압도적으로 긍정적"],
-    "palworld": ["2024", "약 40-100시간", 3, "온라인 다인원", "PC, Xbox", "지원", "Metacritic 69 / Steam 매우 긍정적"],
-    "lethal-company": ["2023", "반복 플레이 중심", 3, "온라인 협동 최대 4명", "PC", "미지원", "Metacritic 확인 필요 / Steam 압도적으로 긍정적"],
-    "helldivers-2": ["2024", "약 30시간 이상", 4, "온라인 협동 최대 4명", "PC, PlayStation", "지원", "Metacritic 82 / Steam 대체로 긍정적"],
-    "deep-rock-galactic": ["2020", "약 40시간 이상", 3, "온라인 협동 최대 4명", "PC, PlayStation, Xbox", "지원", "Metacritic 85 / Steam 압도적으로 긍정적"],
-    "risk-of-rain-2": ["2020", "약 30-100시간", 4, "온라인 협동 최대 4명", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 85 / Steam 압도적으로 긍정적"],
-    "no-mans-sky": ["2016", "약 50시간 이상", 3, "온라인 다인원", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 71 / Steam 매우 긍정적"],
-    "satisfactory": ["2024", "약 80시간 이상", 3, "온라인 협동", "PC", "지원", "Metacritic 91 / Steam 압도적으로 긍정적"],
-    "hi-fi-rush": ["2023", "약 10-15시간", 3, "싱글플레이", "PC, PlayStation, Xbox", "지원", "Metacritic 89 / Steam 압도적으로 긍정적"],
-    "sea-of-stars": ["2023", "약 30-45시간", 2, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 87 / Steam 매우 긍정적"],
-    "tunic": ["2022", "약 12-25시간", 3, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 85 / Steam 매우 긍정적"],
-    "undertale": ["2015", "약 6-15시간", 2, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 92 / Steam 압도적으로 긍정적"],
-    "dredge": ["2023", "약 10-20시간", 2, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 85 / Steam 압도적으로 긍정적"],
-    "inscryption": ["2021", "약 12-20시간", 3, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 85 / Steam 압도적으로 긍정적"],
-    "cult-of-the-lamb": ["2022", "약 15-35시간", 3, "로컬 협동 2명", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 82 / Steam 매우 긍정적"],
-    "lies-of-p": ["2023", "약 30-50시간", 5, "싱글플레이", "PC, PlayStation, Xbox", "지원", "Metacritic 80 / Steam 매우 긍정적"],
-    "armored-core-vi": ["2023", "약 20-40시간", 4, "온라인 대전", "PC, PlayStation, Xbox", "지원", "Metacritic 86 / Steam 매우 긍정적"],
-    "remnant-2": ["2023", "약 25-60시간", 4, "온라인 협동 최대 3명", "PC, PlayStation, Xbox", "지원", "Metacritic 80 / Steam 매우 긍정적"],
-    "phasmophobia": ["2020", "반복 플레이 중심", 3, "온라인 협동 최대 4명", "PC", "지원", "Metacritic 확인 필요 / Steam 압도적으로 긍정적"],
-    "project-zomboid": ["2013", "약 50시간 이상", 5, "온라인 다인원", "PC", "지원", "Metacritic 확인 필요 / Steam 매우 긍정적"],
-    "binding-of-isaac-rebirth": ["2014", "약 50시간 이상", 4, "로컬 협동 최대 4명", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 86 / Steam 압도적으로 긍정적"],
-    "euro-truck-simulator-2": ["2012", "약 50시간 이상", 2, "온라인 다인원", "PC", "지원", "Metacritic 79 / Steam 압도적으로 긍정적"],
-    "among-us": ["2018", "반복 플레이 중심", 2, "온라인 최대 15명", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 85 / Steam 매우 긍정적"],
-    "papers-please": ["2013", "약 5-10시간", 3, "싱글플레이", "PC, PlayStation, Mobile", "지원", "Metacritic 85 / Steam 압도적으로 긍정적"],
-    "hotline-miami": ["2012", "약 5-10시간", 4, "싱글플레이", "PC, PlayStation, Switch", "지원", "Metacritic 85 / Steam 압도적으로 긍정적"],
-    "ftl": ["2012", "약 10-40시간", 4, "싱글플레이", "PC, Mobile", "지원", "Metacritic 84 / Steam 압도적으로 긍정적"],
-    "stanley-parable-ultra-deluxe": ["2022", "약 3-8시간", 1, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 90 / Steam 압도적으로 긍정적"],
-    "a-short-hike": ["2019", "약 2-5시간", 1, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 88 / Steam 압도적으로 긍정적"],
-    "spiritfarer": ["2020", "약 25-40시간", 2, "로컬 협동 2명", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 84 / Steam 압도적으로 긍정적"],
-    "inside": ["2016", "약 3-5시간", 2, "싱글플레이", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 91 / Steam 압도적으로 긍정적"],
-    "limbo": ["2010", "약 3-5시간", 2, "싱글플레이", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 88 / Steam 압도적으로 긍정적"],
-    "fez": ["2013", "약 8-15시간", 3, "싱글플레이", "PC, PlayStation, Xbox, Switch, Mobile", "미지원", "Metacritic 91 / Steam 매우 긍정적"],
-    "spelunky-2": ["2020", "약 20-80시간", 5, "온라인/로컬 협동 최대 4명", "PC, PlayStation, Switch", "지원", "Metacritic 91 / Steam 매우 긍정적"],
-    "shovel-knight-treasure-trove": ["2014", "약 20-40시간", 3, "로컬 협동 2명", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 86 / Steam 압도적으로 긍정적"],
-    "katana-zero": ["2019", "약 5-10시간", 4, "싱글플레이", "PC, Xbox, Switch", "지원", "Metacritic 83 / Steam 압도적으로 긍정적"],
-    "hyper-light-drifter": ["2016", "약 8-15시간", 4, "로컬 협동 2명", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 84 / Steam 매우 긍정적"],
-    "enter-the-gungeon": ["2016", "약 30시간 이상", 4, "로컬 협동 2명", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 84 / Steam 압도적으로 긍정적"],
-    "darkest-dungeon": ["2016", "약 50시간 이상", 5, "싱글플레이", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 84 / Steam 매우 긍정적"],
-    "firewatch": ["2016", "약 4-6시간", 1, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 81 / Steam 매우 긍정적"],
-    "gris": ["2018", "약 3-5시간", 1, "싱글플레이", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 83 / Steam 압도적으로 긍정적"],
-    "edith-finch": ["2017", "약 2-3시간", 1, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 88 / Steam 압도적으로 긍정적"],
-    "baba-is-you": ["2019", "약 20-40시간", 4, "싱글플레이", "PC, Switch, Mobile", "지원", "Metacritic 87 / Steam 압도적으로 긍정적"],
-    "untitled-goose-game": ["2019", "약 3-6시간", 1, "로컬 협동 2명", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 81 / Steam 매우 긍정적"],
-    "loop-hero": ["2021", "약 20-40시간", 3, "싱글플레이", "PC, Xbox, Switch, Mobile", "지원", "Metacritic 82 / Steam 매우 긍정적"],
-    "rain-world": ["2017", "약 20-50시간", 5, "로컬 협동 최대 4명", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 66 / Steam 매우 긍정적"],
-    "night-in-the-woods": ["2017", "약 8-12시간", 1, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 88 / Steam 매우 긍정적"],
-    "oxenfree": ["2016", "약 4-6시간", 1, "싱글플레이", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 80 / Steam 매우 긍정적"],
-    "crypt-of-the-necrodancer": ["2015", "약 15-40시간", 4, "로컬 협동 2명", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 87 / Steam 압도적으로 긍정적"],
-    "superhot": ["2016", "약 3-8시간", 3, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 82 / Steam 매우 긍정적"],
-    "brotato": ["2023", "약 20-60시간", 3, "로컬 협동 최대 4명", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 82 / Steam 압도적으로 긍정적"],
-    "unpacking": ["2021", "약 3-5시간", 1, "싱글플레이", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 84 / Steam 압도적으로 긍정적"],
-    "dorfromantik": ["2022", "약 10-30시간", 2, "싱글플레이", "PC, Switch", "지원", "Metacritic 80 / Steam 압도적으로 긍정적"],
-    "mini-motorways": ["2021", "약 10-30시간", 3, "싱글플레이", "PC, Switch, Mobile", "지원", "Metacritic 87 / Steam 매우 긍정적"]
-  };
   const steamAppIds = {
     "vampire-survivors": "1794680",
     "balatro": "2379780",
@@ -248,6 +133,72 @@
     const koreanTitle = game.titleKo ? `<span class="game-title-ko">${game.titleKo}</span>` : "";
 
     return `<span class="game-title-en">${game.title}</span>${koreanTitle}`;
+  }
+
+  const genreCoverColors = {
+    "Action RPG": "#D94A5C",
+    "RPG": "#6C63FF",
+    "JRPG": "#6C63FF",
+    "Strategy": "#F4B740",
+    "Strategy RPG": "#F4B740",
+    "Card Strategy": "#F4B740",
+    "Simulation": "#38B36B",
+    "Automation": "#38B36B",
+    "Roguelike": "#8E6BFF",
+    "Sandbox": "#4DA3FF",
+    "Open World": "#4DA3FF",
+    "Metroidvania": "#2FA9A6",
+    "Platformer": "#FF8A5C",
+    "Puzzle": "#8E6BFF",
+    "Adventure": "#38B36B",
+    "Action Adventure": "#D94A5C",
+    "Action": "#D94A5C",
+    "Survival": "#38B36B",
+    "Survival Horror": "#5B6472",
+    "Co-op Shooter": "#4DA3FF",
+    "Social Deduction": "#F4B740",
+    "Run and Gun": "#D94A5C"
+  };
+
+  function getGameCoverColor(game) {
+    return genreCoverColors[game.genre] || "#6C63FF";
+  }
+
+  function getGameInitials(game) {
+    const words = game.title.replace(/[^A-Za-z0-9\s]/g, "").trim().split(/\s+/).filter(Boolean);
+
+    if (words.length === 0) {
+      return "?";
+    }
+
+    if (words.length === 1) {
+      return words[0].slice(0, 2).toUpperCase();
+    }
+
+    return (words[0][0] + words[1][0]).toUpperCase();
+  }
+
+  function renderGameCover(game) {
+    const appId = gameCoverAppIds[game.id];
+    const color = getGameCoverColor(game);
+    const initials = getGameInitials(game);
+
+    if (appId) {
+      const src = `https://cdn.akamai.steamstatic.com/steam/apps/${appId}/library_600x900.jpg`;
+
+      return `
+        <div class="game-cover" style="--cover-color:${color}">
+          <img src="${src}" alt="" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('is-broken')">
+          <span class="game-cover-fallback">${initials}</span>
+        </div>
+      `;
+    }
+
+    return `
+      <div class="game-cover game-cover-placeholder" style="--cover-color:${color}">
+        <span>${initials}</span>
+      </div>
+    `;
   }
 
   function getComparableTags(game) {
@@ -500,6 +451,7 @@
 
       return `
         <article class="game-card${isSelected ? " selected" : ""}" data-card-id="${game.id}" role="checkbox" aria-checked="${isSelected}" tabindex="0">
+          ${renderGameCover(game)}
           <div>
             <h3 class="game-title">${renderGameTitle(game)}</h3>
             <div class="meta">
@@ -584,6 +536,7 @@
       <div class="result-list">
         ${recommendations.map((item) => `
           <article class="result-card">
+            ${renderGameCover(item.game)}
             <h3 class="game-title result-title">${renderGameTitle(item.game)}</h3>
             <p class="score">추천 점수 ${item.score}점</p>
             <p>${item.game.description}</p>

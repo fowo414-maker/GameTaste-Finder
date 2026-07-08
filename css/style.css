@@ -2669,6 +2669,40 @@ h3 {
   .game-hover-panel {
     display: none;
   }
+
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  .card-grid .game-card {
+    gap: 4px;
+    min-height: 0;
+    padding: 6px;
+    border-radius: 10px;
+  }
+
+  .card-grid .game-card .meta,
+  .card-grid .game-card .description,
+  .card-grid .game-card .game-detail-link {
+    display: none;
+  }
+
+  .card-grid .game-card .game-title-ko {
+    display: none;
+  }
+
+  .card-grid .game-card .game-title {
+    font-size: 0.7rem;
+    line-height: 1.25;
+  }
+
+  .card-grid .game-card .game-title-en {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
 }
 
 @media (min-width: 761px) and (max-width: 1080px) {

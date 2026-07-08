@@ -43,10 +43,10 @@
 
     for (var row = 0; row < ROWS; row++) {
       var rowT = row / (ROWS - 1);
-      var y0 = height * (0.06 + rowT * 0.94);
-      var amp = 14 + rowT * 56;
+      var y0 = height * (0.04 + rowT * 0.96);
+      var amp = 18 + rowT * 78;
       var alpha = 0.07 + rowT * 0.46;
-      var size = 0.9 + rowT * 1.7;
+      var size = 0.9 + rowT * 1.8;
 
       for (var col = 0; col <= COLS; col++) {
         var colT = col / COLS;

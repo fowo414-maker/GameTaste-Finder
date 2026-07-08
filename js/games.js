@@ -1015,6 +1015,465 @@ const games = [
     tags: ["전략", "교통", "퍼즐", "도시"],
     mood: ["집중", "영리함"],
     description: "도로망을 설계해 도시의 교통 흐름을 유지하는 전략 퍼즐 게임"
+  },
+  {
+    id: "half-life-2",
+    title: "Half-Life 2",
+    titleKo: "하프라이프 2",
+    genre: "Action",
+    tags: ["FPS", "스토리", "물리엔진", "SF"],
+    mood: ["몰입감", "긴장감"],
+    description: "물리 기반 퍼즐과 밀도 높은 연출이 결합된 SF FPS의 고전"
+  },
+  {
+    id: "portal",
+    title: "Portal",
+    titleKo: "포탈",
+    genre: "Puzzle",
+    tags: ["퍼즐", "물리", "유머", "SF"],
+    mood: ["영리함", "유쾌함"],
+    description: "포털 하나로 세상을 뒤집는 짧고 완벽한 퍼즐 게임"
+  },
+  {
+    id: "counter-strike-2",
+    title: "Counter-Strike 2",
+    titleKo: "카운터 스트라이크 2",
+    genre: "Shooter",
+    tags: ["FPS", "대전", "전술", "e스포츠"],
+    mood: ["긴장감", "집중"],
+    description: "정밀한 조준과 팀 전술이 승부를 가르는 대표 경쟁 FPS"
+  },
+  {
+    id: "gta-5",
+    title: "Grand Theft Auto V",
+    titleKo: "그랜드 테프트 오토 5",
+    genre: "Open World",
+    tags: ["오픈월드", "범죄", "탐험", "다인원"],
+    mood: ["자유로움", "몰입감"],
+    description: "세 주인공의 이야기와 방대한 도시를 자유롭게 오가는 오픈월드 범죄극"
+  },
+  {
+    id: "skyrim",
+    title: "The Elder Scrolls V: Skyrim",
+    titleKo: "엘더스크롤 5: 스카이림",
+    genre: "RPG",
+    tags: ["오픈월드", "판타지", "탐험", "모드"],
+    mood: ["자유로움", "몰입감"],
+    description: "끝없는 탐험과 자유도가 특징인 판타지 오픈월드 RPG의 기준점"
+  },
+  {
+    id: "fallout-4",
+    title: "Fallout 4",
+    titleKo: "폴아웃 4",
+    genre: "RPG",
+    tags: ["오픈월드", "포스트아포칼립스", "제작", "선택"],
+    mood: ["자유로움", "기묘함"],
+    description: "폐허가 된 세계를 탐험하며 기지를 짓고 이야기를 만드는 오픈월드 RPG"
+  },
+  {
+    id: "bioshock-infinite",
+    title: "BioShock Infinite",
+    titleKo: "바이오쇼크 인피니트",
+    genre: "Action",
+    tags: ["FPS", "스토리", "SF", "선택"],
+    mood: ["서사적", "몰입감"],
+    description: "하늘 위 도시를 배경으로 한 반전 가득한 스토리 중심 FPS"
+  },
+  {
+    id: "dishonored-2",
+    title: "Dishonored 2",
+    titleKo: "디스아너드 2",
+    genre: "Action",
+    tags: ["잠입", "액션", "선택", "판타지"],
+    mood: ["전략적", "긴장감"],
+    description: "잠입과 전투 중 원하는 방식을 골라 목표를 처리하는 초자연 액션 게임"
+  },
+  {
+    id: "doom-eternal",
+    title: "DOOM Eternal",
+    titleKo: "둠 이터널",
+    genre: "Action",
+    tags: ["FPS", "전투", "SF", "속도감"],
+    mood: ["빠른", "도전적"],
+    description: "쉴 새 없이 몰아치는 전투 리듬이 중독적인 하드코어 FPS"
+  },
+  {
+    id: "control",
+    title: "Control",
+    titleKo: "컨트롤",
+    genre: "Action Adventure",
+    tags: ["초자연", "전투", "탐험", "SF"],
+    mood: ["기묘함", "몰입감"],
+    description: "초자연적인 힘과 변형되는 공간을 활용하는 3인칭 액션 어드벤처"
+  },
+  {
+    id: "resident-evil-village",
+    title: "Resident Evil Village",
+    titleKo: "바이오하자드 빌리지",
+    genre: "Survival Horror",
+    tags: ["공포", "전투", "자원관리", "탐험"],
+    mood: ["긴장감", "기묘함"],
+    description: "기괴한 마을을 탐험하며 생존을 다투는 1인칭 생존 공포 게임"
+  },
+  {
+    id: "death-stranding",
+    title: "Death Stranding",
+    titleKo: "데스 스트랜딩",
+    genre: "Action Adventure",
+    tags: ["오픈월드", "탐험", "비동기협동", "SF"],
+    mood: ["기묘함", "서사적"],
+    description: "황량한 대지를 가로질러 세상을 다시 연결하는 독특한 배달 어드벤처"
+  },
+  {
+    id: "hogwarts-legacy",
+    title: "Hogwarts Legacy",
+    titleKo: "호그와트 레거시",
+    genre: "Action RPG",
+    tags: ["오픈월드", "판타지", "마법", "탐험"],
+    mood: ["몰입감", "따뜻함"],
+    description: "마법 학교와 주변 세계를 자유롭게 누비는 오픈월드 액션 RPG"
+  },
+  {
+    id: "starfield",
+    title: "Starfield",
+    titleKo: "스타필드",
+    genre: "RPG",
+    tags: ["오픈월드", "SF", "탐험", "우주"],
+    mood: ["자유로움", "모험적"],
+    description: "수많은 행성을 탐험하고 우주선을 꾸미는 방대한 스케일의 SF RPG"
+  },
+  {
+    id: "diablo-4",
+    title: "Diablo IV",
+    titleKo: "디아블로 4",
+    genre: "Action RPG",
+    tags: ["핵앤슬래시", "협동", "장비", "다크판타지"],
+    mood: ["도전적", "몰입감"],
+    description: "끝없는 사냥과 장비 파밍이 중독적인 다크 판타지 액션 RPG"
+  },
+  {
+    id: "path-of-exile",
+    title: "Path of Exile",
+    titleKo: "패스 오브 엑자일",
+    genre: "Action RPG",
+    tags: ["핵앤슬래시", "빌드", "무료", "다크판타지"],
+    mood: ["전략적", "도전적"],
+    description: "복잡하고 깊이 있는 빌드 설계가 매력인 무료 핵앤슬래시 RPG"
+  },
+  {
+    id: "warframe",
+    title: "Warframe",
+    titleKo: "워프레임",
+    genre: "Co-op Shooter",
+    tags: ["협동", "슈터", "SF", "무료"],
+    mood: ["빠른", "몰입감"],
+    description: "다양한 전투 슈트로 임무를 함께 수행하는 무료 협동 슈터"
+  },
+  {
+    id: "apex-legends",
+    title: "Apex Legends",
+    titleKo: "에이펙스 레전드",
+    genre: "Shooter",
+    tags: ["배틀로얄", "슈터", "협동", "무료"],
+    mood: ["빠른", "긴장감"],
+    description: "개성 있는 캐릭터와 팀 전술이 돋보이는 배틀로얄 슈터"
+  },
+  {
+    id: "rust",
+    title: "Rust",
+    titleKo: "러스트",
+    genre: "Survival",
+    tags: ["생존", "제작", "다인원", "PvP"],
+    mood: ["긴장감", "전략적"],
+    description: "자원과 신뢰를 두고 다투는 살벌한 멀티플레이 생존 게임"
+  },
+  {
+    id: "ark-survival-evolved",
+    title: "ARK: Survival Evolved",
+    titleKo: "아크: 서바이벌 이볼브드",
+    genre: "Survival",
+    tags: ["생존", "공룡", "제작", "탐험"],
+    mood: ["모험적", "긴장감"],
+    description: "공룡이 뛰노는 섬에서 길들이고 건설하며 살아남는 생존 게임"
+  },
+  {
+    id: "sons-of-the-forest",
+    title: "Sons Of The Forest",
+    titleKo: "선즈 오브 더 포레스트",
+    genre: "Survival Horror",
+    tags: ["생존", "공포", "제작", "협동"],
+    mood: ["긴장감", "기묘함"],
+    description: "식인종이 도사리는 숲에서 살아남는 오픈월드 생존 공포 게임"
+  },
+  {
+    id: "v-rising",
+    title: "V Rising",
+    titleKo: "브이 라이징",
+    genre: "Survival",
+    tags: ["생존", "뱀파이어", "제작", "PvP"],
+    mood: ["긴장감", "모험적"],
+    description: "뱀파이어가 되어 성을 쌓고 세력을 넓히는 오픈월드 생존 게임"
+  },
+  {
+    id: "dying-light-2",
+    title: "Dying Light 2 Stay Human",
+    titleKo: "다잉 라이트 2",
+    genre: "Action RPG",
+    tags: ["파쿠르", "좀비", "오픈월드", "선택"],
+    mood: ["긴장감", "빠른"],
+    description: "파쿠르로 도시를 누비며 좀비 무리를 피해 다니는 오픈월드 액션"
+  },
+  {
+    id: "left-4-dead-2",
+    title: "Left 4 Dead 2",
+    titleKo: "레프트 4 데드 2",
+    genre: "Co-op Shooter",
+    tags: ["협동", "좀비", "슈터", "생존"],
+    mood: ["긴장감", "빠른"],
+    description: "네 명이 힘을 합쳐 좀비 무리를 뚫고 나아가는 협동 슈터의 명작"
+  },
+  {
+    id: "team-fortress-2",
+    title: "Team Fortress 2",
+    titleKo: "팀 포트리스 2",
+    genre: "Shooter",
+    tags: ["슈터", "대전", "무료", "유머"],
+    mood: ["유쾌함", "빠른"],
+    description: "개성 강한 9개 클래스로 팀 전투를 즐기는 무료 클래식 슈터"
+  },
+  {
+    id: "monster-hunter-rise",
+    title: "Monster Hunter Rise",
+    titleKo: "몬스터 헌터 라이즈",
+    genre: "Action RPG",
+    tags: ["액션", "협동", "전투", "제작"],
+    mood: ["도전적", "모험적"],
+    description: "날렵한 이동기와 사냥 액션이 강화된 몬스터 헌터 시리즈"
+  },
+  {
+    id: "street-fighter-6",
+    title: "Street Fighter 6",
+    titleKo: "스트리트 파이터 6",
+    genre: "Fighting",
+    tags: ["격투", "대전", "e스포츠", "콤보"],
+    mood: ["빠른", "긴장감"],
+    description: "정교한 타격감과 콤보 설계가 살아있는 대표 격투 게임"
+  },
+  {
+    id: "tekken-8",
+    title: "TEKKEN 8",
+    titleKo: "철권 8",
+    genre: "Fighting",
+    tags: ["격투", "대전", "e스포츠", "콤보"],
+    mood: ["빠른", "긴장감"],
+    description: "화려한 3D 격투 액션과 깊이 있는 시스템을 갖춘 철권 시리즈 최신작"
+  },
+  {
+    id: "rocket-league",
+    title: "Rocket League",
+    titleKo: "로켓 리그",
+    genre: "Sports",
+    tags: ["스포츠", "자동차", "대전", "협동"],
+    mood: ["빠른", "유쾌함"],
+    description: "로켓을 단 자동차로 축구를 즐기는 독창적인 스포츠 게임"
+  },
+  {
+    id: "human-fall-flat",
+    title: "Human: Fall Flat",
+    titleKo: "휴먼: 폴 플랫",
+    genre: "Co-op Adventure",
+    tags: ["협동", "물리", "퍼즐", "유머"],
+    mood: ["유쾌함", "창의적"],
+    description: "흐물흐물한 캐릭터로 물리 퍼즐을 함께 풀어가는 코미디 협동 게임"
+  },
+  {
+    id: "overcooked-2",
+    title: "Overcooked! 2",
+    titleKo: "오버쿡드 2",
+    genre: "Co-op Adventure",
+    tags: ["협동", "요리", "파티", "타이밍"],
+    mood: ["유쾌함", "빠른"],
+    description: "정신없는 주방에서 손발을 맞춰야 하는 협동 요리 파티 게임"
+  },
+  {
+    id: "hunt-showdown",
+    title: "Hunt: Showdown 1896",
+    titleKo: "헌트: 쇼다운",
+    genre: "Survival Horror",
+    tags: ["PvPvE", "슈터", "현상금", "긴장감"],
+    mood: ["긴장감", "전략적"],
+    description: "괴물과 다른 플레이어를 동시에 상대하는 하드코어 현상금 사냥 슈터"
+  },
+  {
+    id: "metro-exodus",
+    title: "Metro Exodus",
+    titleKo: "메트로 엑소더스",
+    genre: "Action",
+    tags: ["FPS", "생존", "포스트아포칼립스", "스토리"],
+    mood: ["긴장감", "서사적"],
+    description: "폐허가 된 러시아를 열차로 가로지르는 몰입감 짙은 생존 FPS"
+  },
+  {
+    id: "titanfall-2",
+    title: "Titanfall 2",
+    titleKo: "타이탄폴 2",
+    genre: "Action",
+    tags: ["FPS", "메카", "이동기", "스토리"],
+    mood: ["빠른", "몰입감"],
+    description: "거대 로봇과 날렵한 파쿠르 이동이 결합된 완성도 높은 FPS"
+  },
+  {
+    id: "borderlands-3",
+    title: "Borderlands 3",
+    titleKo: "보더랜드 3",
+    genre: "Action RPG",
+    tags: ["루팅", "협동", "슈터", "유머"],
+    mood: ["유쾌함", "빠른"],
+    description: "수많은 총기를 파밍하며 즐기는 코믹한 협동 루터 슈터"
+  },
+  {
+    id: "deltarune",
+    title: "Deltarune",
+    titleKo: "델타룬",
+    genre: "RPG",
+    tags: ["턴제", "스토리", "선택", "유머"],
+    mood: ["감성적", "기묘함"],
+    description: "언더테일 세계관을 잇는 개성 넘치는 턴제 스토리 RPG"
+  },
+  {
+    id: "cocoon",
+    title: "COCOON",
+    titleKo: "코쿤",
+    genre: "Puzzle",
+    tags: ["퍼즐", "탐험", "세계관", "미니멀"],
+    mood: ["영리함", "몰입감"],
+    description: "세계 속의 세계를 오가며 퍼즐을 풀어가는 미니멀한 탐험 퍼즐"
+  },
+  {
+    id: "chicory",
+    title: "Chicory: A Colorful Tale",
+    titleKo: "치커리: 컬러풀 테일",
+    genre: "Adventure",
+    tags: ["탐험", "그림", "퍼즐", "감성"],
+    mood: ["따뜻함", "감성적"],
+    description: "붓으로 세상에 색을 칠하며 나아가는 따뜻한 탐험 어드벤처"
+  },
+  {
+    id: "neon-white",
+    title: "Neon White",
+    titleKo: "네온 화이트",
+    genre: "Action",
+    tags: ["스피드런", "FPS", "플랫포머", "스토리"],
+    mood: ["빠른", "집중"],
+    description: "카드를 무기와 이동기로 바꿔 쓰는 초고속 스피드런 액션 게임"
+  },
+  {
+    id: "pizza-tower",
+    title: "Pizza Tower",
+    titleKo: "피자 타워",
+    genre: "Platformer",
+    tags: ["플랫포머", "속도감", "픽셀", "유머"],
+    mood: ["빠른", "유쾌함"],
+    description: "끊임없이 질주하는 하이텐션 2D 플랫포머"
+  },
+  {
+    id: "signalis",
+    title: "SIGNALIS",
+    titleKo: "시그널리스",
+    genre: "Survival Horror",
+    tags: ["생존", "공포", "SF", "스토리"],
+    mood: ["긴장감", "기묘함"],
+    description: "레트로 감성의 그래픽과 짙은 분위기가 인상적인 생존 공포 게임"
+  },
+  {
+    id: "pentiment",
+    title: "Pentiment",
+    titleKo: "펜티먼트",
+    genre: "Adventure",
+    tags: ["스토리", "추리", "선택", "역사"],
+    mood: ["서사적", "감성적"],
+    description: "중세 마을의 살인 사건을 추적하는 독특한 그림체의 추리 어드벤처"
+  },
+  {
+    id: "astroneer",
+    title: "Astroneer",
+    titleKo: "애스트로니어",
+    genre: "Sandbox",
+    tags: ["탐험", "제작", "협동", "우주"],
+    mood: ["편안함", "창의적"],
+    description: "행성 지형을 직접 깎고 다지며 탐험하는 아기자기한 우주 샌드박스"
+  },
+  {
+    id: "core-keeper",
+    title: "Core Keeper",
+    titleKo: "코어 키퍼",
+    genre: "Sandbox",
+    tags: ["채굴", "제작", "협동", "탐험"],
+    mood: ["편안함", "몰입감"],
+    description: "지하 동굴을 채굴하고 개척하는 2D 협동 샌드박스 게임"
+  },
+  {
+    id: "raft",
+    title: "Raft",
+    titleKo: "래프트",
+    genre: "Survival",
+    tags: ["생존", "제작", "해양", "협동"],
+    mood: ["편안함", "모험적"],
+    description: "작은 뗏목 하나에서 시작해 바다를 개척하는 협동 생존 게임"
+  },
+  {
+    id: "a-plague-tale-requiem",
+    title: "A Plague Tale: Requiem",
+    titleKo: "어 플레이그 테일: 레퀴엠",
+    genre: "Action Adventure",
+    tags: ["잠입", "스토리", "쥐떼", "가족"],
+    mood: ["서사적", "긴장감"],
+    description: "쥐떼가 뒤덮은 세계에서 남매의 여정을 그리는 잠입 액션 어드벤처"
+  },
+  {
+    id: "little-nightmares-2",
+    title: "Little Nightmares II",
+    titleKo: "리틀 나이트메어 2",
+    genre: "Puzzle",
+    tags: ["퍼즐", "공포", "플랫포머", "동행"],
+    mood: ["기묘함", "긴장감"],
+    description: "기괴한 세계를 동료와 함께 헤쳐나가는 공포 퍼즐 플랫포머"
+  },
+  {
+    id: "kena-bridge-of-spirits",
+    title: "Kena: Bridge of Spirits",
+    titleKo: "케나: 브릿지 오브 스피릿",
+    genre: "Action Adventure",
+    tags: ["전투", "탐험", "정령", "감성"],
+    mood: ["따뜻함", "감성적"],
+    description: "귀여운 정령들과 함께 잊혀진 마을을 치유하는 액션 어드벤처"
+  },
+  {
+    id: "against-the-storm",
+    title: "Against the Storm",
+    titleKo: "어게인스트 더 스톰",
+    genre: "Strategy",
+    tags: ["도시건설", "로그라이크", "자원관리", "다크판타지"],
+    mood: ["전략적", "집중"],
+    description: "폭풍이 몰아치는 세계에서 반복해서 마을을 재건하는 전략 로그라이크"
+  },
+  {
+    id: "terra-nil",
+    title: "Terra Nil",
+    titleKo: "테라 닐",
+    genre: "Simulation",
+    tags: ["환경", "빌드", "역발상", "힐링"],
+    mood: ["편안함", "창의적"],
+    description: "황무지를 되살리고 흔적 없이 떠나는 역발상 환경 시뮬레이션"
+  },
+  {
+    id: "wukong",
+    title: "Black Myth: Wukong",
+    titleKo: "검은 신화: 오공",
+    genre: "Action RPG",
+    tags: ["소울라이크", "전투", "신화", "보스전"],
+    mood: ["도전적", "몰입감"],
+    description: "서유기를 재해석한 화려한 액션과 웅장한 보스전이 특징인 소울라이크"
   }
 ];
 
@@ -1131,7 +1590,58 @@ const gameDetails = {
   "brotato": ["2023", "약 20-60시간", 3, "로컬 협동 최대 4명", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 76 / Steam 압도적으로 긍정적"],
   "unpacking": ["2021", "약 3-5시간", 1, "싱글플레이", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 83 / Steam 압도적으로 긍정적"],
   "dorfromantik": ["2022", "약 10-30시간", 2, "싱글플레이", "PC, Switch", "지원", "Metacritic 80 / Steam 압도적으로 긍정적"],
-  "mini-motorways": ["2021", "약 10-30시간", 3, "싱글플레이", "PC, PlayStation, Switch, Mobile", "지원", "Metacritic 87 / Steam 매우 긍정적"]
+  "mini-motorways": ["2021", "약 10-30시간", 3, "싱글플레이", "PC, PlayStation, Switch, Mobile", "지원", "Metacritic 87 / Steam 매우 긍정적"],
+  "half-life-2": ["2004", "약 12-15시간", 3, "싱글플레이", "PC", "지원", "Metacritic 96 / Steam 압도적으로 긍정적"],
+  "portal": ["2007", "약 3-4시간", 2, "싱글플레이", "PC", "지원", "Metacritic 90 / Steam 압도적으로 긍정적"],
+  "counter-strike-2": ["2023", "제한없음", 4, "온라인 대전", "PC", "지원", "Metacritic 확인 필요 / Steam 매우 긍정적"],
+  "gta-5": ["2015", "약 30-100시간", 3, "싱글플레이 및 온라인 다인원", "PC, PlayStation, Xbox", "지원", "Metacritic 확인 필요 / Steam 매우 긍정적"],
+  "skyrim": ["2011", "약 100시간 이상", 3, "싱글플레이", "PC, PlayStation, Xbox, Switch", "미지원", "Metacritic 94 / Steam 압도적으로 긍정적"],
+  "fallout-4": ["2015", "약 80-150시간", 3, "싱글플레이", "PC, PlayStation, Xbox", "미지원", "Metacritic 84 / Steam 매우 긍정적"],
+  "bioshock-infinite": ["2013", "약 12시간", 3, "싱글플레이", "PC, PlayStation, Xbox", "지원", "Metacritic 94 / Steam 압도적으로 긍정적"],
+  "dishonored-2": ["2016", "약 15-20시간", 4, "싱글플레이", "PC, PlayStation, Xbox", "미지원", "Metacritic 86 / Steam 매우 긍정적"],
+  "doom-eternal": ["2020", "약 20시간", 4, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 88 / Steam 압도적으로 긍정적"],
+  "control": ["2019", "약 12-20시간", 3, "싱글플레이", "PC, PlayStation, Xbox", "지원", "Metacritic 85 / Steam 매우 긍정적"],
+  "resident-evil-village": ["2021", "약 10-12시간", 4, "싱글플레이", "PC, PlayStation, Xbox", "지원", "Metacritic 83 / Steam 매우 긍정적"],
+  "death-stranding": ["2022", "약 40-60시간", 3, "싱글플레이", "PC, PlayStation", "지원", "Metacritic 85 / Steam 매우 긍정적"],
+  "hogwarts-legacy": ["2023", "약 35-50시간", 3, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 83 / Steam 매우 긍정적"],
+  "starfield": ["2023", "약 40-100시간", 3, "싱글플레이", "PC, Xbox", "미지원", "Metacritic 87 / Steam 복합적"],
+  "diablo-4": ["2023", "약 30시간 이상", 4, "온라인 협동 최대 4명", "PC, PlayStation, Xbox", "지원", "Metacritic 88 / Steam 복합적"],
+  "path-of-exile": ["2013", "제한없음", 5, "온라인 협동 다인원", "PC, PlayStation, Xbox", "지원", "Metacritic 86 / Steam 매우 긍정적"],
+  "warframe": ["2013", "제한없음", 4, "온라인 협동 최대 4명", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 69 / Steam 매우 긍정적"],
+  "apex-legends": ["2020", "제한없음", 4, "온라인 3인 스쿼드 대전", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 88 / Steam 매우 긍정적"],
+  "rust": ["2018", "제한없음", 5, "온라인 다인원", "PC, PlayStation, Xbox", "지원", "Metacritic 69 / Steam 매우 긍정적"],
+  "ark-survival-evolved": ["2017", "약 60시간 이상", 4, "온라인 다인원", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 70 / Steam 복합적"],
+  "sons-of-the-forest": ["2024", "약 15-25시간", 4, "온라인 협동 최대 8명", "PC, PlayStation", "지원", "Metacritic 86 / Steam 매우 긍정적"],
+  "v-rising": ["2024", "약 30-50시간", 4, "온라인 협동 및 대전", "PC, PlayStation, Xbox", "지원", "Metacritic 85 / Steam 매우 긍정적"],
+  "dying-light-2": ["2022", "약 20-30시간", 3, "온라인 협동 최대 4명", "PC, PlayStation, Xbox", "지원", "Metacritic 77 / Steam 대체로 긍정적"],
+  "left-4-dead-2": ["2009", "약 10-15시간", 3, "온라인 협동 최대 4명", "PC", "지원", "Metacritic 89 / Steam 압도적으로 긍정적"],
+  "team-fortress-2": ["2007", "제한없음", 3, "온라인 대전", "PC", "지원", "Metacritic 92 / Steam 압도적으로 긍정적"],
+  "monster-hunter-rise": ["2022", "약 40-80시간", 4, "온라인 협동 최대 4명", "PC, Switch, PlayStation, Xbox", "지원", "Metacritic 86 / Steam 매우 긍정적"],
+  "street-fighter-6": ["2023", "제한없음", 4, "온라인 대전", "PC, PlayStation, Xbox", "지원", "Metacritic 92 / Steam 매우 긍정적"],
+  "tekken-8": ["2024", "제한없음", 4, "온라인 대전", "PC, PlayStation, Xbox", "지원", "Metacritic 91 / Steam 매우 긍정적"],
+  "rocket-league": ["2015", "제한없음", 3, "온라인 대전 및 협동", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 86 / Steam 매우 긍정적"],
+  "human-fall-flat": ["2016", "약 5-8시간", 1, "온라인 협동 최대 8명", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 70 / Steam 매우 긍정적"],
+  "overcooked-2": ["2018", "약 10시간", 3, "온라인 협동 최대 4명", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 81 / Steam 매우 긍정적"],
+  "hunt-showdown": ["2019", "제한없음", 5, "온라인 협동/대전 최대 3인 팀", "PC, PlayStation, Xbox", "지원", "Metacritic 81 / Steam 매우 긍정적"],
+  "metro-exodus": ["2019", "약 15시간", 3, "싱글플레이", "PC, PlayStation, Xbox", "지원", "Metacritic 85 / Steam 매우 긍정적"],
+  "titanfall-2": ["2016", "약 6-8시간", 3, "싱글플레이 및 온라인 대전", "PC, PlayStation, Xbox", "미지원", "Metacritic 86 / Steam 압도적으로 긍정적"],
+  "borderlands-3": ["2019", "약 30-35시간", 3, "온라인 협동 최대 4명", "PC, PlayStation, Xbox", "지원", "Metacritic 81 / Steam 대체로 긍정적"],
+  "deltarune": ["2025", "약 15-20시간", 2, "싱글플레이", "PC, PlayStation, Xbox, Switch", "미지원", "Metacritic 86 / Steam 압도적으로 긍정적"],
+  "cocoon": ["2023", "약 5-6시간", 3, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 88 / Steam 매우 긍정적"],
+  "chicory": ["2021", "약 15-20시간", 2, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 90 / Steam 압도적으로 긍정적"],
+  "neon-white": ["2022", "약 6-8시간", 4, "싱글플레이", "PC, Switch", "지원", "Metacritic 89 / Steam 압도적으로 긍정적"],
+  "pizza-tower": ["2023", "약 8-10시간", 4, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 89 / Steam 압도적으로 긍정적"],
+  "signalis": ["2022", "약 8-10시간", 3, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 81 / Steam 매우 긍정적"],
+  "pentiment": ["2022", "약 15-20시간", 2, "싱글플레이", "PC, Xbox", "지원", "Metacritic 88 / Steam 매우 긍정적"],
+  "astroneer": ["2019", "약 15-25시간", 2, "온라인 협동 다인원", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 71 / Steam 매우 긍정적"],
+  "core-keeper": ["2024", "약 30-50시간", 3, "온라인 협동 최대 8명", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 86 / Steam 매우 긍정적"],
+  "raft": ["2022", "약 20-30시간", 2, "온라인 협동 다인원", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 확인 필요 / Steam 매우 긍정적"],
+  "a-plague-tale-requiem": ["2022", "약 15시간", 3, "싱글플레이", "PC, PlayStation, Xbox", "지원", "Metacritic 82 / Steam 매우 긍정적"],
+  "little-nightmares-2": ["2021", "약 6-8시간", 3, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 83 / Steam 매우 긍정적"],
+  "kena-bridge-of-spirits": ["2021", "약 12-15시간", 3, "싱글플레이", "PC, PlayStation", "지원", "Metacritic 83 / Steam 매우 긍정적"],
+  "against-the-storm": ["2023", "약 30시간 이상", 4, "싱글플레이", "PC", "지원", "Metacritic 91 / Steam 압도적으로 긍정적"],
+  "terra-nil": ["2023", "약 5-8시간", 2, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 79 / Steam 매우 긍정적"],
+  "wukong": ["2024", "약 25-35시간", 4, "싱글플레이", "PC, PlayStation, Xbox", "지원", "Metacritic 82 / Steam 매우 긍정적"]
 };
 
 const gameCoverAppIds = {
@@ -1239,5 +1749,77 @@ const gameCoverAppIds = {
   "brotato": 1942280,
   "unpacking": 1135690,
   "dorfromantik": 1455840,
-  "mini-motorways": 1127500
+  "mini-motorways": 1127500,
+  "half-life-2": 220,
+  "portal": 400,
+  "counter-strike-2": 730,
+  "gta-5": 3240220,
+  "skyrim": 489830,
+  "fallout-4": 377160,
+  "bioshock-infinite": 8870,
+  "dishonored-2": 403640,
+  "doom-eternal": 782330,
+  "control": 870780,
+  "resident-evil-village": 1196590,
+  "death-stranding": 1850570,
+  "hogwarts-legacy": 990080,
+  "starfield": 1716740,
+  "diablo-4": 2344520,
+  "path-of-exile": 238960,
+  "warframe": 230410,
+  "apex-legends": 1172470,
+  "rust": 252490,
+  "ark-survival-evolved": 346110,
+  "sons-of-the-forest": 1326470,
+  "v-rising": 1604030,
+  "dying-light-2": 534380,
+  "left-4-dead-2": 550,
+  "team-fortress-2": 440,
+  "monster-hunter-rise": 1446780,
+  "street-fighter-6": 1364780,
+  "tekken-8": 1778820,
+  "rocket-league": 252950,
+  "human-fall-flat": 477160,
+  "overcooked-2": 728880,
+  "hunt-showdown": 594650,
+  "metro-exodus": 412020,
+  "titanfall-2": 1237970,
+  "borderlands-3": 397540,
+  "deltarune": 1671210,
+  "cocoon": 1497440,
+  "chicory": 1123450,
+  "neon-white": 1533420,
+  "pizza-tower": 2231450,
+  "signalis": 1262350,
+  "pentiment": 1205520,
+  "astroneer": 361420,
+  "core-keeper": 1621690,
+  "raft": 648800,
+  "a-plague-tale-requiem": 1182900,
+  "little-nightmares-2": 860510,
+  "kena-bridge-of-spirits": 1954200,
+  "against-the-storm": 1336490,
+  "terra-nil": 1593030,
+  "wukong": 2358720
+};
+
+const gameCoverUrls = {
+  "animal-crossing": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70010000027619/9989957eae3a6b545194c42fec2071675c34aadacd65e6b33fdfe7b3b6a86c3a",
+  "bloodborne": "https://image.api.playstation.com/cdn/UP9000/CUSA00900_00/9EJsLXyKS0S1BRey5nwQBOuYr6EDRbGX.png",
+  "fire-emblem-three-houses": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70010000007606/c499fdc86779ca95e61daed1f94288a245d196360d278138e56d44097d1a3878",
+  "super-mario-odyssey": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70010000001130/c42553b4fd0312c31e70ec7468c6c9bccd739f340152925b9600631f2d29f8b5",
+  "metroid-dread": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70010000042924/4f2c683f0196210ec212a2ab8bf6952223c0b88e827b820953407a2ba61c9cb2",
+  "zelda-breath-of-the-wild": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58",
+  "zelda-tears-of-the-kingdom": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70010000063714/fb30eab428df3fc993b41c76e20f72e4d76d49734d17d31996b5ab61c414b117"
+};
+
+const gameCoverLocalFiles = {
+  "minecraft": "minecraft.jpg"
+};
+
+const gameCoverFocus = {
+  "animal-crossing": "68%",
+  "minecraft": "52%",
+  "zelda-breath-of-the-wild": "30%",
+  "zelda-tears-of-the-kingdom": "73%"
 };

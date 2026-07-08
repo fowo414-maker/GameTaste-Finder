@@ -22,6 +22,7 @@
   <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/games.js" defer></script>
+  <script src="js/game-cover.js" defer></script>
   <script src="js/app.js" defer></script>
   <script src="js/hero-terrain.js" defer></script>
 </head>
@@ -43,7 +44,6 @@
 
   <main>
     <section class="hero section">
-      <div class="hero-glow" aria-hidden="true"></div>
       <canvas class="hero-terrain" id="heroTerrain" aria-hidden="true"></canvas>
       <div class="container hero-content">
         <div>
@@ -117,24 +117,31 @@
           <div>
             <p class="eyebrow">Step 2</p>
             <h2 id="recommend-title">추천 결과 분석</h2>
-            <p class="muted">선택한 게임을 기준으로 최대 5개의 게임을 보여줍니다.</p>
+            <p class="muted">선택한 게임을 기준으로 최대 8개의 게임을 보여줍니다.</p>
           </div>
-          <button id="recommendButton" class="primary-button" type="button">추천 게임 확인하기</button>
+          <button id="recommendButton" class="primary-button neon-button" type="button">
+            <span class="neon-edge neon-edge-top" aria-hidden="true"></span>
+            <span class="button-label">추천 게임 확인하기</span>
+            <span class="neon-edge neon-edge-bottom" aria-hidden="true"></span>
+          </button>
         </div>
         <div id="result" class="result-area" aria-live="polite">
-          <p class="empty-message">게임을 선택한 뒤 추천 분석 버튼을 눌러주세요.</p>
+          <p class="empty-message">게임을 3개 이상 선택한 뒤 추천 분석 버튼을 눌러주세요.</p>
         </div>
       </div>
     </section>
 
-    <section class="section section-soft genre-section" aria-labelledby="genre-intro-title">
+    <section class="section section-soft genre-section collapsible-section" aria-labelledby="genre-intro-title">
       <div class="container">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Genres</p>
-            <h2 id="genre-intro-title">대표 장르 소개</h2>
+            <h2 id="genre-intro-title"><button class="collapsible-toggle" type="button" aria-expanded="false" aria-controls="genre-intro-body"><span>대표 장르 소개</span><span class="collapsible-chevron" aria-hidden="true"></span></button></h2>
+            <p class="section-teaser">액션 RPG부터 샌드박스까지, 자주 찾는 6가지 장르를 눌러서 살펴보세요.</p>
           </div>
         </div>
+        <div class="collapsible-body" id="genre-intro-body" role="region" aria-labelledby="genre-intro-title">
+          <div class="collapsible-body-inner">
         <div class="genre-explorer" aria-label="대표 장르 탐색">
           <article class="genre-panel action-rpg">
             <div class="genre-panel-summary">
@@ -215,66 +222,121 @@
             </div>
           </article>
         </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="recommend-logic-title">
+    <section class="section collapsible-section" aria-labelledby="recommend-logic-title">
       <div class="container">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Recommendation Logic</p>
-            <h2 id="recommend-logic-title">게임 추천이 정확해지는 이유</h2>
+            <h2 id="recommend-logic-title"><button class="collapsible-toggle" type="button" aria-expanded="false" aria-controls="recommend-logic-body"><span>게임 추천이 정확해지는 이유</span><span class="collapsible-chevron" aria-hidden="true"></span></button></h2>
+            <p class="section-teaser">추천 점수가 어떻게 계산되는지, 그 안을 4단계로 들여다보세요.</p>
           </div>
         </div>
+        <div class="collapsible-body" id="recommend-logic-body" role="region" aria-labelledby="recommend-logic-title">
+          <div class="collapsible-body-inner">
         <div class="feature-grid">
           <article class="guide-card">
+            <span class="guide-icon" aria-hidden="true">🧭</span>
             <h3>장르 분석</h3>
-            <p class="muted">장르는 게임의 기본 플레이 구조를 보여줍니다. 액션 RPG, 전략, 시뮬레이션처럼 장르가 비슷하면 조작 방식과 진행 흐름도 비슷한 경우가 많아 취향을 판단하는 첫 기준이 됩니다.</p>
+            <p class="muted">장르는 게임의 뼈대입니다. 액션 RPG, 전략, 시뮬레이션처럼 장르가 같으면 조작 방식과 진행 흐름도 비슷하게 흘러가는 경우가 많아, 취향을 판단하는 첫 번째 기준으로 삼기에 가장 안정적입니다.</p>
+            <p class="guide-note">같은 장르 안에서는 실패할 확률이 가장 낮습니다.</p>
           </article>
           <article class="guide-card">
+            <span class="guide-icon" aria-hidden="true">🏷</span>
             <h3>태그 분석</h3>
-            <p class="muted">태그는 장르보다 세부적인 취향을 보여줍니다. 오픈월드, 협동, 로그라이크, 스토리 같은 요소를 함께 비교하면 같은 장르 안에서도 더 가까운 게임을 찾기 쉽습니다.</p>
+            <p class="muted">태그는 장르보다 촘촘한 그물입니다. 오픈월드, 협동, 로그라이크, 스토리 같은 키워드를 겹쳐보면 같은 장르 안에서도 진짜 취향에 가까운 게임만 골라낼 수 있습니다.</p>
+            <p class="guide-note">장르가 놓친 디테일을 태그가 잡아냅니다.</p>
           </article>
           <article class="guide-card">
+            <span class="guide-icon" aria-hidden="true">🕹</span>
             <h3>플레이 스타일</h3>
-            <p class="muted">싱글플레이, 협동, 스토리 중심, 전투 중심처럼 플레이 스타일은 실제 만족도에 큰 영향을 줍니다. 같은 게임이라도 혼자 몰입하고 싶은지, 친구와 함께 즐기고 싶은지에 따라 추천 기준이 달라집니다.</p>
+            <p class="muted">혼자 몰입하고 싶은지, 친구와 왁자지껄 즐기고 싶은지에 따라 같은 게임도 완전히 다르게 느껴집니다. 싱글플레이·협동·스토리·전투 중심 같은 스타일 비교가 실제 만족도를 좌우합니다.</p>
+            <p class="guide-note">결국 만족도를 가르는 건 스타일입니다.</p>
           </article>
           <article class="guide-card">
+            <span class="guide-icon" aria-hidden="true">🧩</span>
             <h3>여러 게임을 선택하면 좋은 이유</h3>
-            <p class="muted">여러 게임을 선택하면 공통적으로 반복되는 장르, 태그, 분위기를 더 잘 파악할 수 있습니다. 한 게임만 고를 때보다 일시적인 취향이 줄어들어 추천 결과가 안정적으로 나옵니다.</p>
+            <p class="muted">한 게임만으로는 그날의 기분이 반영될 수 있습니다. 여러 게임을 함께 고르면 반복되는 장르·태그·분위기가 뚜렷해지고, 추천 결과는 그만큼 흔들림 없이 안정적으로 계산됩니다.</p>
+            <p class="guide-note">3개 이상 고를수록 추천의 정확도가 올라갑니다.</p>
           </article>
+        </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="selection-tips-title">
+    <section class="section collapsible-section" aria-labelledby="selection-tips-title">
       <div class="container">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Tips</p>
-            <h2 id="selection-tips-title">게임을 선택할 때 참고하면 좋은 팁</h2>
+            <h2 id="selection-tips-title"><button class="collapsible-toggle" type="button" aria-expanded="false" aria-controls="selection-tips-body"><span>게임을 선택할 때 참고하면 좋은 팁</span><span class="collapsible-chevron" aria-hidden="true"></span></button></h2>
+            <p class="section-teaser">취향 유형별로 어떤 태그부터 봐야 하는지 정리했습니다.</p>
           </div>
         </div>
+        <div class="collapsible-body" id="selection-tips-body" role="region" aria-labelledby="selection-tips-title">
+          <div class="collapsible-body-inner">
         <div class="feature-grid">
           <article class="guide-card">
+            <span class="guide-icon" aria-hidden="true">🗺</span>
             <h3>오픈월드를 좋아한다면</h3>
             <p class="muted">맵을 자유롭게 돌아다니고 숨겨진 장소를 발견하는 재미를 중시하는지 확인해 보세요. 메인 퀘스트보다 탐험 자체에서 즐거움을 느낀다면 오픈월드 태그가 좋은 기준이 됩니다.</p>
+            <p class="guide-note">탐험이 목적이라면 오픈월드 태그부터 확인하세요.</p>
           </article>
           <article class="guide-card">
+            <span class="guide-icon" aria-hidden="true">🤝</span>
             <h3>협동 게임을 좋아한다면</h3>
             <p class="muted">멀티플레이 인원과 협동 방식이 중요합니다. 단순히 함께 접속하는 게임인지, 역할을 나누고 소통해야 재미가 커지는 게임인지 살펴보면 선택에 도움이 됩니다.</p>
+            <p class="guide-note">몇 명이, 어떻게 함께하는지가 재미를 가릅니다.</p>
           </article>
           <article class="guide-card">
+            <span class="guide-icon" aria-hidden="true">📖</span>
             <h3>스토리 중심 게임을 찾는다면</h3>
             <p class="muted">대화, 선택, 인물 관계, 엔딩 분기 같은 요소가 있는지 확인해 보세요. 전투보다 서사와 분위기에 몰입하고 싶을 때는 스토리 태그가 있는 게임이 잘 맞습니다.</p>
+            <p class="guide-note">전투보다 서사에 끌린다면 스토리 태그를 우선하세요.</p>
           </article>
           <article class="guide-card">
+            <span class="guide-icon" aria-hidden="true">🔥</span>
             <h3>어려운 게임을 좋아한다면</h3>
             <p class="muted">난이도 높은 게임은 반복 학습과 보스 공략에서 만족감이 큽니다. 다만 피로도가 높을 수 있으므로 플레이 시간과 세이브 구조도 함께 확인하는 것이 좋습니다.</p>
+            <p class="guide-note">반복 학습이 즐거운 사람에게 어울리는 태그입니다.</p>
           </article>
           <article class="guide-card">
+            <span class="guide-icon" aria-hidden="true">⏱</span>
             <h3>짧게 즐길 게임을 찾는다면</h3>
             <p class="muted">플레이 시간이 짧거나 한 판 단위로 끝나는 게임을 고르면 부담이 적습니다. 퍼즐, 플랫포머, 로그라이크처럼 짧게 진행해도 성취감이 있는 장르를 살펴보세요.</p>
+            <p class="guide-note">부담 없이 성취감을 느끼고 싶을 때 딱입니다.</p>
+          </article>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="game-guide-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Guide</p>
+            <h2 id="game-guide-title">게임을 고를 때 참고하면 좋은 기준</h2>
+          </div>
+        </div>
+        <div class="info-grid">
+          <article class="guide-card">
+            <h3>장르가 비슷한 게임부터 살펴보기</h3>
+            <p class="muted">이미 재미있게 했던 장르를 기준으로 살펴보면 플레이 방식이 크게 벗어나지 않아 실패 확률을 줄일 수 있습니다.</p>
+          </article>
+          <article class="guide-card">
+            <h3>태그로 플레이 스타일 확인하기</h3>
+            <p class="muted">오픈월드, 협동, 로그라이크, 스토리 같은 태그는 실제로 어떤 방식으로 즐기는 게임인지 판단하는 데 중요한 단서가 됩니다.</p>
+          </article>
+          <article class="guide-card">
+            <h3>플레이 시간과 난이도 확인하기</h3>
+            <p class="muted">짧게 즐길 게임인지, 오래 몰입할 게임인지, 지금 원하는 난이도와 맞는지 확인하면 더 편하게 선택할 수 있습니다.</p>
           </article>
         </div>
       </div>
@@ -316,31 +378,6 @@
           <article class="faq-item">
             <button class="faq-question" type="button" aria-expanded="false">무료인가요?</button>
             <div class="faq-answer"><p>현재 GameTaste Finder는 무료로 사용할 수 있는 정적 게임 추천 사이트입니다.</p></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="game-guide-title">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Guide</p>
-            <h2 id="game-guide-title">게임을 고를 때 참고하면 좋은 기준</h2>
-          </div>
-        </div>
-        <div class="info-grid">
-          <article class="guide-card">
-            <h3>장르가 비슷한 게임부터 살펴보기</h3>
-            <p class="muted">이미 재미있게 했던 장르를 기준으로 살펴보면 플레이 방식이 크게 벗어나지 않아 실패 확률을 줄일 수 있습니다.</p>
-          </article>
-          <article class="guide-card">
-            <h3>태그로 플레이 스타일 확인하기</h3>
-            <p class="muted">오픈월드, 협동, 로그라이크, 스토리 같은 태그는 실제로 어떤 방식으로 즐기는 게임인지 판단하는 데 중요한 단서가 됩니다.</p>
-          </article>
-          <article class="guide-card">
-            <h3>플레이 시간과 난이도 확인하기</h3>
-            <p class="muted">짧게 즐길 게임인지, 오래 몰입할 게임인지, 지금 원하는 난이도와 맞는지 확인하면 더 편하게 선택할 수 있습니다.</p>
           </article>
         </div>
       </div>

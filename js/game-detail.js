@@ -80,4 +80,58 @@
 
   titleKoEl.insertAdjacentElement("afterend", statStrip);
   titleKoEl.insertAdjacentElement("afterend", badgeRow);
+
+  const eyebrowEl = document.querySelector(".eyebrow");
+  const h1El = document.querySelector(".container.narrow h1");
+
+  if (eyebrowEl && h1El && typeof buildGameCoverHtml === "function") {
+    const heading = document.createElement("div");
+    heading.className = "detail-heading";
+
+    const coverWrap = document.createElement("div");
+    coverWrap.className = "detail-cover";
+    coverWrap.innerHTML = buildGameCoverHtml(game);
+
+    const textWrap = document.createElement("div");
+    textWrap.className = "detail-heading-text";
+    textWrap.appendChild(h1El);
+    textWrap.appendChild(titleKoEl);
+
+    heading.appendChild(coverWrap);
+    heading.appendChild(textWrap);
+    eyebrowEl.insertAdjacentElement("afterend", heading);
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reduceMotion) {
+      heading.classList.add("is-visible");
+    } else {
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
+          setTimeout(() => heading.classList.add("is-visible"), 60);
+        });
+      });
+    }
+  }
+
+  if (typeof buildGameCoverHtml === "function" && Array.isArray(games)) {
+    document.querySelectorAll(".similar-game-card").forEach((card) => {
+      const link = card.querySelector(".game-detail-link");
+      const titleEl = card.querySelector("h3");
+
+      if (!link || !titleEl) {
+        return;
+      }
+
+      const href = link.getAttribute("href") || "";
+      const slug = href.replace(/^.*\//, "").replace(/\.html.*$/, "");
+      const similarGame = games.find((item) => item.id === slug);
+
+      if (!similarGame) {
+        return;
+      }
+
+      titleEl.insertAdjacentHTML("beforebegin", buildGameCoverHtml(similarGame));
+    });
+  }
 })();

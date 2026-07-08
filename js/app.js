@@ -15,6 +15,7 @@
 
   const siteHeader = document.querySelector(".site-header");
   const initialGameLimit = 20;
+  const minSelectedGames = 3;
   const selectedIds = new Set();
   let isExpanded = false;
   let lastScrollY = window.scrollY;
@@ -28,11 +29,14 @@
     "Card Strategy": ["전략"],
     "Co-op Shooter": ["협동", "슈터"],
     "Action": ["액션"],
+    "Fighting": ["격투"],
     "Open World": ["오픈월드"],
     "Platformer": ["플랫포머"],
     "Puzzle": ["퍼즐"],
     "Roguelike": ["로그라이크"],
     "Run and Gun": ["액션"],
+    "Shooter": ["슈터"],
+    "Sports": ["스포츠"],
     "Strategy": ["전략"],
     "Strategy RPG": ["전략"],
     "Survival": ["생존"],
@@ -93,7 +97,58 @@
     "brotato": "1942280",
     "unpacking": "1135690",
     "dorfromantik": "1455840",
-    "mini-motorways": "1127500"
+    "mini-motorways": "1127500",
+    "half-life-2": "220",
+    "portal": "400",
+    "counter-strike-2": "730",
+    "gta-5": "3240220",
+    "skyrim": "489830",
+    "fallout-4": "377160",
+    "bioshock-infinite": "8870",
+    "dishonored-2": "403640",
+    "doom-eternal": "782330",
+    "control": "870780",
+    "resident-evil-village": "1196590",
+    "death-stranding": "1850570",
+    "hogwarts-legacy": "990080",
+    "starfield": "1716740",
+    "diablo-4": "2344520",
+    "path-of-exile": "238960",
+    "warframe": "230410",
+    "apex-legends": "1172470",
+    "rust": "252490",
+    "ark-survival-evolved": "346110",
+    "sons-of-the-forest": "1326470",
+    "v-rising": "1604030",
+    "dying-light-2": "534380",
+    "left-4-dead-2": "550",
+    "team-fortress-2": "440",
+    "monster-hunter-rise": "1446780",
+    "street-fighter-6": "1364780",
+    "tekken-8": "1778820",
+    "rocket-league": "252950",
+    "human-fall-flat": "477160",
+    "overcooked-2": "728880",
+    "hunt-showdown": "594650",
+    "metro-exodus": "412020",
+    "titanfall-2": "1237970",
+    "borderlands-3": "397540",
+    "deltarune": "1671210",
+    "cocoon": "1497440",
+    "chicory": "1123450",
+    "neon-white": "1533420",
+    "pizza-tower": "2231450",
+    "signalis": "1262350",
+    "pentiment": "1205520",
+    "astroneer": "361420",
+    "core-keeper": "1621690",
+    "raft": "648800",
+    "a-plague-tale-requiem": "1182900",
+    "little-nightmares-2": "860510",
+    "kena-bridge-of-spirits": "1954200",
+    "against-the-storm": "1336490",
+    "terra-nil": "1593030",
+    "wukong": "2358720"
   };
   const genreLabels = {
     "Action": "액션",
@@ -104,6 +159,7 @@
     "Card Strategy": "카드 전략",
     "Co-op Adventure": "협동 어드벤처",
     "Co-op Shooter": "협동 슈터",
+    "Fighting": "격투",
     "JRPG": "JRPG",
     "Metroidvania": "메트로배니아",
     "Open World": "오픈월드",
@@ -113,8 +169,10 @@
     "Roguelike": "로그라이크",
     "Run and Gun": "런앤건",
     "Sandbox": "샌드박스",
+    "Shooter": "슈터",
     "Simulation": "시뮬레이션",
     "Social Deduction": "소셜 추리",
+    "Sports": "스포츠",
     "Strategy": "전략",
     "Strategy RPG": "전략 RPG",
     "Survival": "생존",
@@ -135,70 +193,8 @@
     return `<span class="game-title-en">${game.title}</span>${koreanTitle}`;
   }
 
-  const genreCoverColors = {
-    "Action RPG": "#D94A5C",
-    "RPG": "#6C63FF",
-    "JRPG": "#6C63FF",
-    "Strategy": "#F4B740",
-    "Strategy RPG": "#F4B740",
-    "Card Strategy": "#F4B740",
-    "Simulation": "#38B36B",
-    "Automation": "#38B36B",
-    "Roguelike": "#8E6BFF",
-    "Sandbox": "#4DA3FF",
-    "Open World": "#4DA3FF",
-    "Metroidvania": "#2FA9A6",
-    "Platformer": "#FF8A5C",
-    "Puzzle": "#8E6BFF",
-    "Adventure": "#38B36B",
-    "Action Adventure": "#D94A5C",
-    "Action": "#D94A5C",
-    "Survival": "#38B36B",
-    "Survival Horror": "#5B6472",
-    "Co-op Shooter": "#4DA3FF",
-    "Social Deduction": "#F4B740",
-    "Run and Gun": "#D94A5C"
-  };
-
-  function getGameCoverColor(game) {
-    return genreCoverColors[game.genre] || "#6C63FF";
-  }
-
-  function getGameInitials(game) {
-    const words = game.title.replace(/[^A-Za-z0-9\s]/g, "").trim().split(/\s+/).filter(Boolean);
-
-    if (words.length === 0) {
-      return "?";
-    }
-
-    if (words.length === 1) {
-      return words[0].slice(0, 2).toUpperCase();
-    }
-
-    return (words[0][0] + words[1][0]).toUpperCase();
-  }
-
   function renderGameCover(game) {
-    const appId = gameCoverAppIds[game.id];
-    const color = getGameCoverColor(game);
-    const initials = getGameInitials(game);
-
-    if (appId) {
-      const src = `https://cdn.akamai.steamstatic.com/steam/apps/${appId}/library_600x900.jpg`;
-
-      return `
-        <div class="game-cover" style="--cover-color:${color}">
-          <img src="${src}" alt="" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('is-broken')">
-          <span class="game-cover-fallback">${initials}</span>
-        </div>
-      `;
-    }
-
-    return `
-      <div class="game-cover game-cover-placeholder" style="--cover-color:${color}">
-        <span>${initials}</span>
-      </div>
-    `;
+    return buildGameCoverHtml(game);
   }
 
   function getComparableTags(game) {
@@ -437,20 +433,68 @@
     return sortedGames;
   }
 
+  let isGameListVisible = false;
+
+  function revealGameCards() {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const cards = gameList.querySelectorAll(".game-card-enter");
+
+    if (reduceMotion) {
+      cards.forEach((card) => card.classList.remove("game-card-enter"));
+      return;
+    }
+
+    if (!isGameListVisible) {
+      return;
+    }
+
+    cards.forEach((card) => {
+      card.addEventListener("transitionend", function handler(event) {
+        if (event.propertyName === "opacity") {
+          card.classList.remove("game-card-enter", "is-visible");
+          card.removeEventListener("transitionend", handler);
+        }
+      });
+    });
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        cards.forEach((card) => card.classList.add("is-visible"));
+      });
+    });
+  }
+
+  if ("IntersectionObserver" in window) {
+    const gameListVisibilityObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !isGameListVisible) {
+          isGameListVisible = true;
+          revealGameCards();
+          gameListVisibilityObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.05 });
+
+    gameListVisibilityObserver.observe(gameList);
+  } else {
+    isGameListVisible = true;
+  }
+
   function renderGames(gameItems = games) {
     if (gameItems.length === 0) {
       gameList.innerHTML = '<p class="empty-message full-width">조건에 맞는 게임을 찾지 못했습니다. 검색어나 필터를 조정해보세요.</p>';
       return;
     }
 
-    gameList.innerHTML = gameItems.map((game) => {
+    gameList.innerHTML = gameItems.map((game, index) => {
       const tags = getComparableTags(game).map((tag) => `<span class="pill">${tag}</span>`).join("");
       const isSelected = selectedIds.has(game.id);
       const detailPageUrl = getDetailPageUrl(game);
-      const detailButton = detailPageUrl ? `<a class="game-detail-link" href="${detailPageUrl}">게임 정보 보기</a>` : "";
+      const detailButton = detailPageUrl ? `<a class="game-detail-link" href="${detailPageUrl}"><span>게임 정보 보기</span></a>` : "";
+      const revealDelay = Math.min(index * 70, 900);
 
       return `
-        <article class="game-card${isSelected ? " selected" : ""}" data-card-id="${game.id}" role="checkbox" aria-checked="${isSelected}" tabindex="0">
+        <article class="game-card game-card-enter${isSelected ? " selected" : ""}" data-card-id="${game.id}" role="checkbox" aria-checked="${isSelected}" tabindex="0" style="--reveal-delay:${revealDelay}ms">
           ${renderGameCover(game)}
           <div>
             <h3 class="game-title">${renderGameTitle(game)}</h3>
@@ -467,6 +511,8 @@
         </article>
       `;
     }).join("");
+
+    revealGameCards();
   }
 
   function updateGameList() {
@@ -514,14 +560,58 @@
       })
       .filter((item) => item.score > 0)
       .sort((a, b) => b.score - a.score || a.game.title.localeCompare(b.game.title))
-      .slice(0, 5);
+      .slice(0, 8);
+  }
+
+  function animateScoreCounters() {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    result.querySelectorAll(".score-value").forEach((el) => {
+      const target = Number(el.dataset.target) || 0;
+
+      if (reduceMotion || target === 0) {
+        el.textContent = String(target);
+        return;
+      }
+
+      const duration = 560;
+      const start = performance.now();
+
+      function tick(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = String(Math.round(target * eased));
+
+        if (progress < 1) {
+          window.requestAnimationFrame(tick);
+        }
+      }
+
+      window.requestAnimationFrame(tick);
+    });
+  }
+
+  function revealResultCards() {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const cards = result.querySelectorAll(".result-card-enter");
+
+    if (reduceMotion) {
+      cards.forEach((card) => card.classList.add("is-visible"));
+      return;
+    }
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        cards.forEach((card) => card.classList.add("is-visible"));
+      });
+    });
   }
 
   function renderRecommendations() {
     const selectedGames = getSelectedGames();
 
-    if (selectedGames.length === 0) {
-      result.innerHTML = '<p class="empty-message">플레이한 게임을 하나 이상 선택해 주세요.</p>';
+    if (selectedGames.length < minSelectedGames) {
+      result.innerHTML = `<p class="empty-message">게임을 ${minSelectedGames}개 이상 선택해 주세요. (현재 ${selectedGames.length}개 선택됨)</p>`;
       return;
     }
 
@@ -534,17 +624,19 @@
 
     result.innerHTML = `
       <div class="result-list">
-        ${recommendations.map((item) => `
-          <article class="result-card">
+        ${recommendations.map((item, index) => `
+          <article class="result-card result-card-enter" style="--reveal-delay:${index * 90}ms">
             ${renderGameCover(item.game)}
             <h3 class="game-title result-title">${renderGameTitle(item.game)}</h3>
-            <p class="score">추천 점수 ${item.score}점</p>
-            <p>${item.game.description}</p>
-            <p class="site-link"><a href="${getGameUrl(item.game)}" target="_blank" rel="noopener noreferrer">사이트 이동하기</a></p>
-            <a class="game-detail-link" href="${getDetailPageUrl(item.game)}">게임 정보 보기</a>
             <div class="meta">
               <span class="pill">${getGenreLabel(item.game.genre)}</span>
               ${getComparableTags(item.game).map((tag) => `<span class="pill">${tag}</span>`).join("")}
+            </div>
+            <p class="score">추천 점수 <span class="score-value" data-target="${item.score}">0</span>점</p>
+            <p>${item.game.description}</p>
+            <div class="result-actions">
+              <a class="site-link-button" href="${getGameUrl(item.game)}" target="_blank" rel="noopener noreferrer"><span>사이트 이동하기</span></a>
+              <a class="game-detail-link" href="${getDetailPageUrl(item.game)}"><span>게임 정보 보기</span></a>
             </div>
             <div class="game-hover-panel" aria-hidden="true">
               ${renderHoverDetails(item.game)}
@@ -553,6 +645,60 @@
         `).join("")}
       </div>
     `;
+
+    revealResultCards();
+    animateScoreCounters();
+  }
+
+  const recommendLoadingSteps = [
+    { icon: "🎲", text: "선택한 게임 불러오는 중" },
+    { icon: "🧩", text: "장르·태그 비교하는 중" },
+    { icon: "🔍", text: "분위기 궁합 확인하는 중" },
+    { icon: "🏆", text: "상위 8개 게임 추리는 중" },
+    { icon: "✨", text: "추천 결과 완성!" }
+  ];
+
+  function playRecommendLoading(onDone) {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reduceMotion) {
+      onDone();
+      return;
+    }
+
+    result.innerHTML = `
+      <div class="result-loading">
+        <div class="result-loading-dice" aria-hidden="true">${recommendLoadingSteps[0].icon}</div>
+        <p class="result-loading-text">${recommendLoadingSteps[0].text}</p>
+        <div class="result-loading-bar"><div class="result-loading-bar-fill"></div></div>
+      </div>
+    `;
+
+    const iconEl = result.querySelector(".result-loading-dice");
+    const textEl = result.querySelector(".result-loading-text");
+    const fillEl = result.querySelector(".result-loading-bar-fill");
+    const stepMs = 520;
+
+    window.requestAnimationFrame(() => {
+      if (fillEl) {
+        fillEl.style.width = "100%";
+      }
+    });
+
+    let step = 0;
+    const timer = setInterval(() => {
+      step += 1;
+
+      if (step < recommendLoadingSteps.length && textEl && iconEl) {
+        textEl.textContent = recommendLoadingSteps[step].text;
+        iconEl.textContent = recommendLoadingSteps[step].icon;
+      }
+    }, stepMs);
+
+    setTimeout(() => {
+      clearInterval(timer);
+      onDone();
+    }, stepMs * recommendLoadingSteps.length + 120);
   }
 
   renderGenreOptions();
@@ -646,6 +792,19 @@
       button.dataset.state = isOpen ? "open" : "closed";
     });
   });
+  document.querySelectorAll(".collapsible-toggle").forEach((button) => {
+    const section = button.closest(".collapsible-section");
+
+    if (!section) {
+      return;
+    }
+
+    button.addEventListener("click", () => {
+      const isExpanded = section.classList.toggle("is-expanded");
+
+      button.setAttribute("aria-expanded", String(isExpanded));
+    });
+  });
   updateIntroState();
   window.addEventListener("scroll", () => {
     const currentScrollY = window.scrollY;
@@ -659,5 +818,28 @@
     siteHeader.classList.toggle("is-hidden", currentScrollY > lastScrollY && currentScrollY > 80);
     lastScrollY = Math.max(currentScrollY, 0);
   }, { passive: true });
-  recommendButton.addEventListener("click", renderRecommendations);
+  const recommendButtonLabel = recommendButton.querySelector(".button-label") || recommendButton;
+  const recommendButtonDefaultText = recommendButtonLabel.textContent;
+
+  recommendButton.addEventListener("click", () => {
+    if (recommendButton.disabled) {
+      return;
+    }
+
+    if (getSelectedGames().length < minSelectedGames) {
+      renderRecommendations();
+      return;
+    }
+
+    recommendButton.disabled = true;
+    recommendButton.classList.add("is-loading");
+    recommendButtonLabel.textContent = "분석 중...";
+
+    playRecommendLoading(() => {
+      renderRecommendations();
+      recommendButton.disabled = false;
+      recommendButton.classList.remove("is-loading");
+      recommendButtonLabel.textContent = recommendButtonDefaultText;
+    });
+  });
 }());

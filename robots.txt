@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gametastefinder.com/sitemap.xml

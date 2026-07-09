@@ -239,13 +239,6 @@
     return `games/${game.id}.html`;
   }
 
-  function formatRatings(ratings) {
-    return ratings
-      .replace("Steam 압도적으로 긍정적", "Steam 압도적으로 긍정적(97%)")
-      .replace("Steam 매우 긍정적", "Steam 매우 긍정적(88%)")
-      .replace("Steam 대체로 긍정적", "Steam 대체로 긍정적(75%)");
-  }
-
   function renderHoverDetails(game) {
     const details = getGameDetails(game);
 
@@ -256,7 +249,7 @@
       <p><strong>👥 멀티플레이</strong>${details.multiplayer}</p>
       <p><strong>🎮 플랫폼</strong>${details.platforms}</p>
       <p><strong>🇰🇷 한국어 지원</strong>${details.korean}</p>
-      <p><strong>🏆 Metacritic / Steam</strong>${formatRatings(details.ratings)}</p>
+      <p><strong>🏆 Metacritic / Steam</strong>${details.ratings}</p>
     `;
   }
 

@@ -173,7 +173,7 @@ const games = [
   {
     id: "dont-starve",
     title: "Don't Starve",
-    titleKo: "돈 스타브",
+    titleKo: "돈 스타브(굶지마)",
     genre: "Survival",
     tags: ["생존", "제작", "로그라이크", "자원관리"],
     mood: ["긴장감", "기묘함"],

@@ -70,3 +70,17 @@ function buildGameCoverHtml(game, extraClass) {
     </div>
   `;
 }
+
+function renderRecommendedRibbon(game) {
+  if (typeof isRecommendedGame !== "function" || !isRecommendedGame(game)) {
+    return "";
+  }
+
+  return `
+    <div class="recommended-ribbon-wrap" aria-hidden="true">
+      <span class="recommended-ribbon">
+        <svg viewBox="0 0 24 24" width="11" height="11" fill="#ffffff"><path d="M12 21s-6.7-4.35-9.33-8.2C1.1 10.7 1.4 7.9 3.4 6.2c1.85-1.55 4.55-1.3 6.1.4L12 9.1l2.5-2.5c1.55-1.7 4.25-1.95 6.1-.4 2 1.7 2.3 4.5.73 6.6C18.7 16.65 12 21 12 21z"></path></svg>
+      </span>
+    </div>
+  `;
+}

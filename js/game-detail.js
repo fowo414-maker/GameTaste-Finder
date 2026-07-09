@@ -132,6 +132,14 @@
       }
 
       titleEl.insertAdjacentHTML("beforebegin", buildGameCoverHtml(similarGame));
+
+      if (typeof formatGamePrice === "function") {
+        titleEl.insertAdjacentHTML("afterend", `<p class="game-price">${formatGamePrice(similarGame)}</p>`);
+      }
+
+      if (typeof renderRecommendedRibbon === "function") {
+        card.insertAdjacentHTML("afterbegin", renderRecommendedRibbon(similarGame));
+      }
     });
   }
 })();

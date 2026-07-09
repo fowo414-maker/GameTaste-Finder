@@ -197,6 +197,10 @@
     return buildGameCoverHtml(game);
   }
 
+  function renderGamePrice(game) {
+    return `<p class="game-price">${formatGamePrice(game)}</p>`;
+  }
+
   function getComparableTags(game) {
     const duplicateTags = duplicateGenreTags[game.genre] || [];
 
@@ -495,6 +499,7 @@
 
       return `
         <article class="game-card game-card-enter${isSelected ? " selected" : ""}" data-card-id="${game.id}" role="checkbox" aria-checked="${isSelected}" tabindex="0" style="--reveal-delay:${revealDelay}ms">
+          ${renderRecommendedRibbon(game)}
           ${renderGameCover(game)}
           <div>
             <h3 class="game-title">${renderGameTitle(game)}</h3>
@@ -503,6 +508,7 @@
               ${tags}
             </div>
           </div>
+          ${renderGamePrice(game)}
           <p class="description">${game.description}</p>
           ${detailButton}
           <div class="game-hover-panel" aria-hidden="true">
@@ -626,12 +632,14 @@
       <div class="result-list">
         ${recommendations.map((item, index) => `
           <article class="result-card result-card-enter" style="--reveal-delay:${index * 90}ms">
+            ${renderRecommendedRibbon(item.game)}
             ${renderGameCover(item.game)}
             <h3 class="game-title result-title">${renderGameTitle(item.game)}</h3>
             <div class="meta">
               <span class="pill">${getGenreLabel(item.game.genre)}</span>
               ${getComparableTags(item.game).map((tag) => `<span class="pill">${tag}</span>`).join("")}
             </div>
+            ${renderGamePrice(item.game)}
             <p class="score">추천 점수 <span class="score-value" data-target="${item.score}">0</span>점</p>
             <p>${item.game.description}</p>
             <div class="result-actions">

@@ -33,6 +33,8 @@ function getCoverImageUrl(game) {
 
 let updated = 0;
 let inserted = 0;
+let cleared = 0;
+const noImage = [];
 
 const existingBlockPattern = /[ \t]*<meta property="og:image" content="[^"]*">\n[ \t]*<meta name="twitter:card" content="summary_large_image">\n[ \t]*<meta name="twitter:title" content="[^"]*">\n[ \t]*<meta name="twitter:description" content="[^"]*">\n[ \t]*<meta name="twitter:image" content="[^"]*">\n?/;
 
@@ -59,7 +61,16 @@ games.forEach((game) => {
   const image = getCoverImageUrl(game);
 
   if (!image) {
-    console.warn("no cover image resolvable for", game.id);
+    noImage.push(game.id);
+
+    // No resolvable image - remove any stale og:image/twitter block instead
+    // of leaving a previously-fetched (possibly wrong) image in place.
+    if (hadExistingBlock) {
+      html = html.replace(existingBlockPattern, "");
+      fs.writeFileSync(filePath, html);
+      cleared++;
+    }
+
     return;
   }
 
@@ -77,4 +88,9 @@ games.forEach((game) => {
   fs.writeFileSync(filePath, html);
 });
 
-console.log(`Inserted ${inserted} new og:image blocks, updated ${updated} existing ones.`);
+console.log(`Inserted ${inserted} new og:image blocks, updated ${updated} existing ones, cleared ${cleared} stale ones.`);
+
+if (noImage.length > 0) {
+  console.log("No resolvable image (og:image omitted) for:");
+  noImage.forEach((id) => console.log(" -", id));
+}

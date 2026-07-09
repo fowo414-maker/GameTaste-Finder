@@ -22,6 +22,42 @@ const { games, gameCoverUrls, gameCoverLocalFiles, rawgData } = data;
 
 const gamesById = new Map(games.map((g) => [g.id, g]));
 
+const genreCoverColors = {
+  "Action RPG": "#D94A5C",
+  "RPG": "#6C63FF",
+  "JRPG": "#6C63FF",
+  "Strategy": "#F4B740",
+  "Strategy RPG": "#F4B740",
+  "Card Strategy": "#F4B740",
+  "Simulation": "#38B36B",
+  "Automation": "#38B36B",
+  "Roguelike": "#8E6BFF",
+  "Sandbox": "#4DA3FF",
+  "Open World": "#4DA3FF",
+  "Metroidvania": "#2FA9A6",
+  "Platformer": "#FF8A5C",
+  "Puzzle": "#8E6BFF",
+  "Adventure": "#38B36B",
+  "Action Adventure": "#D94A5C",
+  "Action": "#D94A5C",
+  "Survival": "#38B36B",
+  "Survival Horror": "#5B6472",
+  "Co-op Shooter": "#4DA3FF",
+  "Social Deduction": "#F4B740",
+  "Run and Gun": "#D94A5C"
+};
+
+function getGameCoverColor(game) {
+  return genreCoverColors[game.genre] || "#6C63FF";
+}
+
+function getGameInitials(game) {
+  const words = game.title.replace(/[^A-Za-z0-9\s]/g, "").trim().split(/\s+/).filter(Boolean);
+  if (words.length === 0) return "?";
+  if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
+  return (words[0][0] + words[1][0]).toUpperCase();
+}
+
 function getCoverImageUrl(game) {
   const rawgEntry = rawgData[game.id];
   const localFile = gameCoverLocalFiles[game.id];
@@ -39,6 +75,10 @@ let html = fs.readFileSync(indexPath, "utf8");
 const itemPattern = /<li class="popular-game-item">\s*<a class="popular-game-link" href="games\/([a-z0-9-]+)\.html">[\s\S]*?<\/li>/g;
 
 let updated = 0;
+let placeholdered = 0;
+const noImage = [];
+
+const coverSpanPattern = /<span class="popular-game-cover"[^>]*>[\s\S]*?<\/span>/;
 
 html = html.replace(itemPattern, (block, gameId) => {
   const game = gamesById.get(gameId);
@@ -51,8 +91,18 @@ html = html.replace(itemPattern, (block, gameId) => {
   const image = getCoverImageUrl(game);
 
   if (!image) {
-    console.warn("no cover image resolvable for:", gameId);
-    return block;
+    noImage.push(gameId);
+    // No resolvable image (e.g. RAWG match was cleared as incorrect) -
+    // show the genre-colored initials placeholder instead of leaving a
+    // stale/wrong image in place.
+    const color = getGameCoverColor(game);
+    const initials = getGameInitials(game);
+    const placeholder = `<span class="popular-game-cover is-placeholder" style="--cover-color:${color}"><span class="popular-game-cover-fallback">${initials}</span></span>`;
+    const newBlock = block.replace(coverSpanPattern, placeholder);
+
+    if (newBlock !== block) placeholdered++;
+
+    return newBlock;
   }
 
   const altText = game.titleKo ? `${game.title} (${game.titleKo}) 커버 이미지` : `${game.title} 커버 이미지`;
@@ -66,4 +116,9 @@ html = html.replace(itemPattern, (block, gameId) => {
 });
 
 fs.writeFileSync(indexPath, html);
-console.log(`Updated ${updated} popular-game-item cards.`);
+console.log(`Updated ${updated} popular-game-item cards, ${placeholdered} switched to initials placeholder.`);
+
+if (noImage.length > 0) {
+  console.log("No resolvable image for:");
+  noImage.forEach((id) => console.log(" -", id));
+}

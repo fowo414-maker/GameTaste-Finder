@@ -54,7 +54,11 @@ function buildGameCoverHtml(game, extraClass) {
   const rawgEntry = typeof rawgData !== "undefined" ? rawgData[game.id] : null;
   const localFile = typeof gameCoverLocalFiles !== "undefined" ? gameCoverLocalFiles[game.id] : null;
   const directUrl = typeof gameCoverUrls !== "undefined" ? gameCoverUrls[game.id] : null;
-  const focusX = (typeof gameCoverFocus !== "undefined" ? gameCoverFocus[game.id] : null) || "50%";
+  // gameCoverFocus entries can be a plain string ("52%", X-axis only, for
+  // backward compatibility) or { x, y } to also crop the vertical position.
+  const focusRaw = typeof gameCoverFocus !== "undefined" ? gameCoverFocus[game.id] : null;
+  const focusX = (typeof focusRaw === "string" ? focusRaw : focusRaw && focusRaw.x) || "50%";
+  const focusY = (focusRaw && typeof focusRaw === "object" && focusRaw.y) || "50%";
   const color = getGameCoverColor(game);
   const initials = getGameInitials(game);
   const classAttr = `game-cover${extraClass ? ` ${extraClass}` : ""}`;
@@ -66,7 +70,7 @@ function buildGameCoverHtml(game, extraClass) {
 
   if (src) {
     return `
-      <div class="${classAttr}" style="--cover-color:${color};--cover-focus-x:${focusX}">
+      <div class="${classAttr}" style="--cover-color:${color};--cover-focus-x:${focusX};--cover-focus-y:${focusY}">
         <img src="${src}" alt="${altText}" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('is-broken')">
         <span class="game-cover-fallback">${initials}</span>
       </div>

@@ -1932,17 +1932,6 @@ const rawgData = {
     ],
     "released": "2016-02-25"
   },
-  "animal-crossing": {
-    "rawgId": 54346,
-    "rawgSlug": "animal-crossing",
-    "image": "https://media.rawg.io/media/games/9dc/9dc9fbd2c2054a3a9b7c33a906546bea.jpg",
-    "rawgRating": 4.17,
-    "rawgGenres": [
-      "RPG",
-      "Simulation"
-    ],
-    "released": "2001-04-14"
-  },
   "minecraft": {
     "rawgId": 22509,
     "rawgSlug": "minecraft",
@@ -1968,16 +1957,6 @@ const rawgData = {
       "Platformer"
     ],
     "released": "2011-05-16"
-  },
-  "hades": {
-    "rawgId": 194817,
-    "rawgSlug": "hades",
-    "image": "https://media.rawg.io/media/screenshots/b7b/b7b66ade987d2d33542797ebe460ef5b.jpg",
-    "rawgRating": 0,
-    "rawgGenres": [
-      "Platformer"
-    ],
-    "released": "2016-06-23"
   },
   "dead-cells": {
     "rawgId": 11726,
@@ -2117,16 +2096,6 @@ const rawgData = {
     ],
     "released": "2010-01-26"
   },
-  "it-takes-two": {
-    "rawgId": 179581,
-    "rawgSlug": "it-takes-two",
-    "image": "https://media.rawg.io/media/screenshots/c02/c02a0c98e873c3912b3fcc5aba5e7a16.jpg",
-    "rawgRating": 0,
-    "rawgGenres": [
-      "Puzzle"
-    ],
-    "released": "2018-08-20"
-  },
   "cyberpunk-2077": {
     "rawgId": 41494,
     "rawgSlug": "cyberpunk-2077",
@@ -2148,16 +2117,6 @@ const rawgData = {
       "Action"
     ],
     "released": "2018-10-26"
-  },
-  "god-of-war": {
-    "rawgId": 29179,
-    "rawgSlug": "god-of-war",
-    "image": "https://media.rawg.io/media/games/1aa/1aa4ca34a8a6bb57a2e065c8332dc230.jpg",
-    "rawgRating": 4.36,
-    "rawgGenres": [
-      "Action"
-    ],
-    "released": "2005-03-22"
   },
   "horizon-zero-dawn": {
     "rawgId": 278,
@@ -2193,14 +2152,6 @@ const rawgData = {
       "RPG"
     ],
     "released": "2018-01-26"
-  },
-  "sekiro": {
-    "rawgId": 433707,
-    "rawgSlug": "sekiro",
-    "image": "https://media.rawg.io/media/screenshots/474/474bbffbbf4f93834b735000c19390b0.jpg",
-    "rawgRating": 0,
-    "rawgGenres": [],
-    "released": "2020-04-21"
   },
   "bloodborne": {
     "rawgId": 3387,
@@ -2669,18 +2620,6 @@ const rawgData = {
       "Adventure"
     ],
     "released": "2023-01-25"
-  },
-  "sea-of-stars": {
-    "rawgId": 418066,
-    "rawgSlug": "sea-of-stars",
-    "image": "https://media.rawg.io/media/screenshots/4c4/4c4bc20edba2fb9701525eadd732de57.jpg",
-    "rawgRating": 0,
-    "rawgGenres": [
-      "Shooter",
-      "Adventure",
-      "RPG"
-    ],
-    "released": "2020-03-07"
   },
   "tunic": {
     "rawgId": 29236,
@@ -3162,16 +3101,6 @@ const rawgData = {
     ],
     "released": "2022-09-27"
   },
-  "unpacking": {
-    "rawgId": 102660,
-    "rawgSlug": "unpacking",
-    "image": "https://media.rawg.io/media/screenshots/1d4/1d44139cf4c9c6e381611d5f9358e7fa.jpg",
-    "rawgRating": 0,
-    "rawgGenres": [
-      "Simulation"
-    ],
-    "released": "2018-02-10"
-  },
   "dorfromantik": {
     "rawgId": 568931,
     "rawgSlug": "dorfromantik",
@@ -3220,17 +3149,6 @@ const rawgData = {
       "Puzzle"
     ],
     "released": "2007-10-09"
-  },
-  "counter-strike-2": {
-    "rawgId": 609128,
-    "rawgSlug": "counter-strike-2",
-    "image": "https://media.rawg.io/media/screenshots/7b2/7b2920260f974292970d6c2312991a3d.jpg",
-    "rawgRating": 0,
-    "rawgGenres": [
-      "Action",
-      "Fighting"
-    ],
-    "released": "2021-05-27"
   },
   "gta-5": {
     "rawgId": 3498,
@@ -3780,14 +3698,76 @@ const rawgData = {
     ],
     "released": "2023-03-28"
   },
+  "animal-crossing": {
+    "rawgId": null,
+    "rawgSlug": null,
+    "image": null,
+    "rawgRating": null,
+    "rawgGenres": [],
+    "released": null
+  },
+  "hades": {
+    "rawgId": null,
+    "rawgSlug": null,
+    "image": null,
+    "rawgRating": null,
+    "rawgGenres": [],
+    "released": null
+  },
+  "it-takes-two": {
+    "rawgId": null,
+    "rawgSlug": null,
+    "image": null,
+    "rawgRating": null,
+    "rawgGenres": [],
+    "released": null
+  },
+  "god-of-war": {
+    "rawgId": null,
+    "rawgSlug": null,
+    "image": null,
+    "rawgRating": null,
+    "rawgGenres": [],
+    "released": null
+  },
+  "sekiro": {
+    "rawgId": null,
+    "rawgSlug": null,
+    "image": null,
+    "rawgRating": null,
+    "rawgGenres": [],
+    "released": null
+  },
+  "sea-of-stars": {
+    "rawgId": null,
+    "rawgSlug": null,
+    "image": null,
+    "rawgRating": null,
+    "rawgGenres": [],
+    "released": null
+  },
+  "unpacking": {
+    "rawgId": null,
+    "rawgSlug": null,
+    "image": null,
+    "rawgRating": null,
+    "rawgGenres": [],
+    "released": null
+  },
+  "counter-strike-2": {
+    "rawgId": null,
+    "rawgSlug": null,
+    "image": null,
+    "rawgRating": null,
+    "rawgGenres": [],
+    "released": null
+  },
   "wukong": {
-    "rawgId": 856438,
-    "rawgSlug": "wukong",
-    "image": "https://media.rawg.io/media/screenshots/b74/b744e79a357677cfe6d62cbca1343204.jpg",
-    "rawgRating": 0,
-    "rawgGenres": [
-      "Platformer"
-    ],
-    "released": "2022-09-25"
+    "rawgId": null,
+    "rawgSlug": null,
+    "image": null,
+    "rawgRating": null,
+    "rawgGenres": [],
+    "released": null
   }
 };

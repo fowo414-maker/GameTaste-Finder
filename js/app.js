@@ -13,6 +13,13 @@
     return;
   }
 
+  const gameListEmpty = document.getElementById("gameListEmpty");
+  const cardsById = new Map();
+
+  gameList.querySelectorAll(".game-card").forEach((card) => {
+    cardsById.set(card.dataset.cardId, card);
+  });
+
   const siteHeader = document.querySelector(".site-header");
   const initialGameLimit = 20;
   const minSelectedGames = 3;
@@ -430,88 +437,37 @@
     return sortedGames;
   }
 
-  let isGameListVisible = false;
+  function syncGameList(visibleGames) {
+    const visibleIds = new Set(visibleGames.map((game) => game.id));
 
-  function revealGameCards() {
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const cards = gameList.querySelectorAll(".game-card-enter");
+    visibleGames.forEach((game) => {
+      const card = cardsById.get(game.id);
 
-    if (reduceMotion) {
-      cards.forEach((card) => card.classList.remove("game-card-enter"));
-      return;
-    }
+      if (!card) {
+        return;
+      }
 
-    if (!isGameListVisible) {
-      return;
-    }
-
-    cards.forEach((card) => {
-      card.addEventListener("transitionend", function handler(event) {
-        if (event.propertyName === "opacity") {
-          card.classList.remove("game-card-enter", "is-visible");
-          card.removeEventListener("transitionend", handler);
-        }
-      });
+      card.hidden = false;
+      gameList.appendChild(card);
     });
 
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        cards.forEach((card) => card.classList.add("is-visible"));
-      });
+    games.forEach((game) => {
+      if (visibleIds.has(game.id)) {
+        return;
+      }
+
+      const card = cardsById.get(game.id);
+
+      if (card) {
+        card.hidden = true;
+        gameList.appendChild(card);
+      }
     });
-  }
 
-  if ("IntersectionObserver" in window) {
-    const gameListVisibilityObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !isGameListVisible) {
-          isGameListVisible = true;
-          revealGameCards();
-          gameListVisibilityObserver.disconnect();
-        }
-      });
-    }, { threshold: 0.05 });
-
-    gameListVisibilityObserver.observe(gameList);
-  } else {
-    isGameListVisible = true;
-  }
-
-  function renderGames(gameItems = games) {
-    if (gameItems.length === 0) {
-      gameList.innerHTML = '<p class="empty-message full-width">조건에 맞는 게임을 찾지 못했습니다. 검색어나 필터를 조정해보세요.</p>';
-      return;
+    if (gameListEmpty) {
+      gameListEmpty.hidden = visibleGames.length > 0;
+      gameList.appendChild(gameListEmpty);
     }
-
-    gameList.innerHTML = gameItems.map((game, index) => {
-      const tags = getComparableTags(game).map((tag) => `<span class="pill">${tag}</span>`).join("");
-      const isSelected = selectedIds.has(game.id);
-      const detailPageUrl = getDetailPageUrl(game);
-      const detailButton = detailPageUrl ? `<a class="game-detail-link" href="${detailPageUrl}"><span>게임 정보 보기</span></a>` : "";
-      const revealDelay = Math.min(index * 70, 900);
-
-      return `
-        <article class="game-card game-card-enter${isSelected ? " selected" : ""}" data-card-id="${game.id}" role="checkbox" aria-checked="${isSelected}" tabindex="0" style="--reveal-delay:${revealDelay}ms">
-          ${renderRecommendedRibbon(game)}
-          ${renderGameCover(game)}
-          <div>
-            <h3 class="game-title">${renderGameTitle(game)}</h3>
-            <div class="meta">
-              <span class="pill">${getGenreLabel(game.genre)}</span>
-              ${tags}
-            </div>
-          </div>
-          ${renderGamePrice(game)}
-          <p class="description">${game.description}</p>
-          ${detailButton}
-          <div class="game-hover-panel" aria-hidden="true">
-            ${renderHoverDetails(game)}
-          </div>
-        </article>
-      `;
-    }).join("");
-
-    revealGameCards();
   }
 
   function updateGameList() {
@@ -521,7 +477,7 @@
     );
     const visibleGames = isExpanded ? filteredGames : filteredGames.slice(0, initialGameLimit);
 
-    renderGames(visibleGames);
+    syncGameList(visibleGames);
     showMoreGames.hidden = filteredGames.length <= initialGameLimit;
     showMoreGames.textContent = isExpanded ? "간략히 보기" : "더보기";
     showMoreGames.setAttribute("aria-expanded", String(isExpanded));

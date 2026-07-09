@@ -46,19 +46,28 @@ function getCoverBasePath() {
 }
 
 function buildGameCoverHtml(game, extraClass) {
+  // RAWG data (populated by scripts/fetch-rawg-images.js into js/games.js's
+  // rawgData object) is the primary cover image source, with a direct URL
+  // or local file as secondary fallbacks. If none of those resolve, this
+  // renders the genre-colored initials placeholder below instead of an
+  // image - it no longer falls back to Steam.
+  const rawgEntry = typeof rawgData !== "undefined" ? rawgData[game.id] : null;
   const localFile = typeof gameCoverLocalFiles !== "undefined" ? gameCoverLocalFiles[game.id] : null;
   const directUrl = typeof gameCoverUrls !== "undefined" ? gameCoverUrls[game.id] : null;
-  const appId = typeof gameCoverAppIds !== "undefined" ? gameCoverAppIds[game.id] : null;
   const focusX = (typeof gameCoverFocus !== "undefined" ? gameCoverFocus[game.id] : null) || "50%";
   const color = getGameCoverColor(game);
   const initials = getGameInitials(game);
   const classAttr = `game-cover${extraClass ? ` ${extraClass}` : ""}`;
-  const src = localFile ? `${getCoverBasePath()}${localFile}` : directUrl || (appId ? `https://cdn.akamai.steamstatic.com/steam/apps/${appId}/library_600x900.jpg` : null);
+  const src = (rawgEntry && rawgEntry.image)
+    || (localFile ? `${getCoverBasePath()}${localFile}` : null)
+    || directUrl
+    || null;
+  const altText = game.titleKo ? `${game.title} (${game.titleKo}) 커버 이미지` : `${game.title} 커버 이미지`;
 
   if (src) {
     return `
       <div class="${classAttr}" style="--cover-color:${color};--cover-focus-x:${focusX}">
-        <img src="${src}" alt="" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('is-broken')">
+        <img src="${src}" alt="${altText}" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('is-broken')">
         <span class="game-cover-fallback">${initials}</span>
       </div>
     `;

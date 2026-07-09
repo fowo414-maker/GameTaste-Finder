@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="55%" stop-color="#6C63FF"/>
+      <stop offset="100%" stop-color="#5548E8"/>
+    </linearGradient>
+    <linearGradient id="badge-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="55%" stop-color="#6C63FF"/>
+      <stop offset="100%" stop-color="#5548E8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg-gradient)"/>
+
+  <circle cx="1080" cy="80" r="220" fill="#ffffff" opacity="0.05"/>
+  <circle cx="1150" cy="560" r="160" fill="#ffffff" opacity="0.06"/>
+  <circle cx="60" cy="560" r="120" fill="#ffffff" opacity="0.05"/>
+
+  <rect x="90" y="235" width="160" height="160" rx="34" fill="#111827"/>
+  <rect x="82" y="227" width="160" height="160" rx="34" fill="url(#badge-gradient)" stroke="#111827" stroke-width="6"/>
+  <text x="162" y="335" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="76" fill="#ffffff">GT</text>
+
+  <text x="300" y="300" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="72" fill="#ffffff">GameTaste Finder</text>
+  <text x="300" y="360" font-family="Malgun Gothic, Arial, sans-serif" font-weight="400" font-size="34" fill="#ececff">취향 기반 게임 추천 · 다음 게임을 찾아보세요</text>
+</svg>

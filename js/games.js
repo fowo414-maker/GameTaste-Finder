@@ -1644,165 +1644,6 @@ const gameDetails = {
   "wukong": ["2024", "약 25-35시간", 4, "싱글플레이", "PC, PlayStation, Xbox", "지원", "Metacritic 82 / Steam 매우 긍정적"]
 };
 
-const gameCoverAppIds = {
-  "elden-ring": 1245620,
-  "dark-souls-3": 374320,
-  "the-witcher-3": 292030,
-  "baldurs-gate-3": 1086940,
-  "stardew-valley": 413150,
-  "terraria": 105600,
-  "hades": 1145360,
-  "dead-cells": 588650,
-  "civilization-vi": 289070,
-  "xcom-2": 268500,
-  "portal-2": 620,
-  "the-witness": 210970,
-  "hollow-knight": 367520,
-  "ori-will-of-the-wisps": 1057090,
-  "celeste": 504230,
-  "slay-the-spire": 646570,
-  "subnautica": 264710,
-  "dont-starve": 219740,
-  "mass-effect-2": 2362420,
-  "it-takes-two": 1426210,
-  "cyberpunk-2077": 1091500,
-  "red-dead-redemption-2": 1174180,
-  "god-of-war": 1593500,
-  "horizon-zero-dawn": 1151640,
-  "ghost-of-tsushima": 2215430,
-  "monster-hunter-world": 582010,
-  "sekiro": 814380,
-  "nioh-2": 1325200,
-  "persona-5-royal": 1687950,
-  "dragon-quest-xi-s": 1295510,
-  "final-fantasy-vii-remake": 1462040,
-  "nier-automata": 524220,
-  "disco-elysium": 632470,
-  "divinity-original-sin-2": 435150,
-  "rimworld": 294100,
-  "factorio": 427520,
-  "oxygen-not-included": 457140,
-  "cities-skylines": 255710,
-  "the-sims-4": 1222670,
-  "into-the-breach": 590380,
-  "total-war-three-kingdoms": 779340,
-  "age-of-empires-ii-de": 813780,
-  "tetris-effect-connected": 1003590,
-  "return-of-the-obra-dinn": 653530,
-  "outer-wilds": 753640,
-  "cuphead": 268910,
-  "the-last-of-us-part-ii": 2531310,
-  "uncharted-4": 1659420,
-  "resident-evil-4-remake": 2050650,
-  "dave-the-diver": 1868140,
-  "vampire-survivors": 1794680,
-  "balatro": 2379780,
-  "valheim": 892970,
-  "palworld": 1623730,
-  "lethal-company": 1966720,
-  "helldivers-2": 553850,
-  "deep-rock-galactic": 548430,
-  "risk-of-rain-2": 632360,
-  "no-mans-sky": 275850,
-  "satisfactory": 526870,
-  "hi-fi-rush": 1817230,
-  "sea-of-stars": 1244090,
-  "tunic": 553420,
-  "undertale": 391540,
-  "dredge": 1562430,
-  "inscryption": 1092790,
-  "cult-of-the-lamb": 1313140,
-  "lies-of-p": 1627720,
-  "armored-core-vi": 1888160,
-  "remnant-2": 1282100,
-  "phasmophobia": 739630,
-  "project-zomboid": 108600,
-  "binding-of-isaac-rebirth": 250900,
-  "euro-truck-simulator-2": 227300,
-  "among-us": 945360,
-  "papers-please": 239030,
-  "hotline-miami": 219150,
-  "ftl": 212680,
-  "stanley-parable-ultra-deluxe": 1703340,
-  "a-short-hike": 1055540,
-  "spiritfarer": 972660,
-  "inside": 304430,
-  "limbo": 48000,
-  "fez": 224760,
-  "spelunky-2": 418530,
-  "shovel-knight-treasure-trove": 250760,
-  "katana-zero": 460950,
-  "hyper-light-drifter": 257850,
-  "enter-the-gungeon": 311690,
-  "darkest-dungeon": 262060,
-  "firewatch": 383870,
-  "gris": 683320,
-  "edith-finch": 501300,
-  "baba-is-you": 736260,
-  "untitled-goose-game": 837470,
-  "loop-hero": 1282730,
-  "rain-world": 312520,
-  "night-in-the-woods": 481510,
-  "oxenfree": 388880,
-  "crypt-of-the-necrodancer": 247080,
-  "superhot": 322500,
-  "brotato": 1942280,
-  "unpacking": 1135690,
-  "dorfromantik": 1455840,
-  "mini-motorways": 1127500,
-  "half-life-2": 220,
-  "portal": 400,
-  "counter-strike-2": 730,
-  "gta-5": 3240220,
-  "skyrim": 489830,
-  "fallout-4": 377160,
-  "bioshock-infinite": 8870,
-  "dishonored-2": 403640,
-  "doom-eternal": 782330,
-  "control": 870780,
-  "resident-evil-village": 1196590,
-  "death-stranding": 1850570,
-  "hogwarts-legacy": 990080,
-  "starfield": 1716740,
-  "diablo-4": 2344520,
-  "path-of-exile": 238960,
-  "warframe": 230410,
-  "apex-legends": 1172470,
-  "rust": 252490,
-  "ark-survival-evolved": 346110,
-  "sons-of-the-forest": 1326470,
-  "v-rising": 1604030,
-  "dying-light-2": 534380,
-  "left-4-dead-2": 550,
-  "team-fortress-2": 440,
-  "monster-hunter-rise": 1446780,
-  "street-fighter-6": 1364780,
-  "tekken-8": 1778820,
-  "rocket-league": 252950,
-  "human-fall-flat": 477160,
-  "overcooked-2": 728880,
-  "hunt-showdown": 594650,
-  "metro-exodus": 412020,
-  "titanfall-2": 1237970,
-  "borderlands-3": 397540,
-  "deltarune": 1671210,
-  "cocoon": 1497440,
-  "chicory": 1123450,
-  "neon-white": 1533420,
-  "pizza-tower": 2231450,
-  "signalis": 1262350,
-  "pentiment": 1205520,
-  "astroneer": 361420,
-  "core-keeper": 1621690,
-  "raft": 648800,
-  "a-plague-tale-requiem": 1182900,
-  "little-nightmares-2": 860510,
-  "kena-bridge-of-spirits": 1954200,
-  "against-the-storm": 1336490,
-  "terra-nil": 1593030,
-  "wukong": 2358720
-};
-
 const gameCoverUrls = {
   "animal-crossing": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70010000027619/9989957eae3a6b545194c42fec2071675c34aadacd65e6b33fdfe7b3b6a86c3a",
   "bloodborne": "https://image.api.playstation.com/cdn/UP9000/CUSA00900_00/9EJsLXyKS0S1BRey5nwQBOuYr6EDRbGX.png",
@@ -2028,3 +1869,1925 @@ const recommendedGameIds = new Set([
 function isRecommendedGame(game) {
   return recommendedGameIds.has(game.id);
 }
+
+// Populated by scripts/fetch-rawg-images.js (requires a RAWG_API_KEY).
+// Shape per entry: { rawgId, rawgSlug, image, rawgRating, rawgGenres, released }.
+// Empty until that script has been run - every game falls back to its
+// Steam/local/direct cover source until then (see js/game-cover.js).
+const rawgData = {
+  "elden-ring": {
+    "rawgId": 326243,
+    "rawgSlug": "elden-ring",
+    "image": "https://media.rawg.io/media/games/b29/b294fdd866dcdb643e7bab370a552855.jpg",
+    "rawgRating": 4.39,
+    "rawgGenres": [
+      "Action",
+      "RPG"
+    ],
+    "released": "2022-02-25"
+  },
+  "dark-souls-3": {
+    "rawgId": 2551,
+    "rawgSlug": "dark-souls-iii",
+    "image": "https://media.rawg.io/media/games/da1/da1b267764d77221f07a4386b6548e5a.jpg",
+    "rawgRating": 4.4,
+    "rawgGenres": [
+      "Action",
+      "RPG"
+    ],
+    "released": "2016-04-11"
+  },
+  "the-witcher-3": {
+    "rawgId": 3328,
+    "rawgSlug": "the-witcher-3-wild-hunt",
+    "image": "https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg",
+    "rawgRating": 4.64,
+    "rawgGenres": [
+      "Action",
+      "RPG"
+    ],
+    "released": "2015-05-18"
+  },
+  "baldurs-gate-3": {
+    "rawgId": 324997,
+    "rawgSlug": "baldurs-gate-3",
+    "image": "https://media.rawg.io/media/games/699/69907ecf13f172e9e144069769c3be73.jpg",
+    "rawgRating": 4.44,
+    "rawgGenres": [
+      "Adventure",
+      "RPG",
+      "Strategy"
+    ],
+    "released": "2023-08-03"
+  },
+  "stardew-valley": {
+    "rawgId": 654,
+    "rawgSlug": "stardew-valley",
+    "image": "https://media.rawg.io/media/games/713/713269608dc8f2f40f5a670a14b2de94.jpg",
+    "rawgRating": 4.39,
+    "rawgGenres": [
+      "RPG",
+      "Simulation",
+      "Indie"
+    ],
+    "released": "2016-02-25"
+  },
+  "animal-crossing": {
+    "rawgId": 54346,
+    "rawgSlug": "animal-crossing",
+    "image": "https://media.rawg.io/media/games/9dc/9dc9fbd2c2054a3a9b7c33a906546bea.jpg",
+    "rawgRating": 4.17,
+    "rawgGenres": [
+      "RPG",
+      "Simulation"
+    ],
+    "released": "2001-04-14"
+  },
+  "minecraft": {
+    "rawgId": 22509,
+    "rawgSlug": "minecraft",
+    "image": "https://media.rawg.io/media/games/b4e/b4e4c73d5aa4ec66bbf75375c4847a2b.jpg",
+    "rawgRating": 4.44,
+    "rawgGenres": [
+      "Action",
+      "Simulation",
+      "Arcade",
+      "Massively Multiplayer",
+      "Indie"
+    ],
+    "released": "2009-05-10"
+  },
+  "terraria": {
+    "rawgId": 422,
+    "rawgSlug": "terraria",
+    "image": "https://media.rawg.io/media/games/f46/f466571d536f2e3ea9e815ad17177501.jpg",
+    "rawgRating": 4.08,
+    "rawgGenres": [
+      "Action",
+      "Indie",
+      "Platformer"
+    ],
+    "released": "2011-05-16"
+  },
+  "hades": {
+    "rawgId": 194817,
+    "rawgSlug": "hades",
+    "image": "https://media.rawg.io/media/screenshots/b7b/b7b66ade987d2d33542797ebe460ef5b.jpg",
+    "rawgRating": 0,
+    "rawgGenres": [
+      "Platformer"
+    ],
+    "released": "2016-06-23"
+  },
+  "dead-cells": {
+    "rawgId": 11726,
+    "rawgSlug": "dead-cells",
+    "image": "https://media.rawg.io/media/games/f90/f90ee1a4239247a822771c40488e68c5.jpg",
+    "rawgRating": 4.23,
+    "rawgGenres": [
+      "Action",
+      "RPG",
+      "Indie",
+      "Platformer"
+    ],
+    "released": "2018-08-07"
+  },
+  "civilization-vi": {
+    "rawgId": 10297,
+    "rawgSlug": "civilization-vi",
+    "image": "https://media.rawg.io/media/games/997/997ab4d67e96fb20a4092383477d4463.jpg",
+    "rawgRating": 4.16,
+    "rawgGenres": [
+      "Strategy",
+      "Simulation"
+    ],
+    "released": "2016-10-20"
+  },
+  "xcom-2": {
+    "rawgId": 1256,
+    "rawgSlug": "xcom-2",
+    "image": "https://media.rawg.io/media/games/9bf/9bfac18ff678f41a4674250fa0e04a52.jpg",
+    "rawgRating": 4.1,
+    "rawgGenres": [
+      "RPG",
+      "Strategy"
+    ],
+    "released": "2016-02-04"
+  },
+  "portal-2": {
+    "rawgId": 4200,
+    "rawgSlug": "portal-2",
+    "image": "https://media.rawg.io/media/games/2ba/2bac0e87cf45e5b508f227d281c9252a.jpg",
+    "rawgRating": 4.58,
+    "rawgGenres": [
+      "Shooter",
+      "Puzzle"
+    ],
+    "released": "2011-04-18"
+  },
+  "the-witness": {
+    "rawgId": 2873,
+    "rawgSlug": "the-witness",
+    "image": "https://media.rawg.io/media/games/00b/00b164224ebaf381104d0b215a37afb3.jpg",
+    "rawgRating": 4.01,
+    "rawgGenres": [
+      "Adventure",
+      "Indie",
+      "Puzzle"
+    ],
+    "released": "2016-01-25"
+  },
+  "hollow-knight": {
+    "rawgId": 9767,
+    "rawgSlug": "hollow-knight",
+    "image": "https://media.rawg.io/media/games/4cf/4cfc6b7f1850590a4634b08bfab308ab.jpg",
+    "rawgRating": 4.4,
+    "rawgGenres": [
+      "Action",
+      "Indie",
+      "Platformer"
+    ],
+    "released": "2017-02-23"
+  },
+  "ori-will-of-the-wisps": {
+    "rawgId": 28199,
+    "rawgSlug": "ori-and-the-will-of-the-wisps",
+    "image": "https://media.rawg.io/media/games/718/71891d2484a592d871e91dc826707e1c.jpg",
+    "rawgRating": 4.41,
+    "rawgGenres": [
+      "Platformer",
+      "Adventure",
+      "Action"
+    ],
+    "released": "2020-03-10"
+  },
+  "celeste": {
+    "rawgId": 22121,
+    "rawgSlug": "celeste",
+    "image": "https://media.rawg.io/media/games/594/59487800889ebac294c7c2c070d02356.jpg",
+    "rawgRating": 4.37,
+    "rawgGenres": [
+      "Indie",
+      "Platformer"
+    ],
+    "released": "2018-01-25"
+  },
+  "slay-the-spire": {
+    "rawgId": 28121,
+    "rawgSlug": "slay-the-spire",
+    "image": "https://media.rawg.io/media/games/f52/f5206d55f918edf8ee07803101106fa6.jpg",
+    "rawgRating": 4.35,
+    "rawgGenres": [
+      "RPG",
+      "Strategy",
+      "Card",
+      "Indie"
+    ],
+    "released": "2019-01-22"
+  },
+  "subnautica": {
+    "rawgId": 10419,
+    "rawgSlug": "subnautica",
+    "image": "https://media.rawg.io/media/games/739/73990e3ec9f43a9e8ecafe207fa4f368.jpg",
+    "rawgRating": 4.24,
+    "rawgGenres": [
+      "Adventure",
+      "Indie"
+    ],
+    "released": "2018-01-23"
+  },
+  "dont-starve": {
+    "rawgId": 9475,
+    "rawgSlug": "dont-starve",
+    "image": "https://media.rawg.io/media/games/f3e/f3eec35c6218dcfd93a537751e6bfa61.jpg",
+    "rawgRating": 3.85,
+    "rawgGenres": [
+      "Indie"
+    ],
+    "released": "2013-04-22"
+  },
+  "mass-effect-2": {
+    "rawgId": 4806,
+    "rawgSlug": "mass-effect-2",
+    "image": "https://media.rawg.io/media/games/3cf/3cff89996570cf29a10eb9cd967dcf73.jpg",
+    "rawgRating": 4.46,
+    "rawgGenres": [
+      "Action",
+      "RPG"
+    ],
+    "released": "2010-01-26"
+  },
+  "it-takes-two": {
+    "rawgId": 179581,
+    "rawgSlug": "it-takes-two",
+    "image": "https://media.rawg.io/media/screenshots/c02/c02a0c98e873c3912b3fcc5aba5e7a16.jpg",
+    "rawgRating": 0,
+    "rawgGenres": [
+      "Puzzle"
+    ],
+    "released": "2018-08-20"
+  },
+  "cyberpunk-2077": {
+    "rawgId": 41494,
+    "rawgSlug": "cyberpunk-2077",
+    "image": "https://media.rawg.io/media/games/26d/26d4437715bee60138dab4a7c8c59c92.jpg",
+    "rawgRating": 4.23,
+    "rawgGenres": [
+      "Action",
+      "Shooter",
+      "RPG"
+    ],
+    "released": "2020-12-10"
+  },
+  "red-dead-redemption-2": {
+    "rawgId": 28,
+    "rawgSlug": "red-dead-redemption-2",
+    "image": "https://media.rawg.io/media/games/511/5118aff5091cb3efec399c808f8c598f.jpg",
+    "rawgRating": 4.59,
+    "rawgGenres": [
+      "Action"
+    ],
+    "released": "2018-10-26"
+  },
+  "god-of-war": {
+    "rawgId": 29179,
+    "rawgSlug": "god-of-war",
+    "image": "https://media.rawg.io/media/games/1aa/1aa4ca34a8a6bb57a2e065c8332dc230.jpg",
+    "rawgRating": 4.36,
+    "rawgGenres": [
+      "Action"
+    ],
+    "released": "2005-03-22"
+  },
+  "horizon-zero-dawn": {
+    "rawgId": 278,
+    "rawgSlug": "horizon-zero-dawn",
+    "image": "https://media.rawg.io/media/games/b7d/b7d3f1715fa8381a4e780173a197a615.jpg",
+    "rawgRating": 4.27,
+    "rawgGenres": [
+      "Action",
+      "RPG"
+    ],
+    "released": "2017-02-28"
+  },
+  "ghost-of-tsushima": {
+    "rawgId": 58550,
+    "rawgSlug": "ghost-of-tsushima",
+    "image": "https://media.rawg.io/media/games/f24/f2493ea338fe7bd3c7d73750a85a0959.jpeg",
+    "rawgRating": 4.41,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "released": "2020-07-17"
+  },
+  "monster-hunter-world": {
+    "rawgId": 46889,
+    "rawgSlug": "monster-hunter-world-2",
+    "image": "https://media.rawg.io/media/games/21c/21cc15d233117c6809ec86870559e105.jpg",
+    "rawgRating": 4.01,
+    "rawgGenres": [
+      "Adventure",
+      "Action",
+      "RPG"
+    ],
+    "released": "2018-01-26"
+  },
+  "sekiro": {
+    "rawgId": 433707,
+    "rawgSlug": "sekiro",
+    "image": "https://media.rawg.io/media/screenshots/474/474bbffbbf4f93834b735000c19390b0.jpg",
+    "rawgRating": 0,
+    "rawgGenres": [],
+    "released": "2020-04-21"
+  },
+  "bloodborne": {
+    "rawgId": 3387,
+    "rawgSlug": "bloodborne",
+    "image": "https://media.rawg.io/media/games/214/214b29aeff13a0ae6a70fc4426e85991.jpg",
+    "rawgRating": 4.41,
+    "rawgGenres": [
+      "Action",
+      "RPG"
+    ],
+    "released": "2015-03-24"
+  },
+  "nioh-2": {
+    "rawgId": 58815,
+    "rawgSlug": "nioh-2",
+    "image": "https://media.rawg.io/media/games/a35/a359074cde22a4b23c54db44a592dc41.jpg",
+    "rawgRating": 3.95,
+    "rawgGenres": [
+      "Action"
+    ],
+    "released": "2020-03-13"
+  },
+  "persona-5-royal": {
+    "rawgId": 339958,
+    "rawgSlug": "persona-5-royal",
+    "image": "https://media.rawg.io/media/games/a9c/a9c789951de65da545d51f664b4f2ce0.jpg",
+    "rawgRating": 4.75,
+    "rawgGenres": [
+      "Adventure",
+      "RPG"
+    ],
+    "released": "2020-03-31"
+  },
+  "dragon-quest-xi-s": {
+    "rawgId": 484816,
+    "rawgSlug": "dragon-quest-xi-s-echoes-of-an-elusive-age-definit",
+    "image": "https://media.rawg.io/media/screenshots/7af/7afce909f5f8510015209451984b683e.jpg",
+    "rawgRating": 4.26,
+    "rawgGenres": [
+      "Adventure",
+      "RPG"
+    ],
+    "released": "2019-09-27"
+  },
+  "final-fantasy-vii-remake": {
+    "rawgId": 259801,
+    "rawgSlug": "final-fantasy-vii-remake",
+    "image": "https://media.rawg.io/media/games/d89/d89bd0cf4fcdc10820892980cbba0f49.jpg",
+    "rawgRating": 4.37,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "released": "2020-04-10"
+  },
+  "nier-automata": {
+    "rawgId": 10141,
+    "rawgSlug": "nierautomata",
+    "image": "https://media.rawg.io/media/games/5a4/5a44112251d70a25291cc33757220fce.jpg",
+    "rawgRating": 4.37,
+    "rawgGenres": [
+      "Action",
+      "RPG"
+    ],
+    "released": "2017-03-17"
+  },
+  "disco-elysium": {
+    "rawgId": 262382,
+    "rawgSlug": "disco-elysium",
+    "image": "https://media.rawg.io/media/games/840/8408ad3811289a6a5830cae60fb0b62a.jpg",
+    "rawgRating": 4.37,
+    "rawgGenres": [
+      "Adventure",
+      "RPG",
+      "Indie"
+    ],
+    "released": "2019-10-14"
+  },
+  "divinity-original-sin-2": {
+    "rawgId": 10073,
+    "rawgSlug": "divinity-original-sin-2",
+    "image": "https://media.rawg.io/media/games/424/424facd40f4eb1f2794fe4b4bb28a277.jpg",
+    "rawgRating": 4.38,
+    "rawgGenres": [
+      "RPG",
+      "Strategy"
+    ],
+    "released": "2017-09-14"
+  },
+  "rimworld": {
+    "rawgId": 12130,
+    "rawgSlug": "rimworld",
+    "image": "https://media.rawg.io/media/screenshots/4d8/4d85fbe90066fdbef295a618640c4a82.jpg",
+    "rawgRating": 4.36,
+    "rawgGenres": [
+      "Strategy",
+      "Simulation",
+      "Indie"
+    ],
+    "released": "2016-07-15"
+  },
+  "factorio": {
+    "rawgId": 10926,
+    "rawgSlug": "factorio",
+    "image": "https://media.rawg.io/media/games/7e4/7e4e22b76da131e9690d5757555093c2.jpg",
+    "rawgRating": 4.36,
+    "rawgGenres": [
+      "Strategy",
+      "Simulation",
+      "Casual",
+      "Indie"
+    ],
+    "released": "2020-08-14"
+  },
+  "oxygen-not-included": {
+    "rawgId": 9880,
+    "rawgSlug": "oxygen-not-included",
+    "image": "https://media.rawg.io/media/games/000/0002b2686a50b30762fb6040a8d9187f.jpg",
+    "rawgRating": 4.14,
+    "rawgGenres": [
+      "Strategy",
+      "Simulation",
+      "Indie"
+    ],
+    "released": "2017-05-18"
+  },
+  "cities-skylines": {
+    "rawgId": 10065,
+    "rawgSlug": "cities-skylines",
+    "image": "https://media.rawg.io/media/games/25c/25c4776ab5723d5d735d8bf617ca12d9.jpg",
+    "rawgRating": 4.12,
+    "rawgGenres": [
+      "Strategy",
+      "Simulation"
+    ],
+    "released": "2015-03-10"
+  },
+  "the-sims-4": {
+    "rawgId": 42187,
+    "rawgSlug": "the-sims-4",
+    "image": "https://media.rawg.io/media/games/e44/e445335e611b4ccf03af71fffcbd30a4.jpg",
+    "rawgRating": 3.67,
+    "rawgGenres": [
+      "Strategy",
+      "Simulation",
+      "Casual"
+    ],
+    "released": "2014-09-02"
+  },
+  "fire-emblem-three-houses": {
+    "rawgId": 246478,
+    "rawgSlug": "fire-emblem-three-houses",
+    "image": "https://media.rawg.io/media/games/530/53081dbd5003f990fa5312404ac3d71a.jpg",
+    "rawgRating": 4.35,
+    "rawgGenres": [
+      "RPG",
+      "Strategy"
+    ],
+    "released": "2019-07-26"
+  },
+  "into-the-breach": {
+    "rawgId": 13566,
+    "rawgSlug": "into-the-breach",
+    "image": "https://media.rawg.io/media/games/800/800d07ca648a9778a8230f40088e0866.jpg",
+    "rawgRating": 4.31,
+    "rawgGenres": [
+      "RPG",
+      "Strategy",
+      "Indie"
+    ],
+    "released": "2018-02-26"
+  },
+  "total-war-three-kingdoms": {
+    "rawgId": 51584,
+    "rawgSlug": "total-war-three-kingdoms",
+    "image": "https://media.rawg.io/media/games/b4c/b4cd6c7a2712b88eec149536882d6c3b.jpg",
+    "rawgRating": 3.98,
+    "rawgGenres": [
+      "Action",
+      "Strategy",
+      "Simulation"
+    ],
+    "released": "2019-05-22"
+  },
+  "age-of-empires-ii-de": {
+    "rawgId": 326253,
+    "rawgSlug": "age-of-empires-2-definitive-edition",
+    "image": "https://media.rawg.io/media/games/945/9455733af10406794b0c1b8d117bca76.jpg",
+    "rawgRating": 4.29,
+    "rawgGenres": [
+      "Strategy"
+    ],
+    "released": "2019-11-14"
+  },
+  "tetris-effect-connected": {
+    "rawgId": 471027,
+    "rawgSlug": "tetris-effect-connected",
+    "image": "https://media.rawg.io/media/games/377/3770f2c7020bcb6cc2072f073f27fb4c.jpg",
+    "rawgRating": 4.22,
+    "rawgGenres": [
+      "Casual",
+      "Indie",
+      "Puzzle"
+    ],
+    "released": "2020-11-10"
+  },
+  "return-of-the-obra-dinn": {
+    "rawgId": 46508,
+    "rawgSlug": "return-of-the-obra-dinn",
+    "image": "https://media.rawg.io/media/games/052/052f9afc7aaeea3e2c5d46eafa92c64e.jpg",
+    "rawgRating": 4.33,
+    "rawgGenres": [
+      "Adventure",
+      "Indie"
+    ],
+    "released": "2018-10-17"
+  },
+  "outer-wilds": {
+    "rawgId": 58764,
+    "rawgSlug": "outer-wilds",
+    "image": "https://media.rawg.io/media/games/9f4/9f418898f5415668ca47b5f4ab1ecfeb.jpg",
+    "rawgRating": 4.36,
+    "rawgGenres": [
+      "Adventure",
+      "Indie",
+      "Puzzle"
+    ],
+    "released": "2019-05-29"
+  },
+  "super-mario-odyssey": {
+    "rawgId": 28026,
+    "rawgSlug": "super-mario-odyssey",
+    "image": "https://media.rawg.io/media/games/267/267bd0dbc496f52692487d07d014c061.jpg",
+    "rawgRating": 4.42,
+    "rawgGenres": [
+      "Arcade",
+      "Platformer"
+    ],
+    "released": "2017-10-27"
+  },
+  "metroid-dread": {
+    "rawgId": 622495,
+    "rawgSlug": "metroid-dread",
+    "image": "https://media.rawg.io/media/games/c26/c262f8b54b46edc72594c4a9bb8ee13e.jpg",
+    "rawgRating": 4.36,
+    "rawgGenres": [
+      "Action",
+      "RPG",
+      "Platformer"
+    ],
+    "released": "2021-10-08"
+  },
+  "cuphead": {
+    "rawgId": 28154,
+    "rawgSlug": "cuphead",
+    "image": "https://media.rawg.io/media/games/226/2262cea0b385db6cf399f4be831603b0.jpg",
+    "rawgRating": 4.37,
+    "rawgGenres": [
+      "Action",
+      "Indie",
+      "Platformer"
+    ],
+    "released": "2017-09-29"
+  },
+  "the-last-of-us-part-ii": {
+    "rawgId": 51325,
+    "rawgSlug": "the-last-of-us-part-2",
+    "image": "https://media.rawg.io/media/games/909/909974d1c7863c2027241e265fe7011f.jpg",
+    "rawgRating": 4.42,
+    "rawgGenres": [
+      "Shooter",
+      "Adventure",
+      "Action"
+    ],
+    "released": "2020-06-19"
+  },
+  "uncharted-4": {
+    "rawgId": 2462,
+    "rawgSlug": "uncharted-4-a-thiefs-end",
+    "image": "https://media.rawg.io/media/games/709/709bf81f874ce5d25d625b37b014cb63.jpg",
+    "rawgRating": 4.48,
+    "rawgGenres": [
+      "Shooter",
+      "Action"
+    ],
+    "released": "2016-05-10"
+  },
+  "resident-evil-4-remake": {
+    "rawgId": 795632,
+    "rawgSlug": "resident-evil-4-2023",
+    "image": "https://media.rawg.io/media/games/51a/51a404b9918a0b19fc704a3ca248c69f.jpg",
+    "rawgRating": 4.57,
+    "rawgGenres": [
+      "Adventure",
+      "Action"
+    ],
+    "released": "2023-03-24"
+  },
+  "zelda-breath-of-the-wild": {
+    "rawgId": 22511,
+    "rawgSlug": "the-legend-of-zelda-breath-of-the-wild",
+    "image": "https://media.rawg.io/media/games/cc1/cc196a5ad763955d6532cdba236f730c.jpg",
+    "rawgRating": 4.47,
+    "rawgGenres": [
+      "Adventure",
+      "Action",
+      "RPG"
+    ],
+    "released": "2017-03-03"
+  },
+  "zelda-tears-of-the-kingdom": {
+    "rawgId": 327239,
+    "rawgSlug": "the-legend-of-zelda-breath-of-the-wild-sequel",
+    "image": "https://media.rawg.io/media/games/556/55684bfd048706f4266d331d70050b37.jpg",
+    "rawgRating": 4.37,
+    "rawgGenres": [
+      "Adventure",
+      "Action"
+    ],
+    "released": "2023-05-12"
+  },
+  "dave-the-diver": {
+    "rawgId": 871264,
+    "rawgSlug": "dave-the-diver",
+    "image": "https://media.rawg.io/media/games/1ee/1eec43616e3ff00a674124d746926b23.jpg",
+    "rawgRating": 4.27,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "RPG",
+      "Simulation"
+    ],
+    "released": "2023-06-28"
+  },
+  "vampire-survivors": {
+    "rawgId": 685577,
+    "rawgSlug": "vampire-survivors",
+    "image": "https://media.rawg.io/media/games/501/501e7019925a3c692bf1c8062f07abe6.jpg",
+    "rawgRating": 4.19,
+    "rawgGenres": [
+      "Action",
+      "RPG",
+      "Casual",
+      "Indie"
+    ],
+    "released": "2022-10-20"
+  },
+  "balatro": {
+    "rawgId": 977316,
+    "rawgSlug": "balatro",
+    "image": "https://media.rawg.io/media/games/821/821a40bd0cc0ac7dfb3fe97a7878dc1f.jpg",
+    "rawgRating": 4.28,
+    "rawgGenres": [
+      "Strategy",
+      "Casual",
+      "Indie"
+    ],
+    "released": "2024-02-20"
+  },
+  "valheim": {
+    "rawgId": 248521,
+    "rawgSlug": "valheim",
+    "image": "https://media.rawg.io/media/games/adb/adb59be81367b19c2544457424bcf086.jpg",
+    "rawgRating": 3.99,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "released": "2021-02-02"
+  },
+  "palworld": {
+    "rawgId": 718135,
+    "rawgSlug": "palworld",
+    "image": "https://media.rawg.io/media/games/4e9/4e9c951414c732923fa72d5b1da49402.jpg",
+    "rawgRating": 3.54,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "RPG",
+      "Indie"
+    ],
+    "released": "2024-01-19"
+  },
+  "lethal-company": {
+    "rawgId": 968329,
+    "rawgSlug": "lethal-company",
+    "image": "https://media.rawg.io/media/screenshots/2fa/2faa93b7882a018ac21a1f9cc5176579.jpg",
+    "rawgRating": 4.24,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "released": "2023-10-23"
+  },
+  "helldivers-2": {
+    "rawgId": 976564,
+    "rawgSlug": "helldivers-2",
+    "image": "https://media.rawg.io/media/screenshots/755/7552f856f88b0de1dee040121039b079.jpg",
+    "rawgRating": 4.24,
+    "rawgGenres": [
+      "Action"
+    ],
+    "released": "2024-02-08"
+  },
+  "deep-rock-galactic": {
+    "rawgId": 9551,
+    "rawgSlug": "deep-rock-galactic",
+    "image": "https://media.rawg.io/media/games/c92/c9207a31f0eeb9904a840fc26eae6afb.jpg",
+    "rawgRating": 4.1,
+    "rawgGenres": [
+      "Action",
+      "Indie"
+    ],
+    "released": "2020-05-13"
+  },
+  "risk-of-rain-2": {
+    "rawgId": 263590,
+    "rawgSlug": "risk-of-rain-2",
+    "image": "https://media.rawg.io/media/games/238/238e2b2b24c9838626700c69cacf1e3a.jpg",
+    "rawgRating": 4.14,
+    "rawgGenres": [
+      "Action",
+      "Shooter",
+      "Arcade"
+    ],
+    "released": "2020-08-11"
+  },
+  "no-mans-sky": {
+    "rawgId": 2093,
+    "rawgSlug": "no-mans-sky",
+    "image": "https://media.rawg.io/media/games/174/1743b3dd185bda4a7be349347d4064df.jpg",
+    "rawgRating": 3.71,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "RPG",
+      "Simulation",
+      "Massively Multiplayer",
+      "Indie"
+    ],
+    "released": "2016-08-09"
+  },
+  "satisfactory": {
+    "rawgId": 58806,
+    "rawgSlug": "satisfactory",
+    "image": "https://media.rawg.io/media/games/9b0/9b03581c1ba7df63e221eb0828f8bb52.jpg",
+    "rawgRating": 4.3,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "Strategy",
+      "Indie"
+    ],
+    "released": "2024-09-11"
+  },
+  "hi-fi-rush": {
+    "rawgId": 914789,
+    "rawgSlug": "hi-fi-rush",
+    "image": "https://media.rawg.io/media/games/62f/62f71917e64e913f2a893e7373319c60.jpg",
+    "rawgRating": 4.3,
+    "rawgGenres": [
+      "Action",
+      "Adventure"
+    ],
+    "released": "2023-01-25"
+  },
+  "sea-of-stars": {
+    "rawgId": 418066,
+    "rawgSlug": "sea-of-stars",
+    "image": "https://media.rawg.io/media/screenshots/4c4/4c4bc20edba2fb9701525eadd732de57.jpg",
+    "rawgRating": 0,
+    "rawgGenres": [
+      "Shooter",
+      "Adventure",
+      "RPG"
+    ],
+    "released": "2020-03-07"
+  },
+  "tunic": {
+    "rawgId": 29236,
+    "rawgSlug": "tunic",
+    "image": "https://media.rawg.io/media/games/2c1/2c1984e128ac48b89953ed4de4904a3b.jpg",
+    "rawgRating": 4.11,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "released": "2022-03-16"
+  },
+  "undertale": {
+    "rawgId": 13627,
+    "rawgSlug": "undertale",
+    "image": "https://media.rawg.io/media/games/ffe/ffed87105b14f5beff72ff44a7793fd5.jpg",
+    "rawgRating": 4.35,
+    "rawgGenres": [
+      "RPG",
+      "Indie"
+    ],
+    "released": "2015-09-14"
+  },
+  "dredge": {
+    "rawgId": 842402,
+    "rawgSlug": "dredge",
+    "image": "https://media.rawg.io/media/games/c2c/c2c9f1c026b6c1be5bc2160baf7224ea.jpg",
+    "rawgRating": 4.27,
+    "rawgGenres": [
+      "Adventure",
+      "RPG"
+    ],
+    "released": "2023-03-29"
+  },
+  "inscryption": {
+    "rawgId": 479694,
+    "rawgSlug": "inscryption",
+    "image": "https://media.rawg.io/media/games/73e/73efc5c0ac6f354271dae610276f617c.jpg",
+    "rawgRating": 4.38,
+    "rawgGenres": [
+      "Adventure",
+      "Strategy",
+      "Indie"
+    ],
+    "released": "2021-10-19"
+  },
+  "cult-of-the-lamb": {
+    "rawgId": 650605,
+    "rawgSlug": "cult-of-the-lamb",
+    "image": "https://media.rawg.io/media/games/ab8/ab8217a1fe2ced388a388722734e6d16.jpg",
+    "rawgRating": 4.11,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "Strategy",
+      "Indie"
+    ],
+    "released": "2022-08-11"
+  },
+  "lies-of-p": {
+    "rawgId": 605674,
+    "rawgSlug": "lies-of-p",
+    "image": "https://media.rawg.io/media/games/458/45838becd01e929b6be8b88d655cebfc.jpg",
+    "rawgRating": 4.16,
+    "rawgGenres": [
+      "Action",
+      "RPG"
+    ],
+    "released": "2023-09-19"
+  },
+  "armored-core-vi": {
+    "rawgId": 892902,
+    "rawgSlug": "armored-core-vi",
+    "image": "https://media.rawg.io/media/games/c97/c97aba78a97038867d4b32a81fe48567.jpg",
+    "rawgRating": 4.14,
+    "rawgGenres": [
+      "Action"
+    ],
+    "released": "2023-08-25"
+  },
+  "remnant-2": {
+    "rawgId": 892898,
+    "rawgSlug": "remnant-2",
+    "image": "https://media.rawg.io/media/games/347/3478db948d4f25d40da7c22c0fd1039c.jpg",
+    "rawgRating": 3.74,
+    "rawgGenres": [
+      "Action",
+      "Shooter",
+      "Arcade"
+    ],
+    "released": "2023-07-21"
+  },
+  "phasmophobia": {
+    "rawgId": 427930,
+    "rawgSlug": "phasmophobia",
+    "image": "https://media.rawg.io/media/screenshots/370/370895ff725d74e26b8d30389222b397.jpg",
+    "rawgRating": 3.85,
+    "rawgGenres": [
+      "Action",
+      "Indie"
+    ],
+    "released": "2020-09-18"
+  },
+  "project-zomboid": {
+    "rawgId": 10900,
+    "rawgSlug": "project-zomboid",
+    "image": "https://media.rawg.io/media/screenshots/243/2436b84b99f1121c302367f0c5901b84.jpg",
+    "rawgRating": 3.87,
+    "rawgGenres": [
+      "RPG",
+      "Indie"
+    ],
+    "released": "2013-11-08"
+  },
+  "binding-of-isaac-rebirth": {
+    "rawgId": 250,
+    "rawgSlug": "the-binding-of-isaac-rebirth",
+    "image": "https://media.rawg.io/media/games/926/926928beb8a9f9b31cf202965aa4cbbc.jpg",
+    "rawgRating": 4.31,
+    "rawgGenres": [
+      "Action",
+      "RPG"
+    ],
+    "released": "2014-11-03"
+  },
+  "euro-truck-simulator-2": {
+    "rawgId": 9609,
+    "rawgSlug": "euro-truck-simulator-2",
+    "image": "https://media.rawg.io/media/games/1f5/1f5ddf7199f2778ff83663b93b5cb330.jpg",
+    "rawgRating": 4.12,
+    "rawgGenres": [
+      "Simulation",
+      "Indie"
+    ],
+    "released": "2012-10-19"
+  },
+  "among-us": {
+    "rawgId": 356714,
+    "rawgSlug": "among-us",
+    "image": "https://media.rawg.io/media/games/e74/e74458058b35e01c1ae3feeb39a3f724.jpg",
+    "rawgRating": 3.83,
+    "rawgGenres": [
+      "Action",
+      "Simulation",
+      "Casual"
+    ],
+    "released": "2018-07-25"
+  },
+  "papers-please": {
+    "rawgId": 1358,
+    "rawgSlug": "papers-please",
+    "image": "https://media.rawg.io/media/games/6d3/6d33014a4ed48a19c30a77ead5a0f62e.jpg",
+    "rawgRating": 4.37,
+    "rawgGenres": [
+      "Simulation",
+      "Educational",
+      "Indie",
+      "Puzzle"
+    ],
+    "released": "2013-08-08"
+  },
+  "hotline-miami": {
+    "rawgId": 3612,
+    "rawgSlug": "hotline-miami",
+    "image": "https://media.rawg.io/media/games/9fa/9fa63622543e5d4f6d99aa9d73b043de.jpg",
+    "rawgRating": 4.38,
+    "rawgGenres": [
+      "Action",
+      "Shooter",
+      "Arcade",
+      "Indie"
+    ],
+    "released": "2012-10-22"
+  },
+  "ftl": {
+    "rawgId": 624,
+    "rawgSlug": "ftl-faster-than-light",
+    "image": "https://media.rawg.io/media/games/5f4/5f4780690dbf04900cbac5f05b9305f3.jpg",
+    "rawgRating": 4.25,
+    "rawgGenres": [
+      "Strategy",
+      "Indie",
+      "Simulation"
+    ],
+    "released": "2012-09-14"
+  },
+  "stanley-parable-ultra-deluxe": {
+    "rawgId": 274758,
+    "rawgSlug": "the-stanley-parable-ultra-deluxe",
+    "image": "https://media.rawg.io/media/games/c4e/c4e3ad247e93d3a5dc40aa215a778a9c.jpg",
+    "rawgRating": 4.37,
+    "rawgGenres": [
+      "Casual",
+      "Indie",
+      "Adventure"
+    ],
+    "released": "2022-04-27"
+  },
+  "a-short-hike": {
+    "rawgId": 304247,
+    "rawgSlug": "a-short-hike",
+    "image": "https://media.rawg.io/media/games/c38/c38deeb8f331a78c89e64ad71a1db361.jpg",
+    "rawgRating": 4.35,
+    "rawgGenres": [
+      "Adventure",
+      "Indie"
+    ],
+    "released": "2019-07-29"
+  },
+  "spiritfarer": {
+    "rawgId": 326236,
+    "rawgSlug": "spiritfire",
+    "image": "https://media.rawg.io/media/games/727/727f889060e688bbdcba7b2a5d26a603.jpg",
+    "rawgRating": 4.12,
+    "rawgGenres": [
+      "Indie",
+      "Adventure",
+      "Simulation"
+    ],
+    "released": "2020-08-18"
+  },
+  "inside": {
+    "rawgId": 1450,
+    "rawgSlug": "inside",
+    "image": "https://media.rawg.io/media/games/d5a/d5a24f9f71315427fa6e966fdd98dfa6.jpg",
+    "rawgRating": 4.39,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Puzzle",
+      "Platformer"
+    ],
+    "released": "2016-06-28"
+  },
+  "limbo": {
+    "rawgId": 1030,
+    "rawgSlug": "limbo",
+    "image": "https://media.rawg.io/media/games/942/9424d6bb763dc38d9378b488603c87fa.jpg",
+    "rawgRating": 4.14,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Puzzle",
+      "Platformer"
+    ],
+    "released": "2010-07-21"
+  },
+  "fez": {
+    "rawgId": 3740,
+    "rawgSlug": "fez",
+    "image": "https://media.rawg.io/media/games/4cb/4cb855e8ef1578415a928e53c9f51867.png",
+    "rawgRating": 4,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Puzzle",
+      "Platformer"
+    ],
+    "released": "2012-04-13"
+  },
+  "spelunky-2": {
+    "rawgId": 59613,
+    "rawgSlug": "spelunky-2",
+    "image": "https://media.rawg.io/media/games/686/68625f8bef120a2a6074c394baf27f77.jpg",
+    "rawgRating": 3.88,
+    "rawgGenres": [
+      "Action",
+      "Indie",
+      "Platformer"
+    ],
+    "released": "2020-09-15"
+  },
+  "shovel-knight-treasure-trove": {
+    "rawgId": 3364,
+    "rawgSlug": "shovel-knight-treasure-trove",
+    "image": "https://media.rawg.io/media/games/136/1369a40d031777815fbb5d7bc4dd2f86.jpg",
+    "rawgRating": 4.32,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "Platformer"
+    ],
+    "released": "2014-06-25"
+  },
+  "katana-zero": {
+    "rawgId": 13856,
+    "rawgSlug": "katana-zero",
+    "image": "https://media.rawg.io/media/games/d37/d37e110ddcc0bd52d99f0f647b737a0a.jpg",
+    "rawgRating": 4.39,
+    "rawgGenres": [
+      "Action",
+      "Indie",
+      "Platformer"
+    ],
+    "released": "2019-04-17"
+  },
+  "hyper-light-drifter": {
+    "rawgId": 2139,
+    "rawgSlug": "hyper-light-drifter",
+    "image": "https://media.rawg.io/media/games/578/57885b9590c9a9f80ceea34d147a34c4.jpg",
+    "rawgRating": 4.14,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "RPG",
+      "Indie"
+    ],
+    "released": "2016-03-30"
+  },
+  "enter-the-gungeon": {
+    "rawgId": 2574,
+    "rawgSlug": "enter-the-gungeon",
+    "image": "https://media.rawg.io/media/games/3be/3be0e624424d3453005019799a760af2.jpg",
+    "rawgRating": 4.07,
+    "rawgGenres": [
+      "Action",
+      "Shooter",
+      "Indie"
+    ],
+    "released": "2016-04-04"
+  },
+  "darkest-dungeon": {
+    "rawgId": 1244,
+    "rawgSlug": "darkest-dungeon",
+    "image": "https://media.rawg.io/media/games/fd9/fd92f105dcd6491bc5d61135033d1f19.jpg",
+    "rawgRating": 4.17,
+    "rawgGenres": [
+      "RPG",
+      "Strategy",
+      "Indie"
+    ],
+    "released": "2016-01-18"
+  },
+  "firewatch": {
+    "rawgId": 2819,
+    "rawgSlug": "firewatch",
+    "image": "https://media.rawg.io/media/games/0be/0bea0a08a4d954337305391b778a7f37.jpg",
+    "rawgRating": 4.3,
+    "rawgGenres": [
+      "Adventure",
+      "Indie"
+    ],
+    "released": "2016-02-08"
+  },
+  "gris": {
+    "rawgId": 59313,
+    "rawgSlug": "gris",
+    "image": "https://media.rawg.io/media/games/51c/51c430f1795c79b78f863a9f22dc422d.jpg",
+    "rawgRating": 4.2,
+    "rawgGenres": [
+      "Adventure",
+      "Indie",
+      "Puzzle",
+      "Platformer"
+    ],
+    "released": "2018-12-13"
+  },
+  "edith-finch": {
+    "rawgId": 42,
+    "rawgSlug": "what-remains-of-edith-finch",
+    "image": "https://media.rawg.io/media/games/34e/34e100b1f648de99f32d477065f04653.jpg",
+    "rawgRating": 4.38,
+    "rawgGenres": [
+      "Indie",
+      "Adventure"
+    ],
+    "released": "2017-04-23"
+  },
+  "baba-is-you": {
+    "rawgId": 50839,
+    "rawgSlug": "baba-is-you",
+    "image": "https://media.rawg.io/media/games/0bc/0bca854021e14ffa9005a85c4567d25c.jpg",
+    "rawgRating": 4.39,
+    "rawgGenres": [
+      "Indie",
+      "Puzzle"
+    ],
+    "released": "2019-03-13"
+  },
+  "untitled-goose-game": {
+    "rawgId": 59637,
+    "rawgSlug": "untitled-goose-game",
+    "image": "https://media.rawg.io/media/games/199/1996ab6448cadb2ce4bea31536466333.jpg",
+    "rawgRating": 4.05,
+    "rawgGenres": [
+      "Action",
+      "Family",
+      "Indie",
+      "Puzzle"
+    ],
+    "released": "2019-09-20"
+  },
+  "loop-hero": {
+    "rawgId": 548036,
+    "rawgSlug": "loop-hero",
+    "image": "https://media.rawg.io/media/games/cef/cef4c326dd57a8f39d696379eaa84411.jpg",
+    "rawgRating": 4.04,
+    "rawgGenres": [
+      "RPG",
+      "Strategy",
+      "Simulation",
+      "Indie"
+    ],
+    "released": "2021-03-04"
+  },
+  "rain-world": {
+    "rawgId": 82,
+    "rawgSlug": "rain-world",
+    "image": "https://media.rawg.io/media/screenshots/ca0/ca0ad22b04fbee26188c02be4d03ab52.jpg",
+    "rawgRating": 3.86,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Platformer"
+    ],
+    "released": "2017-03-27"
+  },
+  "night-in-the-woods": {
+    "rawgId": 320,
+    "rawgSlug": "night-in-the-woods",
+    "image": "https://media.rawg.io/media/games/b0a/b0a370527fea0e824225269d4a8797db.jpg",
+    "rawgRating": 4.25,
+    "rawgGenres": [
+      "Adventure"
+    ],
+    "released": "2017-02-21"
+  },
+  "oxenfree": {
+    "rawgId": 295,
+    "rawgSlug": "oxenfree",
+    "image": "https://media.rawg.io/media/games/7ba/7baf4663962bad7197e2470d59a6e322.jpg",
+    "rawgRating": 3.91,
+    "rawgGenres": [
+      "Adventure",
+      "RPG",
+      "Indie"
+    ],
+    "released": "2016-01-14"
+  },
+  "crypt-of-the-necrodancer": {
+    "rawgId": 2845,
+    "rawgSlug": "crypt-of-the-necrodancer",
+    "image": "https://media.rawg.io/media/games/70a/70a7a7b21d8fdf5f19622e5e14599bcd.jpg",
+    "rawgRating": 3.99,
+    "rawgGenres": [
+      "Action",
+      "RPG",
+      "Indie"
+    ],
+    "released": "2015-04-22"
+  },
+  "superhot": {
+    "rawgId": 7819,
+    "rawgSlug": "superhot",
+    "image": "https://media.rawg.io/media/screenshots/ad4/ad445a12ee46543d4d117f3893041ebf.jpg",
+    "rawgRating": 4.19,
+    "rawgGenres": [
+      "Action",
+      "Shooter",
+      "Indie"
+    ],
+    "released": "2016-02-24"
+  },
+  "brotato": {
+    "rawgId": 857690,
+    "rawgSlug": "brotato",
+    "image": "https://media.rawg.io/media/screenshots/ed8/ed8a780ca2d64dcd38f8ff3bcecf050a.jpg",
+    "rawgRating": 4.03,
+    "rawgGenres": [
+      "Action",
+      "RPG",
+      "Casual",
+      "Indie"
+    ],
+    "released": "2022-09-27"
+  },
+  "unpacking": {
+    "rawgId": 102660,
+    "rawgSlug": "unpacking",
+    "image": "https://media.rawg.io/media/screenshots/1d4/1d44139cf4c9c6e381611d5f9358e7fa.jpg",
+    "rawgRating": 0,
+    "rawgGenres": [
+      "Simulation"
+    ],
+    "released": "2018-02-10"
+  },
+  "dorfromantik": {
+    "rawgId": 568931,
+    "rawgSlug": "dorfromantik",
+    "image": "https://media.rawg.io/media/screenshots/b00/b00b7cc04dd09531b631ea4575696276.jpg",
+    "rawgRating": 3.88,
+    "rawgGenres": [
+      "Strategy",
+      "Simulation",
+      "Casual",
+      "Indie",
+      "Puzzle"
+    ],
+    "released": "2022-04-28"
+  },
+  "mini-motorways": {
+    "rawgId": 375231,
+    "rawgSlug": "mini-motorways",
+    "image": "https://media.rawg.io/media/games/a5b/a5bfc1535a634a02ab0928549272d533.jpg",
+    "rawgRating": 4.16,
+    "rawgGenres": [
+      "Strategy",
+      "Simulation",
+      "Casual",
+      "Indie"
+    ],
+    "released": "2021-07-20"
+  },
+  "half-life-2": {
+    "rawgId": 13537,
+    "rawgSlug": "half-life-2",
+    "image": "https://media.rawg.io/media/games/b8c/b8c243eaa0fbac8115e0cdccac3f91dc.jpg",
+    "rawgRating": 4.48,
+    "rawgGenres": [
+      "Action",
+      "Shooter"
+    ],
+    "released": "2004-11-16"
+  },
+  "portal": {
+    "rawgId": 13536,
+    "rawgSlug": "portal",
+    "image": "https://media.rawg.io/media/games/7fa/7fa0b586293c5861ee32490e953a4996.jpg",
+    "rawgRating": 4.49,
+    "rawgGenres": [
+      "Action",
+      "Puzzle"
+    ],
+    "released": "2007-10-09"
+  },
+  "counter-strike-2": {
+    "rawgId": 609128,
+    "rawgSlug": "counter-strike-2",
+    "image": "https://media.rawg.io/media/screenshots/7b2/7b2920260f974292970d6c2312991a3d.jpg",
+    "rawgRating": 0,
+    "rawgGenres": [
+      "Action",
+      "Fighting"
+    ],
+    "released": "2021-05-27"
+  },
+  "gta-5": {
+    "rawgId": 3498,
+    "rawgSlug": "grand-theft-auto-v",
+    "image": "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg",
+    "rawgRating": 4.47,
+    "rawgGenres": [
+      "Action"
+    ],
+    "released": "2013-09-17"
+  },
+  "skyrim": {
+    "rawgId": 5679,
+    "rawgSlug": "the-elder-scrolls-v-skyrim",
+    "image": "https://media.rawg.io/media/games/7cf/7cfc9220b401b7a300e409e539c9afd5.jpg",
+    "rawgRating": 4.42,
+    "rawgGenres": [
+      "Action",
+      "RPG"
+    ],
+    "released": "2011-11-11"
+  },
+  "fallout-4": {
+    "rawgId": 3070,
+    "rawgSlug": "fallout-4",
+    "image": "https://media.rawg.io/media/games/d82/d82990b9c67ba0d2d09d4e6fa88885a7.jpg",
+    "rawgRating": 3.81,
+    "rawgGenres": [
+      "Action",
+      "RPG"
+    ],
+    "released": "2015-11-09"
+  },
+  "bioshock-infinite": {
+    "rawgId": 4062,
+    "rawgSlug": "bioshock-infinite",
+    "image": "https://media.rawg.io/media/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg",
+    "rawgRating": 4.38,
+    "rawgGenres": [
+      "Action",
+      "Shooter"
+    ],
+    "released": "2013-03-26"
+  },
+  "dishonored-2": {
+    "rawgId": 864,
+    "rawgSlug": "dishonored-2",
+    "image": "https://media.rawg.io/media/games/f6b/f6bed028b02369d4cab548f4f9337e81.jpg",
+    "rawgRating": 4.26,
+    "rawgGenres": [
+      "Action",
+      "RPG"
+    ],
+    "released": "2016-11-10"
+  },
+  "doom-eternal": {
+    "rawgId": 58777,
+    "rawgSlug": "doom-eternal",
+    "image": "https://media.rawg.io/media/games/3ea/3ea3c9bbd940b6cb7f2139e42d3d443f.jpg",
+    "rawgRating": 4.37,
+    "rawgGenres": [
+      "Action",
+      "Shooter"
+    ],
+    "released": "2020-03-19"
+  },
+  "control": {
+    "rawgId": 58812,
+    "rawgSlug": "control",
+    "image": "https://media.rawg.io/media/games/253/2534a46f3da7fa7c315f1387515ca393.jpg",
+    "rawgRating": 4.14,
+    "rawgGenres": [
+      "Action",
+      "Shooter",
+      "Adventure"
+    ],
+    "released": "2019-08-27"
+  },
+  "resident-evil-village": {
+    "rawgId": 452649,
+    "rawgSlug": "resident-evil-village",
+    "image": "https://media.rawg.io/media/games/6cc/6cc23249972a427f697a3d10eb57a820.jpg",
+    "rawgRating": 4.39,
+    "rawgGenres": [
+      "Action",
+      "Adventure"
+    ],
+    "released": "2021-05-07"
+  },
+  "death-stranding": {
+    "rawgId": 50738,
+    "rawgSlug": "death-stranding",
+    "image": "https://media.rawg.io/media/games/2ad/2ad87a4a69b1104f02435c14c5196095.jpg",
+    "rawgRating": 4.31,
+    "rawgGenres": [
+      "Action",
+      "Adventure"
+    ],
+    "released": "2019-11-08"
+  },
+  "hogwarts-legacy": {
+    "rawgId": 906547,
+    "rawgSlug": "hogwarts-legacy",
+    "image": "https://media.rawg.io/media/games/044/044b2ee023930ca138deda151f40c18c.jpg",
+    "rawgRating": 3.91,
+    "rawgGenres": [
+      "Action",
+      "RPG"
+    ],
+    "released": "2023-02-10"
+  },
+  "starfield": {
+    "rawgId": 58779,
+    "rawgSlug": "starfield",
+    "image": "https://media.rawg.io/media/games/ba8/ba82c971336adfd290e4c0eab6504fcf.jpg",
+    "rawgRating": 3.26,
+    "rawgGenres": [
+      "Adventure",
+      "RPG"
+    ],
+    "released": "2023-09-06"
+  },
+  "diablo-4": {
+    "rawgId": 388309,
+    "rawgSlug": "diablo-iv",
+    "image": "https://media.rawg.io/media/games/77d/77d51f8f4a07c3eecb0f8504027b1bf0.jpg",
+    "rawgRating": 3.75,
+    "rawgGenres": [
+      "Action",
+      "RPG"
+    ],
+    "released": "2023-06-06"
+  },
+  "path-of-exile": {
+    "rawgId": 10533,
+    "rawgSlug": "path-of-exile",
+    "image": "https://media.rawg.io/media/games/d0f/d0f91fe1d92332147e5db74e207cfc7a.jpg",
+    "rawgRating": 3.65,
+    "rawgGenres": [
+      "Action",
+      "RPG",
+      "Massively Multiplayer",
+      "Indie"
+    ],
+    "released": "2013-10-23"
+  },
+  "warframe": {
+    "rawgId": 766,
+    "rawgSlug": "warframe",
+    "image": "https://media.rawg.io/media/games/f87/f87457e8347484033cb34cde6101d08d.jpg",
+    "rawgRating": 3.42,
+    "rawgGenres": [
+      "Action",
+      "Shooter",
+      "RPG",
+      "Massively Multiplayer"
+    ],
+    "released": "2013-03-25"
+  },
+  "apex-legends": {
+    "rawgId": 290856,
+    "rawgSlug": "apex-legends",
+    "image": "https://media.rawg.io/media/games/737/737ea5662211d2e0bbd6f5989189e4f1.jpg",
+    "rawgRating": 3.63,
+    "rawgGenres": [
+      "Action",
+      "Shooter"
+    ],
+    "released": "2019-02-04"
+  },
+  "rust": {
+    "rawgId": 9671,
+    "rawgSlug": "rust",
+    "image": "https://media.rawg.io/media/games/447/4470c1e76f01acfaf5af9c207d1c1c92.jpg",
+    "rawgRating": 3.37,
+    "rawgGenres": [
+      "Action",
+      "Shooter",
+      "RPG",
+      "Massively Multiplayer",
+      "Indie"
+    ],
+    "released": "2018-02-09"
+  },
+  "ark-survival-evolved": {
+    "rawgId": 9810,
+    "rawgSlug": "ark-survival-evolved",
+    "image": "https://media.rawg.io/media/games/58a/58ac7f6569259dcc0b60b921869b19fc.jpg",
+    "rawgRating": 3.08,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "RPG",
+      "Massively Multiplayer",
+      "Indie"
+    ],
+    "released": "2015-06-02"
+  },
+  "sons-of-the-forest": {
+    "rawgId": 398405,
+    "rawgSlug": "sons-of-the-forest",
+    "image": "https://media.rawg.io/media/games/7a0/7a092fa63811a7f6ed90f456a8887e91.jpg",
+    "rawgRating": 3.63,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "Simulation",
+      "Indie"
+    ],
+    "released": "2024-02-22"
+  },
+  "v-rising": {
+    "rawgId": 602224,
+    "rawgSlug": "v-rising",
+    "image": "https://media.rawg.io/media/games/bde/bdef96f7782fba0ff62dabc37ff4b1f0.jpg",
+    "rawgRating": 3.72,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "Massively Multiplayer"
+    ],
+    "released": "2024-05-08"
+  },
+  "dying-light-2": {
+    "rawgId": 58758,
+    "rawgSlug": "dying-light-2",
+    "image": "https://media.rawg.io/media/games/73d/73db43df633477d4604c7248292f34b2.jpg",
+    "rawgRating": 3.64,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "released": "2022-02-04"
+  },
+  "left-4-dead-2": {
+    "rawgId": 12020,
+    "rawgSlug": "left-4-dead-2",
+    "image": "https://media.rawg.io/media/games/d58/d588947d4286e7b5e0e12e1bea7d9844.jpg",
+    "rawgRating": 4.1,
+    "rawgGenres": [
+      "Action",
+      "Shooter"
+    ],
+    "released": "2009-11-17"
+  },
+  "team-fortress-2": {
+    "rawgId": 11859,
+    "rawgSlug": "team-fortress-2",
+    "image": "https://media.rawg.io/media/games/46d/46d98e6910fbc0706e2948a7cc9b10c5.jpg",
+    "rawgRating": 3.68,
+    "rawgGenres": [
+      "Action",
+      "Shooter"
+    ],
+    "released": "2007-10-10"
+  },
+  "monster-hunter-rise": {
+    "rawgId": 494393,
+    "rawgSlug": "monster-hunter-rise",
+    "image": "https://media.rawg.io/media/games/dbb/dbba6100aae179b5f24052c9141d426d.jpg",
+    "rawgRating": 4.19,
+    "rawgGenres": [
+      "Action",
+      "RPG"
+    ],
+    "released": "2021-03-26"
+  },
+  "street-fighter-6": {
+    "rawgId": 742771,
+    "rawgSlug": "street-fighter-6",
+    "image": "https://media.rawg.io/media/games/ce2/ce2463db40cec363f360c29ddcc56884.jpg",
+    "rawgRating": 4.09,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "Fighting"
+    ],
+    "released": "2023-06-01"
+  },
+  "tekken-8": {
+    "rawgId": 850705,
+    "rawgSlug": "tekken-8",
+    "image": "https://media.rawg.io/media/games/ed3/ed3a5e9fab79022979de9ef420137f73.jpg",
+    "rawgRating": 3.96,
+    "rawgGenres": [
+      "Action",
+      "Fighting"
+    ],
+    "released": "2024-01-25"
+  },
+  "rocket-league": {
+    "rawgId": 3272,
+    "rawgSlug": "rocket-league",
+    "image": "https://media.rawg.io/media/games/8cc/8cce7c0e99dcc43d66c8efd42f9d03e3.jpg",
+    "rawgRating": 3.93,
+    "rawgGenres": [
+      "Sports",
+      "Racing",
+      "Indie"
+    ],
+    "released": "2015-07-07"
+  },
+  "human-fall-flat": {
+    "rawgId": 13247,
+    "rawgSlug": "human-fall-flat",
+    "image": "https://media.rawg.io/media/games/74d/74dafeb9a442b87b9dd4a1d4a2faa37b.jpg",
+    "rawgRating": 3.82,
+    "rawgGenres": [
+      "Action",
+      "Indie",
+      "Puzzle"
+    ],
+    "released": "2016-07-22"
+  },
+  "overcooked-2": {
+    "rawgId": 58827,
+    "rawgSlug": "overcooked-2",
+    "image": "https://media.rawg.io/media/games/d11/d11470677a829e34562e95a4002c2c7f.jpg",
+    "rawgRating": 4.15,
+    "rawgGenres": [
+      "Action",
+      "Casual",
+      "Indie"
+    ],
+    "released": "2018-08-06"
+  },
+  "hunt-showdown": {
+    "rawgId": 47428,
+    "rawgSlug": "hunt-showdown",
+    "image": "https://media.rawg.io/media/games/929/929a78693f607a3332ecb89fe7ffaf06.jpg",
+    "rawgRating": 3.87,
+    "rawgGenres": [
+      "Action",
+      "Shooter"
+    ],
+    "released": "2018-02-22"
+  },
+  "metro-exodus": {
+    "rawgId": 28201,
+    "rawgSlug": "metro-exodus",
+    "image": "https://media.rawg.io/media/games/152/152e788b7504aa2753c86dae912fb34c.jpg",
+    "rawgRating": 4.17,
+    "rawgGenres": [
+      "Action",
+      "Shooter"
+    ],
+    "released": "2019-02-13"
+  },
+  "titanfall-2": {
+    "rawgId": 923,
+    "rawgSlug": "titanfall-2",
+    "image": "https://media.rawg.io/media/games/569/56978b5a77f13aa2ec5d09ec81d01cad.jpg",
+    "rawgRating": 4.31,
+    "rawgGenres": [
+      "Action",
+      "Shooter"
+    ],
+    "released": "2016-10-28"
+  },
+  "borderlands-3": {
+    "rawgId": 58617,
+    "rawgSlug": "borderlands-3",
+    "image": "https://media.rawg.io/media/games/9f1/9f1891779cb20f44de93cef33b067e50.jpg",
+    "rawgRating": 3.87,
+    "rawgGenres": [
+      "Action",
+      "Shooter",
+      "Adventure",
+      "RPG"
+    ],
+    "released": "2019-09-13"
+  },
+  "deltarune": {
+    "rawgId": 667350,
+    "rawgSlug": "deltarune",
+    "image": "https://media.rawg.io/media/games/7a9/7a907fb5e158c8dc34e783d9c22674c3.jpg",
+    "rawgRating": 4.35,
+    "rawgGenres": [
+      "Adventure",
+      "RPG"
+    ],
+    "released": "2018-10-30"
+  },
+  "cocoon": {
+    "rawgId": 801623,
+    "rawgSlug": "cocoon-2",
+    "image": "https://media.rawg.io/media/games/153/153e8d78ac19e959214dadefb8c27310.jpg",
+    "rawgRating": 4.37,
+    "rawgGenres": [
+      "Indie",
+      "Adventure",
+      "Puzzle"
+    ],
+    "released": "2023-09-29"
+  },
+  "chicory": {
+    "rawgId": 364990,
+    "rawgSlug": "chicory-a-colorful-tale",
+    "image": "https://media.rawg.io/media/games/710/71095dec34962a167121a9d67838818f.jpg",
+    "rawgRating": 3.92,
+    "rawgGenres": [
+      "Indie",
+      "Adventure",
+      "RPG"
+    ],
+    "released": "2021-06-10"
+  },
+  "neon-white": {
+    "rawgId": 558980,
+    "rawgSlug": "neon-white",
+    "image": "https://media.rawg.io/media/games/a12/a120fc7faed7666f8c320a755137e316.jpg",
+    "rawgRating": 4.34,
+    "rawgGenres": [
+      "Action",
+      "Shooter",
+      "Adventure",
+      "Indie"
+    ],
+    "released": "2022-06-16"
+  },
+  "pizza-tower": {
+    "rawgId": 914795,
+    "rawgSlug": "pizza-tower",
+    "image": "https://media.rawg.io/media/games/2d0/2d02bcfc07f4b5ed8623599ff999ee91.jpg",
+    "rawgRating": 4.17,
+    "rawgGenres": [
+      "Action",
+      "Indie"
+    ],
+    "released": "2023-01-26"
+  },
+  "signalis": {
+    "rawgId": 424978,
+    "rawgSlug": "signalis",
+    "image": "https://media.rawg.io/media/games/480/480295ba922318bb052d169174ec88aa.jpg",
+    "rawgRating": 4.35,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "released": "2022-10-27"
+  },
+  "pentiment": {
+    "rawgId": 801567,
+    "rawgSlug": "pentiment",
+    "image": "https://media.rawg.io/media/games/f1d/f1d25c007b9b45c98b57ff9ebbca9692.jpg",
+    "rawgRating": 4.25,
+    "rawgGenres": [
+      "Adventure",
+      "Casual"
+    ],
+    "released": "2022-11-14"
+  },
+  "astroneer": {
+    "rawgId": 11460,
+    "rawgSlug": "astroneer",
+    "image": "https://media.rawg.io/media/games/02f/02f775a806c6cd64c28d5aeca928dc76.jpg",
+    "rawgRating": 3.78,
+    "rawgGenres": [
+      "Adventure",
+      "Indie"
+    ],
+    "released": "2019-02-06"
+  },
+  "core-keeper": {
+    "rawgId": 616688,
+    "rawgSlug": "core-keeper",
+    "image": "https://media.rawg.io/media/games/8d9/8d980d350e5b4661bba3a15afa7b04da.jpg",
+    "rawgRating": 3.94,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "RPG",
+      "Casual",
+      "Indie"
+    ],
+    "released": "2024-08-26"
+  },
+  "raft": {
+    "rawgId": 46301,
+    "rawgSlug": "raft",
+    "image": "https://media.rawg.io/media/games/6b2/6b253d2d39fc05b2368e5e78bb4abffc.jpg",
+    "rawgRating": 3.89,
+    "rawgGenres": [
+      "Adventure"
+    ],
+    "released": "2022-06-20"
+  },
+  "a-plague-tale-requiem": {
+    "rawgId": 616697,
+    "rawgSlug": "a-plague-tale-requiem",
+    "image": "https://media.rawg.io/media/games/cd0/cd074f3f6045297cda9ad077273c09b6.jpg",
+    "rawgRating": 4.29,
+    "rawgGenres": [
+      "Action",
+      "Adventure"
+    ],
+    "released": "2022-10-17"
+  },
+  "little-nightmares-2": {
+    "rawgId": 580495,
+    "rawgSlug": "little-nightmares-2",
+    "image": "https://media.rawg.io/media/screenshots/7ec/7ecef091fe06c961b963b2784d71bc8f.jpg",
+    "rawgRating": 0,
+    "rawgGenres": [
+      "Action"
+    ],
+    "released": "2021-03-31"
+  },
+  "kena-bridge-of-spirits": {
+    "rawgId": 452635,
+    "rawgSlug": "kena-bridge-of-spirits",
+    "image": "https://media.rawg.io/media/games/91d/91ddeef8d5ebee7f21faa89efa0f2201.jpg",
+    "rawgRating": 3.97,
+    "rawgGenres": [
+      "Action",
+      "Shooter",
+      "Adventure",
+      "Strategy",
+      "Indie"
+    ],
+    "released": "2021-09-21"
+  },
+  "against-the-storm": {
+    "rawgId": 494484,
+    "rawgSlug": "against-the-storm",
+    "image": "https://media.rawg.io/media/screenshots/c7d/c7df14c2f6efd2bb035aa89f7c7ca30a.jpg",
+    "rawgRating": 4.27,
+    "rawgGenres": [
+      "Strategy",
+      "Simulation"
+    ],
+    "released": "2023-12-08"
+  },
+  "terra-nil": {
+    "rawgId": 614952,
+    "rawgSlug": "terra-nil",
+    "image": "https://media.rawg.io/media/screenshots/91d/91d1068d4c8e55019375562ada13a619.jpg",
+    "rawgRating": 3.78,
+    "rawgGenres": [
+      "Strategy",
+      "Simulation",
+      "Casual",
+      "Indie"
+    ],
+    "released": "2023-03-28"
+  },
+  "wukong": {
+    "rawgId": 856438,
+    "rawgSlug": "wukong",
+    "image": "https://media.rawg.io/media/screenshots/b74/b744e79a357677cfe6d62cbca1343204.jpg",
+    "rawgRating": 0,
+    "rawgGenres": [
+      "Platformer"
+    ],
+    "released": "2022-09-25"
+  }
+};

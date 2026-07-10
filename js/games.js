@@ -1474,6 +1474,276 @@ const games = [
     tags: ["소울라이크", "전투", "신화", "보스전"],
     mood: ["도전적", "몰입감"],
     description: "서유기를 재해석한 화려한 액션과 웅장한 보스전이 특징인 소울라이크"
+  },
+  {
+    id: "detroit-become-human",
+    title: "Detroit: Become Human",
+    titleKo: "디트로이트: 비컴 휴먼",
+    genre: "Adventure",
+    tags: ["분기 서사","선택형","QTE"],
+    mood: ["서사적","감성적","긴장감"],
+    description: "선택에 따라 결말이 달라지는 안드로이드 분기 서사 어드벤처"
+  },
+  {
+    id: "rainbow-six-siege",
+    title: "Tom Clancy's Rainbow Six Siege",
+    titleKo: "톰 클랜시의 레인보우 식스 시즈",
+    genre: "Shooter",
+    tags: ["전술 슈터","파괴 가능 지형","5대5"],
+    mood: ["긴장감","전략적","집중"],
+    description: "요원별 특수 능력과 파괴 가능한 지형을 활용하는 전술 슈터"
+  },
+  {
+    id: "pubg-battlegrounds",
+    title: "PUBG: BATTLEGROUNDS",
+    titleKo: "펍지: 배틀그라운드",
+    genre: "Shooter",
+    tags: ["배틀로얄","생존","100인전"],
+    mood: ["긴장감","몰입감"],
+    description: "100명이 좁아지는 섬에서 최후 1인을 가리는 배틀로얄의 원조"
+  },
+  {
+    id: "rhythm-doctor",
+    title: "Rhythm Doctor",
+    titleKo: "리듬 닥터",
+    genre: "Puzzle",
+    tags: ["리듬","박자","고난도"],
+    mood: ["집중","긴장감","몰입감"],
+    description: "환자의 심장 박동에 맞춰 정확한 타이밍에 스페이스바를 눌러야 하는 리듬 게임"
+  },
+  {
+    id: "moncage",
+    title: "Moncage",
+    titleKo: "몬케이지",
+    genre: "Puzzle",
+    tags: ["시점 퍼즐","큐브","감성"],
+    mood: ["아름다움","차분함","영리함"],
+    description: "작은 큐브 안 여섯 장면을 회전시켜 시점을 맞추는 퍼즐 게임"
+  },
+  {
+    id: "a-dance-of-fire-and-ice",
+    title: "A Dance of Fire and Ice",
+    titleKo: "불과 얼음의 춤",
+    genre: "Puzzle",
+    tags: ["리듬","정밀 타이밍","미니멀"],
+    mood: ["집중","긴장감","영리함"],
+    description: "두 행성이 궤도를 도는 리듬에 맞춰 정확한 타이밍에 클릭하는 리듬 게임"
+  },
+  {
+    id: "sanabi",
+    title: "SANABI",
+    titleKo: "산나비",
+    genre: "Platformer",
+    tags: ["그래플링 훅","액션","서사"],
+    mood: ["빠른","서사적","감성적"],
+    description: "그래플링 훅 하나로 도시를 누비는 한국산 액션 플랫포머"
+  },
+  {
+    id: "uncover-the-smoking-gun",
+    title: "Uncover the Smoking Gun",
+    titleKo: "언커버 더 스모킹 건",
+    genre: "Puzzle",
+    tags: ["추리","증거 분석","논리"],
+    mood: ["영리함","집중","차분함"],
+    description: "흩어진 증거를 분석해 진범을 특정하는 추리 시뮬레이션"
+  },
+  {
+    id: "we-were-here-together",
+    title: "We Were Here Together",
+    titleKo: "우리는 여기에 있었다 투게더",
+    genre: "Co-op Adventure",
+    tags: ["2인 협동","무전기","탈출"],
+    mood: ["긴장감","몰입감","따뜻함"],
+    description: "무전기로만 소통하며 둘이서 눈밭의 성을 탈출하는 2인 협동 퍼즐"
+  },
+  {
+    id: "a-way-out",
+    title: "A Way Out",
+    titleKo: "어 웨이 아웃",
+    genre: "Co-op Adventure",
+    tags: ["2인 협동","탈옥","스플릿 스크린"],
+    mood: ["긴장감","서사적","몰입감"],
+    description: "탈옥한 두 죄수의 이야기를 화면 분할로 함께 진행하는 2인 협동 게임"
+  },
+  {
+    id: "bitburner",
+    title: "Bitburner",
+    titleKo: "비트버너",
+    genre: "Automation",
+    tags: ["해킹","코딩","무료"],
+    mood: ["영리함","몰입감","집중"],
+    description: "직접 자바스크립트 코드를 짜서 서버를 해킹하고 돈을 버는 프로그래밍 게임"
+  },
+  {
+    id: "do-not-feed-the-monkeys",
+    title: "Do Not Feed the Monkeys",
+    titleKo: "먹이를 주지 마세요",
+    genre: "Simulation",
+    tags: ["관음","관찰","윤리적 선택"],
+    mood: ["기묘함","긴장감","영리함"],
+    description: "몰래 카메라로 타인의 삶을 훔쳐보며 개입 여부를 선택하는 관찰 시뮬레이션"
+  },
+  {
+    id: "do-not-feed-the-monkeys-2099",
+    title: "Do Not Feed the Monkeys 2099",
+    titleKo: "먹이를 주지 마세요 2099",
+    genre: "Simulation",
+    tags: ["관음","사이버펑크","윤리적 선택"],
+    mood: ["기묘함","긴장감","영리함"],
+    description: "가까운 미래를 배경으로 돌아온 관찰 시뮬레이션 속편"
+  },
+  {
+    id: "fall-guys",
+    title: "Fall Guys",
+    titleKo: "폴 가이즈",
+    genre: "Sports",
+    tags: ["파티","장애물 경주","배틀로얄"],
+    mood: ["유쾌함","빠른"],
+    description: "젤리 같은 캐릭터들이 장애물 코스에서 우당탕 경쟁하는 파티 배틀로얄"
+  },
+  {
+    id: "geometry-dash",
+    title: "Geometry Dash",
+    titleKo: "지오메트리 대시",
+    genre: "Platformer",
+    tags: ["리듬 플랫포머","정밀 점프","고난도"],
+    mood: ["빠른","집중","긴장감"],
+    description: "비트에 맞춰 장애물을 넘는 초고속 리듬 플랫포머"
+  },
+  {
+    id: "getting-over-it",
+    title: "Getting Over It with Bennett Foddy",
+    titleKo: "게팅 오버 잇",
+    genre: "Platformer",
+    tags: ["물리 등반","고난도","인내심"],
+    mood: ["도전적","집중","긴장감"],
+    description: "망치 하나로 항아리 속 몸을 끌고 산을 오르는 악명 높은 인내심 게임"
+  },
+  {
+    id: "golfing-over-it",
+    title: "Golfing Over It with Alva Majo",
+    titleKo: "골핑 오버 잇",
+    genre: "Platformer",
+    tags: ["물리 등반","골프","고난도"],
+    mood: ["도전적","집중","유쾌함"],
+    description: "골프채 하나로 공을 쳐 산을 오르는 Getting Over It의 골프 버전"
+  },
+  {
+    id: "goose-goose-duck",
+    title: "Goose Goose Duck",
+    titleKo: "구스 구스 덕",
+    genre: "Social Deduction",
+    tags: ["소셜 추리","역할 다양성","무료"],
+    mood: ["유쾌함","긴장감"],
+    description: "거위와 오리로 나뉘어 정체를 숨기고 추리하는 무료 소셜 추리 게임"
+  },
+  {
+    id: "gtfo",
+    title: "GTFO",
+    titleKo: "지티에프오",
+    genre: "Co-op Shooter",
+    tags: ["4인 협동","호러","고난도"],
+    mood: ["긴장감","몰입감","도전적"],
+    description: "소리 하나에도 전멸할 수 있는 4인 협동 지하 침투 호러 슈터"
+  },
+  {
+    id: "human-resource-machine",
+    title: "Human Resource Machine",
+    titleKo: "휴먼 리소스 머신",
+    genre: "Puzzle",
+    tags: ["코딩 퍼즐","논리","회사 풍자"],
+    mood: ["영리함","집중","유쾌함"],
+    description: "간단한 명령어 블록으로 사무실 업무를 자동화하는 프로그래밍 퍼즐"
+  },
+  {
+    id: "journey",
+    title: "Journey",
+    titleKo: "저니",
+    genre: "Adventure",
+    tags: ["감성 어드벤처","비언어","짧은 경험"],
+    mood: ["아름다움","감성적","서사적"],
+    description: "말없이 사막을 가로질러 산을 향해 걷는 짧고 강렬한 감성 어드벤처"
+  },
+  {
+    id: "jump-king",
+    title: "Jump King",
+    titleKo: "점프 킹",
+    genre: "Platformer",
+    tags: ["정밀 점프","고난도","인내심"],
+    mood: ["도전적","집중","긴장감"],
+    description: "한 번 실수하면 한참을 굴러떨어지는 악명 높은 정밀 점프 게임"
+  },
+  {
+    id: "muck",
+    title: "Muck",
+    titleKo: "머크",
+    genre: "Survival",
+    tags: ["로그라이크","생존","협동"],
+    mood: ["도전적","몰입감"],
+    description: "죽으면 처음부터 다시 시작하는 협동 생존 로그라이크"
+  },
+  {
+    id: "no-umbrellas-allowed",
+    title: "No Umbrellas Allowed",
+    titleKo: "우산을 쓰지 마세요",
+    genre: "Simulation",
+    tags: ["일기 예보","타이쿤","생활 시뮬레이션"],
+    mood: ["차분함","따뜻함","영리함"],
+    description: "날씨를 예측해 사람들에게 팔며 작은 마을에 자리 잡는 일기 예보 시뮬레이션"
+  },
+  {
+    id: "poly-bridge-2",
+    title: "Poly Bridge 2",
+    titleKo: "폴리 브릿지 2",
+    genre: "Puzzle",
+    tags: ["물리 시뮬레이션","다리 건설","논리"],
+    mood: ["영리함","차분함","집중"],
+    description: "예산 안에서 다리를 설계하고 차량이 무사히 건너는지 시험하는 물리 퍼즐"
+  },
+  {
+    id: "skul-the-hero-slayer",
+    title: "Skul: The Hero Slayer",
+    titleKo: "스컬: 더 히어로 슬레이어",
+    genre: "Roguelike",
+    tags: ["두개골 교체","액션","빌드"],
+    mood: ["도전적","빠른","몰입감"],
+    description: "머리를 갈아 끼우며 능력을 바꿔가는 한국산 로그라이크 액션"
+  },
+  {
+    id: "stacklands",
+    title: "Stacklands",
+    titleKo: "스택랜드",
+    genre: "Simulation",
+    tags: ["카드 빌더","마을 경영","덱빌딩"],
+    mood: ["차분함","영리함","몰입감"],
+    description: "카드를 쌓고 조합해서 마을을 키워나가는 카드형 빌더 게임"
+  },
+  {
+    id: "to-the-moon",
+    title: "To the Moon",
+    titleKo: "투 더 문",
+    genre: "Adventure",
+    tags: ["기억 여행","감성","픽셀 그래픽"],
+    mood: ["감성적","서사적","아름다움"],
+    description: "죽음을 앞둔 노인의 기억을 거슬러 올라가는 픽셀 그래픽 감성 어드벤처"
+  },
+  {
+    id: "we-were-here-forever",
+    title: "We Were Here Forever",
+    titleKo: "우리는 여기에 있었다 포에버",
+    genre: "Co-op Adventure",
+    tags: ["2인 협동","무전기","탈출"],
+    mood: ["긴장감","몰입감","따뜻함"],
+    description: "시리즈 최대 규모로 확장된 무전기 기반 2인 협동 탈출 퍼즐"
+  },
+  {
+    id: "overwatch-2",
+    title: "Overwatch",
+    titleKo: "오버워치",
+    genre: "Shooter",
+    tags: ["히어로 슈터","5대5","무료"],
+    mood: ["빠른","긴장감","전략적"],
+    description: "개성 강한 영웅들이 역할군별로 맞붙는 무료 팀 기반 히어로 슈터"
   }
 ];
 
@@ -1641,7 +1911,37 @@ const gameDetails = {
   "kena-bridge-of-spirits": ["2021", "약 12-15시간", 3, "싱글플레이", "PC, PlayStation", "지원", "Metacritic 83 / Steam 매우 긍정적"],
   "against-the-storm": ["2023", "약 30시간 이상", 4, "싱글플레이", "PC", "지원", "Metacritic 91 / Steam 압도적으로 긍정적"],
   "terra-nil": ["2023", "약 5-8시간", 2, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 79 / Steam 매우 긍정적"],
-  "wukong": ["2024", "약 25-35시간", 4, "싱글플레이", "PC, PlayStation, Xbox", "지원", "Metacritic 82 / Steam 매우 긍정적"]
+  "wukong": ["2024", "약 25-35시간", 4, "싱글플레이", "PC, PlayStation, Xbox", "지원", "Metacritic 82 / Steam 매우 긍정적"],
+  "detroit-become-human": ["2018", "약 10-12시간", 1, "싱글플레이", "PC, PlayStation", "지원", "Metacritic 80 / Steam 매우 긍정적"],
+  "rainbow-six-siege": ["2015", "제한없음", 4, "온라인 대전", "PC, PlayStation, Xbox", "지원", "Metacritic 확인 필요 / Steam 매우 긍정적"],
+  "pubg-battlegrounds": ["2017", "제한없음", 3, "온라인 대전", "PC, PlayStation, Xbox", "지원", "Metacritic 확인 필요 / Steam 복합적"],
+  "rhythm-doctor": ["2025", "약 10-20시간", 4, "싱글플레이", "PC, Xbox", "지원", "Metacritic 89 / Steam 압도적으로 긍정적"],
+  "moncage": ["2021", "약 2-3시간", 2, "싱글플레이", "PC, Switch, Mobile", "지원", "Metacritic 확인 필요 / Steam 매우 긍정적"],
+  "a-dance-of-fire-and-ice": ["2019", "약 10-20시간", 4, "싱글플레이", "PC, Switch, Mobile", "지원", "Metacritic 확인 필요 / Steam 압도적으로 긍정적"],
+  "sanabi": ["2023", "약 6-8시간", 3, "싱글플레이", "PC, PlayStation, Switch", "지원", "Metacritic 확인 필요 / Steam 압도적으로 긍정적"],
+  "uncover-the-smoking-gun": ["2024", "약 5-8시간", 2, "싱글플레이", "PC", "지원", "Metacritic 80 / Steam 매우 긍정적"],
+  "we-were-here-together": ["2019", "약 4-6시간", 3, "온라인 협동 2명 전용", "PC", "지원", "Metacritic 77 / Steam 매우 긍정적"],
+  "a-way-out": ["2018", "약 6-8시간", 2, "협동 2명 전용", "PC, PlayStation, Xbox", "미지원", "Metacritic 78 / Steam 매우 긍정적"],
+  "bitburner": ["2021", "약 50시간 이상", 4, "싱글플레이", "PC", "미지원", "Metacritic 확인 필요 / Steam 압도적으로 긍정적"],
+  "do-not-feed-the-monkeys": ["2018", "약 8-12시간", 2, "싱글플레이", "PC, Switch, Mobile", "지원", "Metacritic 확인 필요 / Steam 매우 긍정적"],
+  "do-not-feed-the-monkeys-2099": ["2023", "약 8-12시간", 2, "싱글플레이", "PC, Switch", "지원", "Metacritic 확인 필요 / Steam 매우 긍정적"],
+  "fall-guys": ["2020", "제한없음", 2, "온라인 다인원", "PC, PlayStation, Xbox, Switch, Mobile", "지원", "Metacritic 80 / Steam 복합적"],
+  "geometry-dash": ["2014", "약 20시간 이상", 5, "싱글플레이", "PC, Mobile", "미지원", "Metacritic 확인 필요 / Steam 압도적으로 긍정적"],
+  "getting-over-it": ["2017", "약 2-6시간", 5, "싱글플레이", "PC, Mobile", "지원", "Metacritic 확인 필요 / Steam 매우 긍정적"],
+  "golfing-over-it": ["2018", "약 2-4시간", 4, "싱글플레이", "PC", "지원", "Metacritic 확인 필요 / Steam 매우 긍정적"],
+  "goose-goose-duck": ["2021", "제한없음", 2, "온라인 다인원", "PC, Mobile", "지원", "Metacritic 확인 필요 / Steam 매우 긍정적"],
+  "gtfo": ["2021", "약 30시간 이상", 5, "온라인 협동 최대 4명", "PC", "지원", "Metacritic 78 / Steam 매우 긍정적"],
+  "human-resource-machine": ["2015", "약 6-8시간", 3, "싱글플레이", "PC, Switch, Mobile", "지원", "Metacritic 78 / Steam 압도적으로 긍정적"],
+  "journey": ["2012", "약 2-3시간", 1, "온라인 협동 2명", "PC, PlayStation", "지원", "Metacritic 확인 필요 / Steam 압도적으로 긍정적"],
+  "jump-king": ["2019", "약 5-10시간", 5, "싱글플레이", "PC, Switch, Mobile", "미지원", "Metacritic 확인 필요 / Steam 매우 긍정적"],
+  "muck": ["2021", "약 10시간 이상", 3, "온라인 협동 최대 4명", "PC", "미지원", "Metacritic 확인 필요 / Steam 매우 긍정적"],
+  "no-umbrellas-allowed": ["2021", "약 10-15시간", 2, "싱글플레이", "PC, Switch", "지원", "Metacritic 확인 필요 / Steam 압도적으로 긍정적"],
+  "poly-bridge-2": ["2020", "약 10-15시간", 3, "싱글플레이", "PC, Switch, Mobile", "지원", "Metacritic 확인 필요 / Steam 매우 긍정적"],
+  "skul-the-hero-slayer": ["2021", "약 20-40시간", 4, "싱글플레이", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 80 / Steam 매우 긍정적"],
+  "stacklands": ["2022", "약 10-15시간", 2, "싱글플레이", "PC", "지원", "Metacritic 확인 필요 / Steam 압도적으로 긍정적"],
+  "to-the-moon": ["2012", "약 4-5시간", 1, "싱글플레이", "PC, Switch, Mobile", "지원", "Metacritic 81 / Steam 압도적으로 긍정적"],
+  "we-were-here-forever": ["2022", "약 6-8시간", 3, "온라인 협동 최대 4명", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 확인 필요 / Steam 매우 긍정적"],
+  "overwatch-2": ["2022", "제한없음", 3, "온라인 대전", "PC, PlayStation, Xbox, Switch", "지원", "Metacritic 확인 필요 / Steam 복합적"]
 };
 
 const gameCoverUrls = {
@@ -1659,10 +1959,70 @@ const gameCoverLocalFiles = {
 };
 
 const gameCoverFocus = {
-  "animal-crossing": "68%",
+  "baldurs-gate-3": "80%",
   "minecraft": "52%",
+  "dead-cells": "18%",
+  "portal-2": "60%",
+  "ori-will-of-the-wisps": "47%",
+  "subnautica": "45%",
+  "mass-effect-2": "40%",
+  "horizon-zero-dawn": "45%",
+  "monster-hunter-world": "60%",
+  "sekiro": "70%",
+  "bloodborne": "52%",
+  "nioh-2": "55%",
+  "persona-5-royal": "40%",
+  "final-fantasy-vii-remake": "60%",
+  "disco-elysium": "52%",
+  "oxygen-not-included": "47%",
+  "into-the-breach": "80%",
+  "total-war-three-kingdoms": "70%",
+  "outer-wilds": "80%",
+  "resident-evil-4-remake": "20%",
   "zelda-breath-of-the-wild": "30%",
-  "zelda-tears-of-the-kingdom": "73%"
+  "zelda-tears-of-the-kingdom": "60%",
+  "dave-the-diver": "30%",
+  "vampire-survivors": "30%",
+  "balatro": "95%",
+  "palworld": "70%",
+  "lethal-company": "30%",
+  "risk-of-rain-2": "48%",
+  "satisfactory": "10%",
+  "sea-of-stars": "45%",
+  "dredge": "20%",
+  "euro-truck-simulator-2": "60%",
+  "a-short-hike": "23%",
+  "spiritfarer": "70%",
+  "inside": "60%",
+  "limbo": "60%",
+  "fez": "60%",
+  "spelunky-2": "77%",
+  "hyper-light-drifter": "68%",
+  "enter-the-gungeon": "49%",
+  "darkest-dungeon": "65%",
+  "firewatch": "14%",
+  "gris": "51%",
+  "baba-is-you": "70%",
+  "rain-world": "57%",
+  "crypt-of-the-necrodancer": "20%",
+  "superhot": "40%",
+  "unpacking": "60%",
+  "mini-motorways": "13%",
+  "half-life-2": "52%",
+  "death-stranding": "40%",
+  "warframe": "60%",
+  "ark-survival-evolved": "35%",
+  "sons-of-the-forest": "45%",
+  "monster-hunter-rise": "55%",
+  "street-fighter-6": "95%",
+  "rocket-league": "55%",
+  "human-fall-flat": "65%",
+  "overcooked-2": "45%",
+  "titanfall-2": "15%",
+  "chicory": "5%",
+  "a-plague-tale-requiem": "57%",
+  "little-nightmares-2": "70%",
+  "kena-bridge-of-spirits": "75%"
 };
 
 const gamePrices = {
@@ -1829,7 +2189,37 @@ const gamePrices = {
   "kena-bridge-of-spirits": 41000,
   "against-the-storm": 29900,
   "terra-nil": 27000,
-  "wukong": 64800
+  "wukong": 64800,
+  "detroit-become-human": 45500,
+  "rainbow-six-siege": 0,
+  "pubg-battlegrounds": 0,
+  "rhythm-doctor": 21500,
+  "moncage": 15500,
+  "a-dance-of-fire-and-ice": 6500,
+  "sanabi": 15500,
+  "uncover-the-smoking-gun": 24000,
+  "we-were-here-together": 14500,
+  "a-way-out": 33000,
+  "bitburner": 0,
+  "do-not-feed-the-monkeys": 17500,
+  "do-not-feed-the-monkeys-2099": 12500,
+  "fall-guys": 0,
+  "geometry-dash": 5600,
+  "getting-over-it": 8500,
+  "golfing-over-it": 5450,
+  "goose-goose-duck": 0,
+  "gtfo": 49990,
+  "human-resource-machine": 16500,
+  "journey": 18000,
+  "jump-king": 14500,
+  "muck": 0,
+  "no-umbrellas-allowed": 20500,
+  "poly-bridge-2": 15500,
+  "skul-the-hero-slayer": 20500,
+  "stacklands": 8800,
+  "to-the-moon": 10800,
+  "we-were-here-forever": 19500,
+  "overwatch-2": 0
 };
 
 function getGamePrice(game) {
@@ -2186,15 +2576,14 @@ const rawgData = {
     "released": "2020-03-31"
   },
   "dragon-quest-xi-s": {
-    "rawgId": 484816,
-    "rawgSlug": "dragon-quest-xi-s-echoes-of-an-elusive-age-definit",
-    "image": "https://media.rawg.io/media/screenshots/7af/7afce909f5f8510015209451984b683e.jpg",
-    "rawgRating": 4.26,
+    "rawgId": 58084,
+    "rawgSlug": "dragon-quest-xi",
+    "image": "https://media.rawg.io/media/games/e04/e041cc430f6b6681477580d3bcddf29f.jpg",
+    "rawgRating": 4.3,
     "rawgGenres": [
-      "Adventure",
       "RPG"
     ],
-    "released": "2019-09-27"
+    "released": "2017-07-29"
   },
   "final-fantasy-vii-remake": {
     "rawgId": 259801,
@@ -3795,5 +4184,365 @@ const rawgData = {
       "RPG"
     ],
     "released": "2024-08-20"
+  },
+  "detroit-become-human": {
+    "rawgId": 29177,
+    "rawgSlug": "detroit-become-human",
+    "image": "https://media.rawg.io/media/games/951/951572a3dd1e42544bd39a5d5b42d234.jpg",
+    "rawgRating": 4.34,
+    "rawgGenres": [
+      "Adventure",
+      "Action"
+    ],
+    "released": "2018-05-25"
+  },
+  "rainbow-six-siege": {
+    "rawgId": 8488,
+    "rawgSlug": "tom-clancys-rainbow-six-siege-2",
+    "image": "https://media.rawg.io/media/games/b34/b3419c2706f8f8dbe40d08e23642ad06.jpg",
+    "rawgRating": 3.88,
+    "rawgGenres": [
+      "Shooter",
+      "Action"
+    ],
+    "released": "2015-12-01"
+  },
+  "pubg-battlegrounds": {
+    "rawgId": 10142,
+    "rawgSlug": "playerunknowns-battlegrounds",
+    "image": "https://media.rawg.io/media/games/1bd/1bd2657b81eb0c99338120ad444b24ff.jpg",
+    "rawgRating": 3.28,
+    "rawgGenres": [
+      "Shooter",
+      "Massively Multiplayer",
+      "Action"
+    ],
+    "released": "2017-12-20"
+  },
+  "rhythm-doctor": {
+    "rawgId": 51168,
+    "rawgSlug": "rhythm-doctor",
+    "image": "https://media.rawg.io/media/games/1fd/1fdea6d922661f2a2b8d44d50fbdd9a4.jpg",
+    "rawgRating": 4.3,
+    "rawgGenres": [
+      "Indie"
+    ],
+    "released": "2025-12-06"
+  },
+  "moncage": {
+    "rawgId": 690708,
+    "rawgSlug": "moncage",
+    "image": "https://media.rawg.io/media/games/895/8957dba7dae9df357a1d43e71ae7bfe2.jpg",
+    "rawgRating": 3.79,
+    "rawgGenres": [
+      "Adventure",
+      "Strategy",
+      "Simulation",
+      "Casual",
+      "Indie",
+      "Puzzle"
+    ],
+    "released": "2021-11-15"
+  },
+  "a-dance-of-fire-and-ice": {
+    "rawgId": 279033,
+    "rawgSlug": "a-dance-of-fire-and-ice-2",
+    "image": "https://media.rawg.io/media/screenshots/ff9/ff937e37fd58db9f77873f2018b1ec15.jpg",
+    "rawgRating": 4.19,
+    "rawgGenres": [
+      "Casual",
+      "Indie",
+      "Arcade"
+    ],
+    "released": "2019-01-03"
+  },
+  "sanabi": {
+    "rawgId": 710407,
+    "rawgSlug": "sanabi",
+    "image": "https://media.rawg.io/media/games/8fd/8fddf3eec9b26d7d40965d57da53cce0.jpg",
+    "rawgRating": 4.3,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Platformer"
+    ],
+    "released": "2023-11-09"
+  },
+  "uncover-the-smoking-gun": {
+    "rawgId": 984234,
+    "rawgSlug": "uncover-the-smoking-gun",
+    "image": "https://media.rawg.io/media/screenshots/96e/96e67e05304889869a11b26185a31e57.jpg",
+    "rawgRating": 0,
+    "rawgGenres": [],
+    "released": "2024-06-23"
+  },
+  "we-were-here-together": {
+    "rawgId": 236751,
+    "rawgSlug": "we-were-here-together",
+    "image": "https://media.rawg.io/media/games/812/8129a4f97f5a061e370901b6dc257bd8.jpg",
+    "rawgRating": 4.03,
+    "rawgGenres": [
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Puzzle"
+    ],
+    "released": "2019-10-10"
+  },
+  "a-way-out": {
+    "rawgId": 50778,
+    "rawgSlug": "a-way-out-2018",
+    "image": "https://media.rawg.io/media/games/473/473bd9a5e9522629d6cb28b701fb836a.jpg",
+    "rawgRating": 4.12,
+    "rawgGenres": [
+      "Adventure",
+      "Action"
+    ],
+    "released": "2018-03-23"
+  },
+  "bitburner": {
+    "rawgId": 707311,
+    "rawgSlug": "bitburner",
+    "image": "https://media.rawg.io/media/screenshots/6f6/6f6d384dfe960125ef4bda74c5efbac2.jpg",
+    "rawgRating": 3.33,
+    "rawgGenres": [],
+    "released": "2021-12-10"
+  },
+  "do-not-feed-the-monkeys": {
+    "rawgId": 44931,
+    "rawgSlug": "do-not-feed-the-monkeys",
+    "image": "https://media.rawg.io/media/screenshots/cef/cef4e36ef6ecf82f9e36e32fb0f9c612.jpg",
+    "rawgRating": 3.89,
+    "rawgGenres": [
+      "Adventure",
+      "Strategy",
+      "Simulation",
+      "Indie",
+      "Puzzle"
+    ],
+    "released": "2018-10-22"
+  },
+  "do-not-feed-the-monkeys-2099": {
+    "rawgId": 845344,
+    "rawgSlug": "do-not-feed-the-monkeys-2099",
+    "image": "https://media.rawg.io/media/screenshots/995/995d185d417cdfed66b419cffc23359e.jpg",
+    "rawgRating": 3.25,
+    "rawgGenres": [
+      "Indie",
+      "Strategy",
+      "Adventure",
+      "Simulation"
+    ],
+    "released": "2023-05-25"
+  },
+  "fall-guys": {
+    "rawgId": 326292,
+    "rawgSlug": "fall-guys",
+    "image": "https://media.rawg.io/media/games/5eb/5eb49eb2fa0738fdb5bacea557b1bc57.jpg",
+    "rawgRating": 3.73,
+    "rawgGenres": [
+      "Action",
+      "Sports",
+      "Casual",
+      "Massively Multiplayer",
+      "Indie"
+    ],
+    "released": "2020-08-04"
+  },
+  "geometry-dash": {
+    "rawgId": 89,
+    "rawgSlug": "geometry-dash",
+    "image": "https://media.rawg.io/media/screenshots/fba/fbad5c48939e7887872754c9167c3f68.jpeg",
+    "rawgRating": 3.88,
+    "rawgGenres": [
+      "Arcade",
+      "Casual",
+      "Indie"
+    ],
+    "released": "2013-08-13"
+  },
+  "getting-over-it": {
+    "rawgId": 47204,
+    "rawgSlug": "getting-over-it-with-bennett-foddy",
+    "image": "https://media.rawg.io/media/games/941/941f173c573feebf92d62fad118d004e.jpg",
+    "rawgRating": 3.6,
+    "rawgGenres": [
+      "Action",
+      "Simulation"
+    ],
+    "released": "2017-12-06"
+  },
+  "golfing-over-it": {
+    "rawgId": 62539,
+    "rawgSlug": "golfing-over-it-with-alva-majo-indie",
+    "image": "https://media.rawg.io/media/screenshots/548/548d5b7f8fd1105bbe92821cc65d3dbe.jpg",
+    "rawgRating": 2.67,
+    "rawgGenres": [
+      "Platformer",
+      "Indie",
+      "Action"
+    ],
+    "released": "2018-03-28"
+  },
+  "goose-goose-duck": {
+    "rawgId": 586153,
+    "rawgSlug": "goose-goose-duck",
+    "image": "https://media.rawg.io/media/screenshots/983/98330a21cccd92d900d7b97b81e6db9e.jpg",
+    "rawgRating": 3.33,
+    "rawgGenres": [
+      "Action",
+      "Strategy",
+      "Casual",
+      "Indie"
+    ],
+    "released": "2021-04-30"
+  },
+  "gtfo": {
+    "rawgId": 50775,
+    "rawgSlug": "gtfo",
+    "image": "https://media.rawg.io/media/games/814/8140301ae3791d2cd4303d6c6f485b9a.jpg",
+    "rawgRating": 3.68,
+    "rawgGenres": [
+      "Action",
+      "Adventure"
+    ],
+    "released": "2021-12-09"
+  },
+  "human-resource-machine": {
+    "rawgId": 5978,
+    "rawgSlug": "human-resource-machine",
+    "image": "https://media.rawg.io/media/screenshots/8ab/8abf17ba4f55182f37b2eb2866fae35d.jpg",
+    "rawgRating": 4.01,
+    "rawgGenres": [
+      "Simulation",
+      "Casual",
+      "Educational",
+      "Indie",
+      "Puzzle"
+    ],
+    "released": "2015-10-14"
+  },
+  "journey": {
+    "rawgId": 3254,
+    "rawgSlug": "journey",
+    "image": "https://media.rawg.io/media/games/baf/baf9905270314e07e6850cffdb51df41.jpg",
+    "rawgRating": 4.32,
+    "rawgGenres": [
+      "Adventure",
+      "Family",
+      "Indie"
+    ],
+    "released": "2012-03-13"
+  },
+  "jump-king": {
+    "rawgId": 306139,
+    "rawgSlug": "jump-king",
+    "image": "https://media.rawg.io/media/screenshots/7d5/7d56326ef688d4159ee75f85d77e546d.jpg",
+    "rawgRating": 3.64,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "released": "2019-05-02"
+  },
+  "muck": {
+    "rawgId": 613573,
+    "rawgSlug": "muck-2",
+    "image": "https://media.rawg.io/media/screenshots/a78/a783c8e31fd3a9876f719da4008a86f8.jpg",
+    "rawgRating": 3.46,
+    "rawgGenres": [
+      "Indie",
+      "Adventure",
+      "Action"
+    ],
+    "released": "2021-06-05"
+  },
+  "no-umbrellas-allowed": {
+    "rawgId": 491009,
+    "rawgSlug": "no-umbrellas-allowed",
+    "image": "https://media.rawg.io/media/screenshots/7e7/7e76aa7d6028f0a7a1edc7dcc371872a.jpg",
+    "rawgRating": 3.43,
+    "rawgGenres": [
+      "Strategy",
+      "Simulation",
+      "Indie"
+    ],
+    "released": "2020-06-24"
+  },
+  "poly-bridge-2": {
+    "rawgId": 428354,
+    "rawgSlug": "poly-bridge-2",
+    "image": "https://media.rawg.io/media/screenshots/35f/35f5abf86a809da1ad699376c6f88028.jpg",
+    "rawgRating": 3.91,
+    "rawgGenres": [
+      "Simulation",
+      "Indie",
+      "Puzzle"
+    ],
+    "released": "2020-05-28"
+  },
+  "skul-the-hero-slayer": {
+    "rawgId": 412477,
+    "rawgSlug": "skul-the-hero-slayer",
+    "image": "https://media.rawg.io/media/games/4f0/4f0a1619ca566080c9f3bb1e813bd6f6.jpg",
+    "rawgRating": 3.59,
+    "rawgGenres": [
+      "Action",
+      "Indie"
+    ],
+    "released": "2021-01-21"
+  },
+  "stacklands": {
+    "rawgId": 763608,
+    "rawgSlug": "stacklands",
+    "image": "https://media.rawg.io/media/screenshots/35e/35e72a4d7e9be35051f5e1df77edce75.jpg",
+    "rawgRating": 3.85,
+    "rawgGenres": [
+      "Simulation",
+      "Casual",
+      "Indie"
+    ],
+    "released": "2022-03-31"
+  },
+  "to-the-moon": {
+    "rawgId": 13194,
+    "rawgSlug": "to-the-moon",
+    "image": "https://media.rawg.io/media/games/fae/faebf3c8cbf30db3f46bfbecf6ada3d6.jpg",
+    "rawgRating": 4.29,
+    "rawgGenres": [
+      "Action",
+      "Adventure",
+      "RPG",
+      "Casual",
+      "Indie"
+    ],
+    "released": "2011-01-10"
+  },
+  "we-were-here-forever": {
+    "rawgId": 574766,
+    "rawgSlug": "we-were-here-forever",
+    "image": "https://media.rawg.io/media/games/b2d/b2d4e1f3fc468c104efb7c5a576b4206.jpg",
+    "rawgRating": 4.36,
+    "rawgGenres": [
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Puzzle"
+    ],
+    "released": "2022-05-10"
+  },
+  "overwatch-2": {
+    "rawgId": 388308,
+    "rawgSlug": "overwatch-2",
+    "image": "https://media.rawg.io/media/games/95a/95a10817d1fc648cff1153f3fa8ef6c5.jpg",
+    "rawgRating": 3.14,
+    "rawgGenres": [
+      "Action",
+      "Shooter",
+      "Massively Multiplayer"
+    ],
+    "released": "2022-10-04"
   }
 };

@@ -3699,75 +3699,101 @@ const rawgData = {
     "released": "2023-03-28"
   },
   "animal-crossing": {
-    "rawgId": null,
-    "rawgSlug": null,
-    "image": null,
-    "rawgRating": null,
-    "rawgGenres": [],
-    "released": null
+    "rawgId": 421698,
+    "rawgSlug": "animal-crossing-2019",
+    "image": "https://media.rawg.io/media/games/42f/42fe1abd4d7c11ca92d93a0fb0f8662b.jpg",
+    "rawgRating": 4.3,
+    "rawgGenres": [
+      "Simulation"
+    ],
+    "released": "2020-03-20"
   },
   "hades": {
-    "rawgId": null,
-    "rawgSlug": null,
-    "image": null,
-    "rawgRating": null,
-    "rawgGenres": [],
-    "released": null
+    "rawgId": 274755,
+    "rawgSlug": "hades-2018",
+    "image": "https://media.rawg.io/media/games/1f4/1f47a270b8f241e4676b14d39ec620f7.jpg",
+    "rawgRating": 4.42,
+    "rawgGenres": [
+      "Indie",
+      "Adventure",
+      "Action",
+      "RPG"
+    ],
+    "released": "2020-09-17"
   },
   "it-takes-two": {
-    "rawgId": null,
-    "rawgSlug": null,
-    "image": null,
-    "rawgRating": null,
-    "rawgGenres": [],
-    "released": null
+    "rawgId": 455597,
+    "rawgSlug": "it-takes-two-2",
+    "image": "https://media.rawg.io/media/games/d47/d479582ed0a46496ad34f65c7099d7e5.jpg",
+    "rawgRating": 4.46,
+    "rawgGenres": [
+      "Platformer",
+      "Adventure",
+      "Action"
+    ],
+    "released": "2021-03-26"
   },
   "god-of-war": {
-    "rawgId": null,
-    "rawgSlug": null,
-    "image": null,
-    "rawgRating": null,
-    "rawgGenres": [],
-    "released": null
+    "rawgId": 58175,
+    "rawgSlug": "god-of-war-2",
+    "image": "https://media.rawg.io/media/games/4be/4be6a6ad0364751a96229c56bf69be59.jpg",
+    "rawgRating": 4.54,
+    "rawgGenres": [
+      "Action"
+    ],
+    "released": "2018-04-20"
   },
   "sekiro": {
-    "rawgId": null,
-    "rawgSlug": null,
-    "image": null,
-    "rawgRating": null,
-    "rawgGenres": [],
-    "released": null
+    "rawgId": 50734,
+    "rawgSlug": "shadows-die-twice",
+    "image": "https://media.rawg.io/media/games/67f/67f62d1f062a6164f57575e0604ee9f6.jpg",
+    "rawgRating": 4.38,
+    "rawgGenres": [
+      "Action",
+      "RPG"
+    ],
+    "released": "2019-03-22"
   },
   "sea-of-stars": {
-    "rawgId": null,
-    "rawgSlug": null,
-    "image": null,
-    "rawgRating": null,
-    "rawgGenres": [],
-    "released": null
+    "rawgId": 427490,
+    "rawgSlug": "sea-of-stars-2",
+    "image": "https://media.rawg.io/media/games/1de/1de8ff69ed31d7a47d4f7770f23f20b8.jpg",
+    "rawgRating": 4.28,
+    "rawgGenres": [
+      "RPG"
+    ],
+    "released": "2023-08-28"
   },
   "unpacking": {
-    "rawgId": null,
-    "rawgSlug": null,
-    "image": null,
-    "rawgRating": null,
-    "rawgGenres": [],
-    "released": null
+    "rawgId": 364942,
+    "rawgSlug": "unpacking-2",
+    "image": "https://media.rawg.io/media/games/c11/c1118fbcfd846c631ecb7646f8efc780.jpg",
+    "rawgRating": 4.04,
+    "rawgGenres": [
+      "Casual"
+    ],
+    "released": "2021-11-02"
   },
   "counter-strike-2": {
-    "rawgId": null,
-    "rawgSlug": null,
-    "image": null,
-    "rawgRating": null,
-    "rawgGenres": [],
-    "released": null
+    "rawgId": 965470,
+    "rawgSlug": "counter-strike-2-2",
+    "image": "https://media.rawg.io/media/games/ec4/ec4b02bdb3eb5c6212992c19bc05697e.jpg",
+    "rawgRating": 3.59,
+    "rawgGenres": [
+      "Shooter"
+    ],
+    "released": "2023-09-27"
   },
   "wukong": {
-    "rawgId": null,
-    "rawgSlug": null,
-    "image": null,
-    "rawgRating": null,
-    "rawgGenres": [],
-    "released": null
+    "rawgId": 481913,
+    "rawgSlug": "black-myth-wu-kong",
+    "image": "https://media.rawg.io/media/games/779/77988e89f7862afeede524420aa251b0.jpg",
+    "rawgRating": 4.31,
+    "rawgGenres": [
+      "Adventure",
+      "Action",
+      "RPG"
+    ],
+    "released": "2024-08-20"
   }
 };

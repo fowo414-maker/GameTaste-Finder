@@ -76,9 +76,16 @@ const itemPattern = /<li class="popular-game-item">\s*<a class="popular-game-lin
 
 let updated = 0;
 let placeholdered = 0;
+let upgraded = 0;
 const noImage = [];
 
+// Matches either an existing image cover span or an existing initials
+// placeholder span - the two hand-authored forms this markup ever takes.
 const coverSpanPattern = /<span class="popular-game-cover"[^>]*>[\s\S]*?<\/span>/;
+// The placeholder markup nests a fallback-initials span inside the cover
+// span, so a single non-greedy `[\s\S]*?<\/span>` would stop at the inner
+// </span> and leave the outer one dangling - match both closing tags.
+const placeholderSpanPattern = /<span class="popular-game-cover is-placeholder"[^>]*>[\s\S]*?<\/span>\s*<\/span>/;
 
 html = html.replace(itemPattern, (block, gameId) => {
   const game = gamesById.get(gameId);
@@ -89,9 +96,13 @@ html = html.replace(itemPattern, (block, gameId) => {
   }
 
   const image = getCoverImageUrl(game);
+  const isPlaceholder = placeholderSpanPattern.test(block);
 
   if (!image) {
     noImage.push(gameId);
+
+    if (isPlaceholder) return block; // already a placeholder, nothing to change
+
     // No resolvable image (e.g. RAWG match was cleared as incorrect) -
     // show the genre-colored initials placeholder instead of leaving a
     // stale/wrong image in place.
@@ -107,6 +118,17 @@ html = html.replace(itemPattern, (block, gameId) => {
 
   const altText = game.titleKo ? `${game.title} (${game.titleKo}) 커버 이미지` : `${game.title} 커버 이미지`;
 
+  if (isPlaceholder) {
+    // Upgrading a placeholder to a real image - it has no hand-tuned crop
+    // yet, so default to a centered focus point.
+    const imageCover = `<span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:50%"><img src="${image}" alt="${altText}" loading="lazy" decoding="async"></span>`;
+    const newBlock = block.replace(placeholderSpanPattern, imageCover);
+
+    if (newBlock !== block) upgraded++;
+
+    return newBlock;
+  }
+
   let newBlock = block.replace(/(<img src=")[^"]*(")/, `$1${image}$2`);
   newBlock = newBlock.replace(/(<img src="[^"]*" alt=")[^"]*(")/, `$1${altText}$2`);
 
@@ -116,7 +138,7 @@ html = html.replace(itemPattern, (block, gameId) => {
 });
 
 fs.writeFileSync(indexPath, html);
-console.log(`Updated ${updated} popular-game-item cards, ${placeholdered} switched to initials placeholder.`);
+console.log(`Updated ${updated} popular-game-item cards, ${upgraded} upgraded from placeholder to image, ${placeholdered} switched to initials placeholder.`);
 
 if (noImage.length > 0) {
   console.log("No resolvable image for:");

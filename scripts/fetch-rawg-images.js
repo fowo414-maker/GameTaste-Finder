@@ -49,10 +49,18 @@ const gamesJsSource = fs.readFileSync(gamesJsPath, "utf8");
 
 const sandbox = {};
 vm.createContext(sandbox);
-const { games, rawgData: existingRawgData } = vm.runInContext(
-  gamesJsSource + "\n;(function(){return {games, rawgData};})()",
+const { games, rawgData: existingRawgData, gameDetails } = vm.runInContext(
+  gamesJsSource + "\n;(function(){return {games, rawgData, gameDetails};})()",
   sandbox
 );
+
+// gameDetails[id][0] is the release year we already display on the site
+// (e.g. "2018" for our God of War reboot entry) - a strong disambiguator
+// when a title has multiple RAWG entries (remasters, originals, sequels).
+function expectedYearOf(id) {
+  const details = gameDetails && gameDetails[id];
+  return details && details[0] ? String(details[0]).match(/\d{4}/)?.[0] || null : null;
+}
 
 const REQUEST_DELAY_MS = 350; // be polite to RAWG's free-tier rate limit
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -102,14 +110,17 @@ function namesLookSimilar(a, b) {
   return overlap / Math.min(wordsA.size, wordsB.size) >= 0.6;
 }
 
-// A well-known title with rating 0 / no ratings / no genres on RAWG almost
-// always means the matched entry is an obscure, unrelated game - real
-// popular titles always carry substantial RAWG review data.
+// A well-known title with rating 0 or no ratings on RAWG almost always
+// means the matched entry is an obscure, unrelated game holding the same
+// (or a similar-looking) name/slug - real popular titles always carry
+// substantial RAWG review data. Note this is now an OR: a handful of
+// generic genre tags on an otherwise unrated entry used to be enough to
+// slip past the old AND-based check (e.g. our "hades" id matched an
+// obscure 0-rating "Platformer" called Hades instead of Supergiant's game).
 function looksSuspicious(rawgGame) {
   const noRating = !rawgGame.rating || rawgGame.rating === 0;
   const noRatingsCount = !rawgGame.ratings_count || rawgGame.ratings_count === 0;
-  const noGenres = !Array.isArray(rawgGame.genres) || rawgGame.genres.length === 0;
-  return noRating && noRatingsCount && noGenres;
+  return noRating || noRatingsCount;
 }
 
 function toRawgEntry(rawgGame) {
@@ -123,11 +134,41 @@ function toRawgEntry(rawgGame) {
   };
 }
 
+function yearOf(rawgGame) {
+  const m = rawgGame.released && /^(\d{4})/.exec(rawgGame.released);
+  return m ? m[1] : null;
+}
+
+// Same title can legitimately map to several RAWG entries (a remaster, the
+// original release, a sequel that kept the base name). Within 1 year of our
+// displayed release year counts as a match; without an expected year on our
+// side we don't filter on this at all.
+function yearMatches(rawgGame, expectedYear) {
+  if (!expectedYear) return true;
+  const y = yearOf(rawgGame);
+  return y !== null && Math.abs(Number(y) - Number(expectedYear)) <= 1;
+}
+
+// Rank name-similar, non-suspicious candidates: year-correct ones first,
+// most-rated as the tiebreaker (both within the year-correct group and
+// within the fallback group, so we don't just take whatever RAWG listed
+// first).
+function rankCandidates(candidates, game, expectedYear) {
+  return candidates
+    .filter((c) => namesLookSimilar(c.name, game.title))
+    .sort((a, b) => {
+      const yearDelta = (yearMatches(b, expectedYear) ? 1 : 0) - (yearMatches(a, expectedYear) ? 1 : 0);
+      if (yearDelta !== 0) return yearDelta;
+      return (b.ratings_count || 0) - (a.ratings_count || 0);
+    });
+}
+
 async function findRawgMatch(game) {
+  const expectedYear = expectedYearOf(game.id);
   const direct = await rawgFetch(`https://api.rawg.io/api/games/${encodeURIComponent(game.id)}?key=${API_KEY}`);
   const directLooksRight = direct && direct.id && namesLookSimilar(direct.name, game.title);
 
-  if (directLooksRight && !looksSuspicious(direct)) {
+  if (directLooksRight && !looksSuspicious(direct) && yearMatches(direct, expectedYear)) {
     return { rawgGame: direct, confidence: "high" };
   }
 
@@ -135,17 +176,21 @@ async function findRawgMatch(game) {
   const searchResult = await rawgFetch(searchUrl);
   const candidates = searchResult && Array.isArray(searchResult.results) ? searchResult.results : [];
 
-  const goodMatch = candidates.find((c) => namesLookSimilar(c.name, game.title) && !looksSuspicious(c));
-  if (goodMatch) {
-    return { rawgGame: goodMatch, confidence: "high" };
+  // RAWG's search order isn't reliable relevance ranking (duplicate/obscure
+  // entries can outrank the real game), so among all name-similar,
+  // non-suspicious candidates pick the best-ranked one (year-correct,
+  // most-rated) instead of whichever came back first.
+  const goodCandidates = rankCandidates(candidates, game, expectedYear).filter((c) => !looksSuspicious(c));
+  if (goodCandidates.length > 0) {
+    return { rawgGame: goodCandidates[0], confidence: "high" };
   }
 
   // Nothing passed both the name check and the sanity check. Prefer a
   // name-similar-but-suspicious candidate over a name-dissimilar one, but
   // flag it clearly either way instead of silently trusting it.
-  const nameOnlyMatch = candidates.find((c) => namesLookSimilar(c.name, game.title));
-  if (nameOnlyMatch) {
-    return { rawgGame: nameOnlyMatch, confidence: "low-suspicious-rating" };
+  const nameOnlyMatches = rankCandidates(candidates, game, expectedYear);
+  if (nameOnlyMatches.length > 0) {
+    return { rawgGame: nameOnlyMatches[0], confidence: "low-suspicious-rating" };
   }
 
   if (directLooksRight) {

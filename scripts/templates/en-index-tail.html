@@ -1,0 +1,521 @@
+        <div class="show-more-wrap">
+          <button id="showMoreGames" class="show-more-button" type="button" aria-controls="gameList">Show more</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" aria-labelledby="recommend-title">
+      <div class="container">
+        <div class="action-panel">
+          <div>
+            <p class="eyebrow">Step 2</p>
+            <h2 id="recommend-title">Recommendation Results</h2>
+            <p class="muted">Shows up to 8 games based on what you selected.</p>
+          </div>
+          <button id="recommendButton" class="primary-button neon-button" type="button">
+            <span class="neon-edge neon-edge-top" aria-hidden="true"></span>
+            <span class="button-label">Get Recommendations</span>
+            <span class="neon-edge neon-edge-bottom" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div id="result" class="result-area" aria-live="polite">
+          <p class="empty-message">Select 3 or more games, then press the recommend button.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft popular-games-section" aria-labelledby="popular-games-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Popular Games</p>
+            <h2 id="popular-games-title">Jump to Popular Games</h2>
+          </div>
+          <p class="muted">Check the intro, genre, and why we recommend each popular game on its detail page.</p>
+        </div>
+        <ul class="popular-games-grid">
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/elden-ring.html">
+              <span class="popular-game-rank">1</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:80%"><img src="https://media.rawg.io/media/games/b29/b294fdd866dcdb643e7bab370a552855.jpg" alt="Elden Ring cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Elden Ring</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/baldurs-gate-3.html">
+              <span class="popular-game-rank">2</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:10%"><img src="https://media.rawg.io/media/games/699/69907ecf13f172e9e144069769c3be73.jpg" alt="Baldur's Gate 3 cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Baldur's Gate 3</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/zelda-tears-of-the-kingdom.html">
+              <span class="popular-game-rank">3</span>
+              <span class="popular-game-cover" style="--cover-focus-x:73%; --cover-focus-y:50%"><img src="https://media.rawg.io/media/games/556/55684bfd048706f4266d331d70050b37.jpg" alt="The Legend of Zelda: Tears of the Kingdom cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Zelda: Tears of the Kingdom</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/zelda-breath-of-the-wild.html">
+              <span class="popular-game-rank">4</span>
+              <span class="popular-game-cover" style="--cover-focus-x:70%; --cover-focus-y:50%"><img src="https://media.rawg.io/media/games/cc1/cc196a5ad763955d6532cdba236f730c.jpg" alt="The Legend of Zelda: Breath of the Wild cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Zelda: Breath of the Wild</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/minecraft.html">
+              <span class="popular-game-rank">5</span>
+              <span class="popular-game-cover" style="--cover-focus-x:52%; --cover-focus-y:50%"><img src="https://media.rawg.io/media/games/b4e/b4e4c73d5aa4ec66bbf75375c4847a2b.jpg" alt="Minecraft cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Minecraft</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/gta-5.html">
+              <span class="popular-game-rank">6</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:50%"><img src="https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg" alt="Grand Theft Auto V cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Grand Theft Auto V</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/stardew-valley.html">
+              <span class="popular-game-rank">7</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:10%"><img src="https://media.rawg.io/media/games/713/713269608dc8f2f40f5a670a14b2de94.jpg" alt="Stardew Valley cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Stardew Valley</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/hollow-knight.html">
+              <span class="popular-game-rank">8</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:50%"><img src="https://media.rawg.io/media/games/4cf/4cfc6b7f1850590a4634b08bfab308ab.jpg" alt="Hollow Knight cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Hollow Knight</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/cyberpunk-2077.html">
+              <span class="popular-game-rank">9</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:50%"><img src="https://media.rawg.io/media/games/26d/26d4437715bee60138dab4a7c8c59c92.jpg" alt="Cyberpunk 2077 cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Cyberpunk 2077</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/the-witcher-3.html">
+              <span class="popular-game-rank">10</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:50%"><img src="https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg" alt="The Witcher 3: Wild Hunt cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">The Witcher 3: Wild Hunt</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/red-dead-redemption-2.html">
+              <span class="popular-game-rank">11</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:20%"><img src="https://media.rawg.io/media/games/511/5118aff5091cb3efec399c808f8c598f.jpg" alt="Red Dead Redemption 2 cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Red Dead Redemption 2</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/palworld.html">
+              <span class="popular-game-rank">12</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:0%"><img src="https://media.rawg.io/media/games/4e9/4e9c951414c732923fa72d5b1da49402.jpg" alt="Palworld cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Palworld</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/helldivers-2.html">
+              <span class="popular-game-rank">13</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:60%"><img src="https://media.rawg.io/media/screenshots/755/7552f856f88b0de1dee040121039b079.jpg" alt="HELLDIVERS 2 cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">HELLDIVERS 2</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/lies-of-p.html">
+              <span class="popular-game-rank">14</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:20%"><img src="https://media.rawg.io/media/games/458/45838becd01e929b6be8b88d655cebfc.jpg" alt="Lies of P cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Lies of P</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/diablo-4.html">
+              <span class="popular-game-rank">15</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:20%"><img src="https://media.rawg.io/media/games/77d/77d51f8f4a07c3eecb0f8504027b1bf0.jpg" alt="Diablo IV cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Diablo IV</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/hogwarts-legacy.html">
+              <span class="popular-game-rank">16</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:60%"><img src="https://media.rawg.io/media/games/044/044b2ee023930ca138deda151f40c18c.jpg" alt="Hogwarts Legacy cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Hogwarts Legacy</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/starfield.html">
+              <span class="popular-game-rank">17</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:55%"><img src="https://media.rawg.io/media/games/ba8/ba82c971336adfd290e4c0eab6504fcf.jpg" alt="Starfield cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Starfield</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/god-of-war.html">
+              <span class="popular-game-rank">18</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:50%"><img src="https://media.rawg.io/media/games/4be/4be6a6ad0364751a96229c56bf69be59.jpg" alt="God of War cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">God of War</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/horizon-zero-dawn.html">
+              <span class="popular-game-rank">19</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:55%"><img src="https://media.rawg.io/media/games/b7d/b7d3f1715fa8381a4e780173a197a615.jpg" alt="Horizon Zero Dawn cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Horizon Zero Dawn</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/persona-5-royal.html">
+              <span class="popular-game-rank">20</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:50%"><img src="https://media.rawg.io/media/games/a9c/a9c789951de65da545d51f664b4f2ce0.jpg" alt="Persona 5 Royal cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Persona 5 Royal</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/final-fantasy-vii-remake.html">
+              <span class="popular-game-rank">21</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:70%"><img src="https://media.rawg.io/media/games/d89/d89bd0cf4fcdc10820892980cbba0f49.jpg" alt="Final Fantasy VII Remake cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Final Fantasy VII Remake</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/resident-evil-4-remake.html">
+              <span class="popular-game-rank">22</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:20%"><img src="https://media.rawg.io/media/games/51a/51a404b9918a0b19fc704a3ca248c69f.jpg" alt="Resident Evil 4 Remake cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Resident Evil 4 Remake</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/dark-souls-3.html">
+              <span class="popular-game-rank">23</span>
+              <span class="popular-game-cover" style="--cover-focus-x:60%; --cover-focus-y:0%"><img src="https://media.rawg.io/media/games/da1/da1b267764d77221f07a4386b6548e5a.jpg" alt="Dark Souls III cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Dark Souls III</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/sekiro.html">
+              <span class="popular-game-rank">24</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:50%"><img src="https://media.rawg.io/media/games/67f/67f62d1f062a6164f57575e0604ee9f6.jpg" alt="Sekiro: Shadows Die Twice cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Sekiro: Shadows Die Twice</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/bloodborne.html">
+              <span class="popular-game-rank">25</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:0%"><img src="https://media.rawg.io/media/games/214/214b29aeff13a0ae6a70fc4426e85991.jpg" alt="Bloodborne cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Bloodborne</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/monster-hunter-world.html">
+              <span class="popular-game-rank">26</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:60%"><img src="https://media.rawg.io/media/games/21c/21cc15d233117c6809ec86870559e105.jpg" alt="Monster Hunter: World cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Monster Hunter: World</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/apex-legends.html">
+              <span class="popular-game-rank">27</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:50%"><img src="https://media.rawg.io/media/games/737/737ea5662211d2e0bbd6f5989189e4f1.jpg" alt="Apex Legends cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Apex Legends</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/counter-strike-2.html">
+              <span class="popular-game-rank">28</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:50%"><img src="https://media.rawg.io/media/games/ec4/ec4b02bdb3eb5c6212992c19bc05697e.jpg" alt="Counter-Strike 2 cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Counter-Strike 2</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/valheim.html">
+              <span class="popular-game-rank">29</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:10%"><img src="https://media.rawg.io/media/games/adb/adb59be81367b19c2544457424bcf086.jpg" alt="Valheim cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Valheim</span></span>
+            </a>
+          </li>
+          <li class="popular-game-item">
+            <a class="popular-game-link" href="/games/among-us.html">
+              <span class="popular-game-rank">30</span>
+              <span class="popular-game-cover" style="--cover-focus-x:50%; --cover-focus-y:50%"><img src="https://media.rawg.io/media/games/e74/e74458058b35e01c1ae3feeb39a3f724.jpg" alt="Among Us cover image" loading="lazy" decoding="async"></span>
+              <span class="popular-game-label"><span class="popular-game-en">Among Us</span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-soft genre-section collapsible-section" aria-labelledby="genre-intro-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Genres</p>
+            <h2 id="genre-intro-title"><button class="collapsible-toggle" type="button" aria-expanded="false" aria-controls="genre-intro-body"><span>Explore Popular Genres</span><span class="collapsible-chevron" aria-hidden="true"></span></button></h2>
+            <p class="section-teaser">From Action RPGs to Sandbox, click through six frequently searched genres.</p>
+          </div>
+        </div>
+        <div class="collapsible-body" id="genre-intro-body" role="region" aria-labelledby="genre-intro-title">
+          <div class="collapsible-body-inner">
+        <div class="genre-explorer" aria-label="Explore popular genres">
+          <article class="genre-panel action-rpg">
+            <div class="genre-panel-summary">
+              <span class="genre-icon" aria-hidden="true">⚔</span>
+              <h3>Action RPG</h3>
+            </div>
+            <div class="genre-panel-detail">
+              <h4 class="genre-panel-detail-title">Action RPG</h4>
+              <p class="genre-keywords">Combat · Progression · Gear builds</p>
+              <p>A genre where combat mechanics and character growth matter equally. It suits players who enjoy gearing up and taking down tough enemies.</p>
+              <p><strong>Featured games</strong> Elden Ring, Monster Hunter: World, Lies of P</p>
+              <button class="genre-action" type="button" data-genre-filter="Action RPG">View these games</button>
+            </div>
+          </article>
+          <article class="genre-panel rpg">
+            <div class="genre-panel-summary">
+              <span class="genre-icon" aria-hidden="true">✦</span>
+              <h3>RPG</h3>
+            </div>
+            <div class="genre-panel-detail">
+              <h4 class="genre-panel-detail-title">RPG</h4>
+              <p class="genre-keywords">Narrative · Choices · Character growth</p>
+              <p>A genre built for long, immersive sessions centered on story, choices, and character growth. Recommended if you enjoy slowly following a world's lore and narrative.</p>
+              <p><strong>Featured games</strong> Baldur's Gate 3, The Witcher 3, Disco Elysium</p>
+              <button class="genre-action" type="button" data-genre-filter="RPG">View these games</button>
+            </div>
+          </article>
+          <article class="genre-panel strategy">
+            <div class="genre-panel-summary">
+              <span class="genre-icon" aria-hidden="true">♟</span>
+              <h3>Strategy</h3>
+            </div>
+            <div class="genre-panel-detail">
+              <h4 class="genre-panel-detail-title">Strategy</h4>
+              <p class="genre-keywords">Tactics · Resource management · Planning</p>
+              <p>A genre where resource management, tactical judgment, and long-term planning matter most. It suits players who prefer thinking and deciding over fast reflexes.</p>
+              <p><strong>Featured games</strong> Civilization VI, XCOM 2, Into the Breach</p>
+              <button class="genre-action" type="button" data-genre-filter="Strategy">View these games</button>
+            </div>
+          </article>
+          <article class="genre-panel simulation">
+            <div class="genre-panel-summary">
+              <span class="genre-icon" aria-hidden="true">▣</span>
+              <h3>Simulation</h3>
+            </div>
+            <div class="genre-panel-detail">
+              <h4 class="genre-panel-detail-title">Simulation</h4>
+              <p class="genre-keywords">Life · Management · Incremental growth</p>
+              <p>A genre about repeating and developing a specific activity, like daily life, a city, a farm, or a business. Great for calmly setting goals and steadily expanding.</p>
+              <p><strong>Featured games</strong> Stardew Valley, Cities: Skylines, The Sims 4</p>
+              <button class="genre-action" type="button" data-genre-filter="Simulation">View these games</button>
+            </div>
+          </article>
+          <article class="genre-panel roguelike">
+            <div class="genre-panel-summary">
+              <span class="genre-icon" aria-hidden="true">↻</span>
+              <h3>Roguelike</h3>
+            </div>
+            <div class="genre-panel-detail">
+              <h4 class="genre-panel-detail-title">Roguelike</h4>
+              <p class="genre-keywords">Repeated runs · Builds · Randomness</p>
+              <p>Defined by runs that are different every time and repeated attempts. Recommended if you enjoy trying again after failure to perfect a build.</p>
+              <p><strong>Featured games</strong> Hades, Dead Cells, Slay the Spire</p>
+              <button class="genre-action" type="button" data-genre-filter="Roguelike">View these games</button>
+            </div>
+          </article>
+          <article class="genre-panel sandbox">
+            <div class="genre-panel-summary">
+              <span class="genre-icon" aria-hidden="true">⬡</span>
+              <h3>Sandbox</h3>
+            </div>
+            <div class="genre-panel-detail">
+              <h4 class="genre-panel-detail-title">Sandbox</h4>
+              <p class="genre-keywords">Freedom · Crafting · Exploration</p>
+              <p>A genre that values open-ended exploration and creation over a fixed answer. Great if you enjoy setting your own goals through building, surviving, and crafting.</p>
+              <p><strong>Featured games</strong> Minecraft, Terraria, Valheim</p>
+              <button class="genre-action" type="button" data-genre-filter="Sandbox">View these games</button>
+            </div>
+          </article>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section collapsible-section" aria-labelledby="recommend-logic-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Recommendation Logic</p>
+            <h2 id="recommend-logic-title"><button class="collapsible-toggle" type="button" aria-expanded="false" aria-controls="recommend-logic-body"><span>Why the Recommendations Get More Accurate</span><span class="collapsible-chevron" aria-hidden="true"></span></button></h2>
+            <p class="section-teaser">See how the recommendation score is calculated, in four steps.</p>
+          </div>
+        </div>
+        <div class="collapsible-body" id="recommend-logic-body" role="region" aria-labelledby="recommend-logic-title">
+          <div class="collapsible-body-inner">
+        <div class="feature-grid">
+          <article class="guide-card">
+            <span class="guide-icon" aria-hidden="true">🧭</span>
+            <h3>Genre Analysis</h3>
+            <p class="muted">Genre is a game's backbone. When the genre matches - Action RPG, Strategy, Simulation, and so on - the controls and pacing tend to feel similar too, making it the most reliable first signal for judging taste.</p>
+            <p class="guide-note">The odds of a miss are lowest within the same genre.</p>
+          </article>
+          <article class="guide-card">
+            <span class="guide-icon" aria-hidden="true">🏷</span>
+            <h3>Tag Analysis</h3>
+            <p class="muted">Tags are a finer net than genre. Overlapping keywords like Open World, Co-op, Roguelike, and Story lets us pick out the games closest to your actual taste, even within the same genre.</p>
+            <p class="guide-note">Tags catch the details genre misses.</p>
+          </article>
+          <article class="guide-card">
+            <span class="guide-icon" aria-hidden="true">🕹</span>
+            <h3>Play Style</h3>
+            <p class="muted">Whether you want to lose yourself alone or enjoy some noisy fun with friends changes how the same game feels entirely. Comparing styles like singleplayer, co-op, story-focused, or combat-focused is what really drives your satisfaction.</p>
+            <p class="guide-note">In the end, style is what determines satisfaction.</p>
+          </article>
+          <article class="guide-card">
+            <span class="guide-icon" aria-hidden="true">🧩</span>
+            <h3>Why Selecting Multiple Games Helps</h3>
+            <p class="muted">A single game might just reflect your mood that day. Picking several games together makes the repeating genres, tags, and moods clearer, so the recommendation is calculated more steadily and reliably.</p>
+            <p class="guide-note">The more you pick past 3, the more accurate the recommendation gets.</p>
+          </article>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section collapsible-section" aria-labelledby="selection-tips-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Tips</p>
+            <h2 id="selection-tips-title"><button class="collapsible-toggle" type="button" aria-expanded="false" aria-controls="selection-tips-body"><span>Tips for Choosing Games</span><span class="collapsible-chevron" aria-hidden="true"></span></button></h2>
+            <p class="section-teaser">A rundown of which tags to check first, organized by taste type.</p>
+          </div>
+        </div>
+        <div class="collapsible-body" id="selection-tips-body" role="region" aria-labelledby="selection-tips-title">
+          <div class="collapsible-body-inner">
+        <div class="feature-grid">
+          <article class="guide-card">
+            <span class="guide-icon" aria-hidden="true">🗺</span>
+            <h3>If you like open worlds</h3>
+            <p class="muted">Check whether you value freely roaming the map and discovering hidden spots. If exploring itself is more fun for you than the main quest, the Open World tag is a good guide.</p>
+            <p class="guide-note">If exploration is the goal, check the Open World tag first.</p>
+          </article>
+          <article class="guide-card">
+            <span class="guide-icon" aria-hidden="true">🤝</span>
+            <h3>If you like co-op games</h3>
+            <p class="muted">Player count and how the co-op works matter. It helps to check whether it's simply about being online together, or a game that gets more fun the more you split roles and communicate.</p>
+            <p class="guide-note">How many people, and how you play together, is what shapes the fun.</p>
+          </article>
+          <article class="guide-card">
+            <span class="guide-icon" aria-hidden="true">📖</span>
+            <h3>If you're looking for story-focused games</h3>
+            <p class="muted">Check whether it has elements like dialogue, choices, character relationships, and branching endings. When you want to immerse yourself in narrative and atmosphere more than combat, games with the Story tag are a good fit.</p>
+            <p class="guide-note">If narrative draws you in more than combat, prioritize the Story tag.</p>
+          </article>
+          <article class="guide-card">
+            <span class="guide-icon" aria-hidden="true">🔥</span>
+            <h3>If you like difficult games</h3>
+            <p class="muted">High-difficulty games deliver a lot of satisfaction through repeated learning and boss fights. That said, they can be fatiguing, so it's worth checking playtime and save structure too.</p>
+            <p class="guide-note">A good tag for anyone who enjoys learning through repetition.</p>
+          </article>
+          <article class="guide-card">
+            <span class="guide-icon" aria-hidden="true">⏱</span>
+            <h3>If you're looking for something short</h3>
+            <p class="muted">Picking a game with a short playtime, or one that wraps up in single sessions, keeps the commitment low. Look at genres like Puzzle, Platformer, or Roguelike, which can feel rewarding even in short sessions.</p>
+            <p class="guide-note">Perfect for when you want a sense of accomplishment without the commitment.</p>
+          </article>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="game-guide-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Guide</p>
+            <h2 id="game-guide-title">Criteria Worth Considering When Choosing a Game</h2>
+          </div>
+        </div>
+        <div class="info-grid">
+          <article class="guide-card">
+            <h3>Start with games in a similar genre</h3>
+            <p class="muted">Looking at genres you've already enjoyed keeps the playstyle from straying too far, lowering the odds of a miss.</p>
+          </article>
+          <article class="guide-card">
+            <h3>Check play style through tags</h3>
+            <p class="muted">Tags like Open World, Co-op, Roguelike, and Story are important clues for judging how a game is actually meant to be enjoyed.</p>
+          </article>
+          <article class="guide-card">
+            <h3>Check playtime and difficulty</h3>
+            <p class="muted">Checking whether it's a short game or a long, immersive one, and whether it matches the difficulty you want right now, makes choosing easier.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" aria-labelledby="faq-title">
+      <div class="container narrow">
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">How are recommendations calculated?</button>
+            <div class="faq-answer"><p>We score every game you haven't selected yet by comparing its genre, tags, and mood against the games you picked.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">Is my personal information stored?</button>
+            <div class="faq-answer"><p>This site doesn't collect personal information or store anything on a server. All recommendation calculations happen right in your browser.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">Do I need to sign up?</button>
+            <div class="faq-answer"><p>No sign-up or login is required. Just pick games on the page and see your recommendations right away.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">How accurate are the recommendations?</button>
+            <div class="faq-answer"><p>Recommendations are a reference based on what your selected games have in common. Actual satisfaction can vary depending on personal taste and how you play.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">How is the game data selected?</button>
+            <div class="faq-answer"><p>We focused on PC and console games with clearly defined genres and play styles that are easy for a wide audience to reference.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">How does the search work?</button>
+            <div class="faq-answer"><p>It matches your search term against both the English and Korean titles and shows any game that contains it.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">Can I use this on mobile?</button>
+            <div class="faq-answer"><p>Yes. As a static website, it works fine in mobile browsers, with cards and menus that adapt to your screen size.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">Is it free?</button>
+            <div class="faq-answer"><p>Yes, GameTaste Finder is currently a free static game recommendation site.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button id="jumpToStep2" class="jump-to-step2" type="button" aria-label="Jump to Step 2 recommendation results">
+    <span class="jump-to-step2-icon" aria-hidden="true">↓</span>
+    <span class="jump-to-step2-label">Get recommendations</span>
+  </button>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p>&copy; 2026 GameTaste Finder</p>
+        <p>GameTaste Finder is a game recommendation service that helps you find new games based on your play preferences.</p>
+        <p>Recommendations are for reference only; actual play experience may vary by user.</p>
+        <p>Game images, logos, and trademarks belong to their respective owners. <a href="copyright.html">View copyright notice</a></p>
+        <p>Some game data and images are provided by <a href="https://rawg.io" target="_blank" rel="noopener noreferrer">RAWG</a>.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

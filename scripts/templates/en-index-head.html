@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J09Q9JLKT2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-J09Q9JLKT2');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GameTaste Finder | Taste-Based Game Recommendations</title>
+  <meta name="description" content="A static website that recommends similar games based on genre, tags, and mood once you pick games you've enjoyed playing.">
+  <link rel="canonical" href="https://gametastefinder.com/en/">
+  <link rel="alternate" hreflang="ko" href="https://gametastefinder.com/">
+  <link rel="alternate" hreflang="en" href="https://gametastefinder.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://gametastefinder.com/">
+  <meta property="og:title" content="GameTaste Finder | Taste-Based Game Recommendations">
+  <meta property="og:description" content="Pick the games you've loved and find your next favorite game.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gametastefinder.com/en/">
+  <meta property="og:image" content="https://gametastefinder.com/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GameTaste Finder | Taste-Based Game Recommendations">
+  <meta name="twitter:description" content="Pick the games you've loved and find your next favorite game.">
+  <meta name="twitter:image" content="https://gametastefinder.com/images/og-image.jpg">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="js/games.js" defer></script>
+  <script src="js/game-cover.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="/js/hero-terrain.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How are recommendations calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We score every game you haven't selected yet by comparing its genre, tags, and mood against the games you picked."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my personal information stored?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This site doesn't collect personal information or store anything on a server. All recommendation calculations happen right in your browser."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to sign up?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No sign-up or login is required. Just pick games on the page and see your recommendations right away."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate are the recommendations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Recommendations are a reference based on what your selected games have in common. Actual satisfaction can vary depending on personal taste and how you play."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is the game data selected?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We focused on PC and console games with clearly defined genres and play styles that are easy for a wide audience to reference."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the search work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It matches your search term against both the English and Korean titles and shows any game that contains it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use this on mobile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. As a static website, it works fine in mobile browsers, with cards and menus that adapt to your screen size."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, GameTaste Finder is currently a free static game recommendation site."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="home-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="GameTaste Finder home">
+        <span class="brand-badge">GT</span>
+        <span class="brand-name">GameTaste Finder</span>
+      </a>
+      <nav class="nav" aria-label="Main menu">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <canvas class="hero-terrain" id="heroTerrain" aria-hidden="true"></canvas>
+      <div class="container hero-content">
+        <div>
+          <p class="hero-brand">GameTaste Finder</p>
+          <p class="eyebrow">Taste-Based Game Recommendations</p>
+          <h1 class="hero-title">Find your next favorite <span class="hero-highlight">game</span><br>based on ones you already love.</h1>
+          <p class="lead">Pick several games and we'll surface recommended picks from the ones you haven't chosen yet.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section game-select-section" aria-labelledby="game-select-title">
+      <div class="container">
+        <div class="section-heading" id="game-select-anchor">
+          <div>
+            <p class="eyebrow">Step 1</p>
+            <h2 id="game-select-title">Select games you've enjoyed playing</h2>
+          </div>
+          <p class="muted">The more games you select, the more accurate your recommendations will be.</p>
+        </div>
+        <div class="finder-panel" aria-labelledby="finder-title">
+          <h3 id="finder-title">Find games</h3>
+          <div class="finder-controls">
+            <label class="control-field" for="gameSearch">
+              <span>Search</span>
+              <input id="gameSearch" class="search-input" type="search" placeholder="Search by English or Korean game name" autocomplete="off">
+            </label>
+            <label class="control-field genre-field" for="genreFilter">
+              <span>Genre</span>
+              <select id="genreFilter" class="sort-select">
+                <option value="">All genres</option>
+              </select>
+            </label>
+            <label class="control-field sort-field" for="gameSort">
+              <span>Sort</span>
+              <select id="gameSort" class="sort-select">
+                <option value="default">Default</option>
+                <option value="ko-title">Title (Korean A-Z)</option>
+                <option value="en-title">Title (A-Z)</option>
+                <option value="difficulty-asc">Difficulty (Low to High)</option>
+                <option value="difficulty-desc">Difficulty (High to Low)</option>
+                <option value="time-asc">Playtime (Short to Long)</option>
+                <option value="time-desc">Playtime (Long to Short)</option>
+                <option value="metacritic-desc">Metacritic (High to Low)</option>
+                <option value="metacritic-asc">Metacritic (Low to High)</option>
+                <option value="steam-desc">Steam Rating (High to Low)</option>
+                <option value="steam-asc">Steam Rating (Low to High)</option>
+              </select>
+            </label>
+          </div>
+          <fieldset class="filter-group">
+            <legend>Filters</legend>
+            <label class="filter-pill"><input type="checkbox" name="gameFilter" value="korean">Korean language support</label>
+            <label class="filter-pill"><input type="checkbox" name="gameFilter" value="multiplayer">Multiplayer support</label>
+            <label class="filter-pill"><input type="checkbox" name="gameFilter" value="singleplayer">Singleplayer</label>
+            <label class="filter-pill"><input type="checkbox" name="gameFilter" value="hard">High difficulty</label>
+            <label class="filter-pill"><input type="checkbox" name="gameFilter" value="short">Short playtime</label>
+            <label class="filter-pill"><input type="checkbox" name="gameFilter" value="long">Long playtime</label>
+          </fieldset>
+        </div>
